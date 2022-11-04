@@ -1,0 +1,194 @@
+@font-face {
+    font-family: "Apercu";
+    src: local("Apercu"),
+         url("assets/Fonts/apercu_bold_pro.otf") format("opentype")
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    /* overflow: hidden; */
+    position: relative;
+}
+
+button{
+    height: 3em; 
+    background-color: #ffffff;
+    box-shadow: 0px 0px 61px 3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 61px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 61px 3px rgba(0,0,0,0.75);
+    border: 0.5px solid #dbdbdb;
+    border-radius: 30px;
+    padding: 5px 10px; 
+    font-size: 15px;
+}
+
+#catacombesTitle{
+    text-align: center;
+    width: 80%;
+    margin-bottom: 1em;
+}
+
+.loading-bar{
+    position: absolute; 
+    top: 73%; 
+    width: 90%; 
+    height: 2px;
+    background: #ffffff;
+    transform: scaleX(0);
+    transform-origin: top left;
+    margin-left: 5%;
+    transition: transform 0.5s;
+    will-change: transform;
+}
+
+.loadingPercent{
+    z-index: 99999; 
+    color: #ffffff; 
+    position: absolute; 
+    margin: auto; 
+    left: 50%;
+    top: 66%;
+    transition: transform 3s;
+}
+
+#VRButton{
+    position: absolute!important;
+}
+
+.loading-bar.ended{
+    transform-origin: top right;
+    transition: transform 1s ease-in-out;
+}
+
+.webgl
+{
+    position: absolute;
+    outline: none;
+    bottom: 3em;
+}
+
+#canvas, #canvasDiv{
+    display: none;
+    /* width: 1200px!important;  */
+    width: 90%!important; 
+    /* height: 650px!important; */
+    height: 46%!important;
+    margin-left: 5%;
+    margin-top: 2%;
+    border-radius: 15px;
+    box-shadow: -1px -1px 147px 33px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px -1px 147px 33px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px -1px 147px 33px rgba(0,0,0,0.75);
+    /* margin-top: -42em; */
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-image: url("assets/Images/paris.png");
+    width: 1150px;
+    height: 700px;  
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /* position: fixed; */
+    border: #000000 solid 11px;
+}
+
+#belierPoint, #plagePoint, #cellierPoint{
+    width: 10%;
+}
+    
+.div1 { grid-area: 11 / 6 / 12 / 7;}
+.div2 { grid-area: 10 / 7 / 11 / 8;}
+.div3 { grid-area: 10 / 6 / 11 / 7;}
+
+#closeIcon{
+    /* margin-left: 1241px; */
+    right: 4%;
+    margin-top: 13px;
+    z-index: 999999; 
+    width: 14px;
+    height: 15px; 
+    position: absolute;
+    background-color: #fff; 
+    padding: 5px 10px 10px 8px;
+    border-radius: 50%;
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Chrome, Safari, Opéra */
+    -ms-user-select: none; /* Internet explorer */
+    user-select: none; /* Propriété standard */
+    text-align: center;
+    margin-top: -0.9em;
+    border: 1.8px #000 solid;
+}
+
+#infoIcon{
+    right: 6%;
+    position: absolute;
+    margin-top: -1.2em;
+    margin-right: 0.5em;
+}
+
+#belierPoint{
+    margin-top: 7%;
+    margin-left: 10%;
+}
+
+#concretionPoint{
+    margin-top: -32%;
+    margin-left: 26%;
+}
+
+#cellierPoint{
+    margin-top: 22%;
+    margin-left: 70%;
+}
+
+#plagePoint{
+    margin-top: 25%;
+    margin-left: -10%;
+}
+
+#belierDiv, #concretionDiv{
+    grid-area: 11 / 6 / 12 / 7;
+}
+
+#cellierDiv{
+    grid-area: 10 / 6 / 11 / 7;
+}
+
+#plageDiv{
+    grid-area: 10 / 7 / 11 / 8;
+}
+
+.parentTextExplications {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 0.2fr repeat(4, 1fr);
+    grid-column-gap: 30px;
+}
+    
+.textExplication1 { grid-area: 2 / 2 / 5 / 4; }
+.textExplication2 { grid-area: 2 / 4 / 5 / 6; }
+.textExplication3 { grid-area: 2 / 6 / 5 / 8; }
+
+.textExplication{
+    /* padding: 1em 3em 3em;  */
+    text-align: justify;
+}
