@@ -15,4 +15,17 @@ npm run dev
 npm run build
 ```
 
-# Tested with Safari / Chrome and Oculus Quest 2
+## Tested with Safari / Chrome and Oculus Quest 2
+
+- In web browser : 
+    - left click : turn around the room
+    - right click pressed : moving the camera 
+    - mouse wheel : Zoom in and zoom out
+
+
+- Locomotion in VR : 
+    - Touch the controllers thumbsticks and point whre you want to go ( you can change the camera direction too, just turn the thumbstick in the direction you want)
+
+
+
+
