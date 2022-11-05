@@ -1,6 +1,6 @@
-import './style.css'
-import * as roomGen from './roomGen.js'
-
+import './style.css';
+import * as roomGen from './roomGen.js';
+import LocomotiveScroll from 'locomotive-scroll';
 
 /**
  * Display catacombs rooms
@@ -50,6 +50,7 @@ belierDiv.addEventListener("mouseleave",function(){belierDiv.style.display="none
 plageDiv.addEventListener("mouseleave",function(){plageDiv.style.display="none"});
 cellierDiv.addEventListener("mouseleave",function(){cellierDiv.style.display="none"});
 concretionDiv.addEventListener("mouseleave",function(){concretionDiv.style.display="none"});
+
 
 roomGen.signature();
 

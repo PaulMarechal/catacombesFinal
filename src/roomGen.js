@@ -29,10 +29,10 @@ export function salle(modele3d, bakedJpg){
     /**
     * Base
     */
-    // Debug
-    // const gui = new dat.GUI({
-    //     width: 400
-    // })
+    //Debug
+    const gui = new dat.GUI({
+        width: 400
+    })
 
     // Canvas 
     const canvas = document.createElement("canvas");
@@ -238,6 +238,22 @@ export function salle(modele3d, bakedJpg){
     controllerGrip1.addEventListener('connected', (e) => {
         teleportVR.add(1, controllerGrip1, e.data.gamepad)
     })
+
+
+    // test 
+    const geometry = new THREE.ConeGeometry( 0.05, 0.14, 32 );
+    const material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+    const cone = new THREE.Mesh( geometry, material );
+    cone.rotation.z = 4.75;
+    scene.add( cone );
+
+    gui.add(cone.rotation, 'x').min(-60).max(60).step(0.01).name('camera x')
+    gui.add(cone.rotation, 'y').min(-60).max(60).step(0.01).name('Plane2 y')
+    gui.add(cone.rotation, 'z').min(-60).max(60).step(0.01).name('Plane2 z')
+     gui.add(cone.position, 'x').min(-60).max(60).step(0.01).name('position  x')
+    gui.add(cone.position, 'y').min(-60).max(60).step(0.01).name('position y')
+    gui.add(cone.position, 'z').min(-60).max(60).step(0.01).name('position z')
+    // fin test 
 
 
     const tick = () =>
