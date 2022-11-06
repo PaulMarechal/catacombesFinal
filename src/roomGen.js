@@ -30,9 +30,9 @@ export function salle(modele3d, bakedJpg){
     * Base
     */
     //Debug
-    const gui = new dat.GUI({
-        width: 400
-    })
+    // const gui = new dat.GUI({
+    //     width: 400
+    // })
 
     // Canvas 
     const canvas = document.createElement("canvas");
@@ -86,7 +86,7 @@ export function salle(modele3d, bakedJpg){
                 gsap.to(overlayMaterial.uniforms.uAlpha, {duration : 4, value: 0});
                 loadingBarElement.classList.add('ended');
                 loadingBarElement.style.transform = '';
-                loadingPercent.innerHTML = '';
+                loadingPercent.remove();
             })
         }, 
 
@@ -95,7 +95,6 @@ export function salle(modele3d, bakedJpg){
             // console.log("progress")
             const progressRatio = itemsLoaded / itemsTotal
             loadingBarElement.style.transform = `scaleX(${progressRatio})`
-
             loadingPercent.innerHTML = "";
             loadingPercent.innerHTML = `${Math.round(progressRatio*100)} %`
 
@@ -241,25 +240,21 @@ export function salle(modele3d, bakedJpg){
 
 
     // test 
-    const geometry = new THREE.ConeGeometry( 0.05, 0.14, 32 );
-    const material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-    const cone = new THREE.Mesh( geometry, material );
-    cone.rotation.z = 4.75;
-    scene.add( cone );
-
-    gui.add(cone.rotation, 'x').min(-60).max(60).step(0.01).name('camera x')
-    gui.add(cone.rotation, 'y').min(-60).max(60).step(0.01).name('Plane2 y')
-    gui.add(cone.rotation, 'z').min(-60).max(60).step(0.01).name('Plane2 z')
-     gui.add(cone.position, 'x').min(-60).max(60).step(0.01).name('position  x')
-    gui.add(cone.position, 'y').min(-60).max(60).step(0.01).name('position y')
-    gui.add(cone.position, 'z').min(-60).max(60).step(0.01).name('position z')
+    // gui.add(cone.rotation, 'x').min(-60).max(60).step(0.01).name('camera x')
+    // gui.add(cone.rotation, 'y').min(-60).max(60).step(0.01).name('Plane2 y')
+    // gui.add(cone.rotation, 'z').min(-60).max(60).step(0.01).name('Plane2 z')
+    // gui.add(cone.position, 'x').min(-60).max(60).step(0.01).name('position  x')
+    // gui.add(cone.position, 'y').min(-60).max(60).step(0.01).name('position y')
+    // gui.add(cone.position, 'z').min(-60).max(60).step(0.01).name('position z')
     // fin test 
 
+
+    removeCanvas();
 
     const tick = () =>
     {
         const elapsedTime = clock.getElapsedTime()
-        // removeCanvas();
+        // removeCanvas()
         const test = document.getElementById("canvas");
         const vrButton = document.getElementById("VRButton");
         var loadingBar = document.querySelector(".loading-bar")
@@ -277,11 +272,6 @@ export function salle(modele3d, bakedJpg){
         window.requestAnimationFrame(tick)
 
         closeIcon.addEventListener("click", function(){
-            test.remove(), 
-            closeIcon.style.display = "none",
-            infoIcon.style.display = "none",
-            vrButton.remove(), 
-            loadingBar.classList.remove("ended"),
             window.cancelAnimationFrame(tick)
         })
     }
@@ -316,7 +306,7 @@ export function removeCanvas(){
         infoIcon.style.display = "none",
         vrButton.remove(), 
         loadingBar.classList.remove("ended")
-        window.cancelAnimationFrame(tick)
+        // window.cancelAnimationFrame(tick)
     })
 }
 
