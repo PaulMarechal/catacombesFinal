@@ -60,17 +60,18 @@
          </svg>
     </div>
 
-    <div id="infoButton" style="display: none; position: absolute; margin-left: 21%;">
-        <div id="closeIconInfo" style="margin-left: 97.7%; margin-top: -1.2em;">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="36" height="36" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round" style="margin-top: -8px; margin-left: -10px; background-color: #fff; border-radius: 50%; border: 1.2px #000 solid;">
+    <div id="infoButton">
+        <div id="closeIconInfo">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" id="closeHelpButton" width="36" height="36" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round" >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
              </svg>
         </div>
-        <img src="assets/Images/help.png" alt="Help to use the 3D display of the rooms. Right click pressed: move the camera, left click: turn around the room, wheel: zoom" style="z-index: 99999; margin: auto; bottom: 4em; right: 0; left: 0;">
+        <img id="imgHelp" src="assets/Images/help.png" alt="Help to use the 3D display of the rooms. Right click pressed: move the camera, left click: turn around the room, wheel: zoom">
     </div>
 
+    <!-- Modifier TeleportVR -> direction Z pour qu'elle s'adapte au bon emplacement -->
     <div class="parent" id="parentDiv">
         <div class="div1" id="belier">
             <p id="belierPoint">📍</p>

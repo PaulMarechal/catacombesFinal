@@ -76,7 +76,7 @@ button{
 {
     position: absolute;
     outline: none;
-    bottom: 3em;
+    bottom: 1em;
 }
 
 #canvas, #canvasDiv{
@@ -123,6 +123,38 @@ button{
 .div2 { grid-area: 10 / 7 / 11 / 8;}
 .div3 { grid-area: 10 / 6 / 11 / 7;}
 
+#imgHelp{
+    z-index: 99999; 
+    margin: auto; 
+    bottom: 4em; 
+    right: 0; 
+    left: 0; 
+    width: 76%; 
+    border-radius: 15px
+}
+
+#closeIconInfo{
+    margin-left: 76%; 
+    margin-top: 4.8em;
+}
+
+#closeHelpButton{
+    margin-top: -8px; 
+    margin-left: -10px; 
+    background-color: #fff; 
+    border-radius: 50%; 
+    border: 1.2px #000 solid; 
+    z-index: 999999; 
+    position: absolute; 
+    margin-top: -1.2em;
+}
+
+#infoButton{
+    display: none; 
+    position: absolute; 
+    margin-left: 21%;
+}
+
 #closeIcon{
     /* margin-left: 1241px; */
     right: 4%;
@@ -139,14 +171,14 @@ button{
     -ms-user-select: none; /* Internet explorer */
     user-select: none; /* Propriété standard */
     text-align: center;
-    margin-top: -0.9em;
+    margin-top: 0.3em;
     border: 1.8px #000 solid;
 }
 
 #infoIcon{
     right: 6%;
     position: absolute;
-    margin-top: -1.2em;
+    /* margin-top: -1.2em; */
     margin-right: 0.5em;
 }
 

@@ -318,6 +318,7 @@ export function removeCanvas(){
         vrButton.remove(), 
         loadingBar.classList.remove("ended")
         // window.cancelAnimationFrame(tick)
+        location.reload();
     })
 }
 
