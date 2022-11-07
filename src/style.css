@@ -197,3 +197,10 @@ button{
     /* padding: 1em 3em 3em;  */
     text-align: justify;
 }
+
+#infobutton{
+    display: none; 
+    position: absolute;
+    margin-left: 24%; 
+    margin-top: 3%;
+}

@@ -285,12 +285,12 @@ export function displaySalle(nomSalle, id, modele3d, bakedJpg, area){
     var btn = document.createElement("button"); 
     var mapParent = document.getElementById("parentDiv");
     const closeIcon = document.getElementById("closeIcon");
-    const infoIcon = document.getElementById("infoIcon")
+    const infoIcon = document.getElementById("infoIcon");
 
     btn.setAttribute("id", id)
     var t = document.createTextNode(nomSalle);      
     btn.appendChild(t);   
-    btn.onclick = function(){salle(modele3d, bakedJpg); closeIcon.style.display = "block"; infoIcon.style.display= "block"};         
+    btn.onclick = function(){salle(modele3d, bakedJpg); closeIcon.style.display = "block"; infoIcon.style.display= "block";};         
     document.getElementById(area).appendChild(btn);
     btn.style.display = "none";
 }
@@ -298,7 +298,18 @@ export function displaySalle(nomSalle, id, modele3d, bakedJpg, area){
 export function removeCanvas(){
     const test = document.getElementById("canvas");
     const vrButton = document.getElementById("VRButton");
-    var loadingBar = document.querySelector(".loading-bar")
+    const infoButton = document.getElementById("infoButton"); 
+    const infoIcon = document.getElementById("infoIcon");
+    const closeIconInfo = document.getElementById("closeIconInfo");
+    var loadingBar = document.querySelector(".loading-bar");
+
+    infoIcon.addEventListener("click", function(){
+        infoButton.style.display = "block";
+    })
+
+    closeIconInfo.addEventListener("click", function(){
+        infoButton.style.display = "none";
+    })
 
     closeIcon.addEventListener("click", function(){
         test.remove(), 
