@@ -4,11 +4,12 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 /**
  * Display catacombs rooms
- */
-roomGen.displaySalle("Bélier", "belierDiv", "./Belier/portal.glb", "./Belier/baked.jpg", "parentDiv");
-roomGen.displaySalle("Concrétion", "concretionDiv", "./Concretion/concretion.glb", "./concretion/concretion.jpg", "parentDiv");
-roomGen.displaySalle("La Plage", "plageDiv", "./Plage/plage.glb", "./Plage/La_Plage.jpg", "parentDiv");
-roomGen.displaySalle("Cellier", "cellierDiv", "./Cellier/cellier.glb", "./Cellier/Cellier.jpg", "parentDiv");
+ */  
+// 3D Canvas
+roomGen.displaySalle("Bélier", "belierDiv", "./Belier/portal.glb", "./Belier/baked.jpg", "parentDiv", "./Belier/belier.usdz");
+roomGen.displaySalle("Concrétion", "concretionDiv", "./Concretion/concretion.glb", "./Concretion/concretion.jpg", "parentDiv", "./Concretion/concretion.usdz");
+roomGen.displaySalle("La Plage", "plageDiv", "./Plage/plage.glb", "./Plage/La_Plage.jpg", "parentDiv", "./Plage/plage.usdz");
+roomGen.displaySalle("Cellier", "cellierDiv", "./Cellier/cellier.glb", "./Cellier/Cellier.jpg", "parentDiv", "./Cellier/cellier.usdz");
 
 
 /** 

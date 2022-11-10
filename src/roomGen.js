@@ -14,7 +14,7 @@ import TeleportVR from 'teleportvr';
 /**
  * Room creation ( base Three.js code to create rooms)
  */
-export function salle(modele3d, bakedJpg){
+export function salle(modele3d, bakedJpg, linkAR){
     /**
      * Selectors
      */
@@ -238,6 +238,8 @@ export function salle(modele3d, bakedJpg){
         teleportVR.add(1, controllerGrip1, e.data.gamepad)
     })
 
+    arDisplay(linkAR);
+
 
     // test 
     // gui.add(cone.rotation, 'x').min(-60).max(60).step(0.01).name('camera x')
@@ -281,7 +283,7 @@ export function salle(modele3d, bakedJpg){
 /**
  * Display rooms ( room name, id, 3D Model (glb), baked image (jpg), page area )
  */
-export function displaySalle(nomSalle, id, modele3d, bakedJpg, area){
+export function displaySalle(nomSalle, id, modele3d, bakedJpg, area, linkAR){
     var btn = document.createElement("button"); 
     var mapParent = document.getElementById("parentDiv");
     const closeIcon = document.getElementById("closeIcon");
@@ -290,10 +292,12 @@ export function displaySalle(nomSalle, id, modele3d, bakedJpg, area){
     btn.setAttribute("id", id)
     var t = document.createTextNode(nomSalle);      
     btn.appendChild(t);   
-    btn.onclick = function(){salle(modele3d, bakedJpg); closeIcon.style.display = "block"; infoIcon.style.display= "block";};         
+    btn.onclick = function(){salle(modele3d, bakedJpg, linkAR); closeIcon.style.display = "block"; infoIcon.style.display= "block";};         
     document.getElementById(area).appendChild(btn);
     btn.style.display = "none";
 }
+
+
 
 export function removeCanvas(){
     const test = document.getElementById("canvas");
@@ -301,6 +305,7 @@ export function removeCanvas(){
     const infoButton = document.getElementById("infoButton"); 
     const infoIcon = document.getElementById("infoIcon");
     const closeIconInfo = document.getElementById("closeIconInfo");
+    const arLink = document.getElementById("arLink");
     var loadingBar = document.querySelector(".loading-bar");
 
     infoIcon.addEventListener("click", function(){
@@ -318,8 +323,29 @@ export function removeCanvas(){
         vrButton.remove(), 
         loadingBar.classList.remove("ended")
         // window.cancelAnimationFrame(tick)
+        arLink.remove();
         location.reload();
     })
+}
+
+export function arDisplay(linkAR){
+
+    // If AR available on mobile
+    if (a.relList.supports("ar")){
+        const parentDiv = document.getElementById("body");
+        var elementA = document.createElement("a");
+        var elementDiv = document.createElement("div");
+
+        elementA.setAttribute("href", linkAR);
+        elementA.style.color = "#FFFFFF"; 
+        elementA.setAttribute("id", "arLink")
+        elementA.setAttribute("rel", "ar");
+        elementA.textContent = "ENTER AR"
+        elementDiv.setAttribute("id", "ARButton");
+        
+        parentDiv.appendChild(elementDiv);
+        elementDiv.appendChild(elementA);
+    }
 }
 
 export function signature(){

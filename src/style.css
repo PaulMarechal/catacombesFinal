@@ -42,7 +42,7 @@ button{
 
 .loading-bar{
     position: absolute; 
-    top: 73%; 
+    top: 80%; 
     width: 90%; 
     height: 2px;
     background: #ffffff;
@@ -59,12 +59,43 @@ button{
     position: absolute; 
     margin: auto; 
     left: 50%;
-    top: 66%;
+    top: 75%;
     transition: transform 3s;
 }
 
 #VRButton{
     position: absolute!important;
+}
+
+#ARButton{
+    position: abso;
+    position: relative;
+    bottom: 4em;
+    padding: 12px 6px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    color: rgb(255, 255, 255);
+    font: 13px sans-serif;
+    opacity: 0.5;
+    outline: none;
+    z-index: 999;
+    cursor: pointer;
+    left: calc(50% - -140px);
+    width: 102px;
+    height: 13px;
+    color: #ffff;
+    text-align: center;
+}
+
+#arLink{
+    text-decoration: none;
+    margin: auto; 
+    right: 0; 
+    left: 0; 
+    top: 0; 
+    bottom: 0;
+    padding: auto;
 }
 
 .loading-bar.ended{
@@ -84,7 +115,7 @@ button{
     /* width: 1200px!important;  */
     width: 90%!important; 
     /* height: 650px!important; */
-    height: 46%!important;
+    height: 40%!important;
     margin-left: 5%;
     margin-top: 2%;
     border-radius: 15px;
