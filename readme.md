@@ -15,6 +15,9 @@
     - right click pressed : moving the camera 
     - mouse wheel : Zoom in and zoom out
 
+- AR on mobile : 
+    - Zoom : Touch with two fingers
+    - Rotate with two fingers
 
 - Locomotion in VR : 
     - Touch the controllers thumbsticks and point whre you want to go ( you can change the camera direction too, just turn the thumbstick in the direction you want)

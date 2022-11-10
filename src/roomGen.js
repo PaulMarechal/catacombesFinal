@@ -9,6 +9,7 @@ import { XRControllerModelFactory } from 'three/examples/jsm/webxr/XRControllerM
 import { gsap } from 'gsap';
 import * as locomotion from './moveCameraXR.js';
 import TeleportVR from 'teleportvr';
+import * as displayAR from './ar.js';
 
 
 /**
@@ -238,7 +239,7 @@ export function salle(modele3d, bakedJpg, linkAR){
         teleportVR.add(1, controllerGrip1, e.data.gamepad)
     })
 
-    arDisplay(linkAR);
+    displayAR.arDisplay(linkAR);
 
 
     // test 
@@ -326,26 +327,6 @@ export function removeCanvas(){
         arLink.remove();
         location.reload();
     })
-}
-
-export function arDisplay(linkAR){
-
-    // If AR available on mobile
-    if (a.relList.supports("ar")){
-        const parentDiv = document.getElementById("body");
-        var elementA = document.createElement("a");
-        var elementDiv = document.createElement("div");
-
-        elementA.setAttribute("href", linkAR);
-        elementA.style.color = "#FFFFFF"; 
-        elementA.setAttribute("id", "arLink")
-        elementA.setAttribute("rel", "ar");
-        elementA.textContent = "ENTER AR"
-        elementDiv.setAttribute("id", "ARButton");
-        
-        parentDiv.appendChild(elementDiv);
-        elementDiv.appendChild(elementA);
-    }
 }
 
 export function signature(){
