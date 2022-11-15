@@ -11,7 +11,6 @@ import * as locomotion from './moveCameraXR.js';
 import TeleportVR from 'teleportvr';
 import * as displayAR from './ar.js';
 
-
 /**
  * Room creation ( base Three.js code to create rooms)
  */
@@ -25,7 +24,7 @@ export function salle(modele3d, bakedJpg, linkAR){
     // Loading Percent 
     var loadingPercent = document.createElement("h2");
     var loadingPercentContent = document.createTextNode("");
-    loadingPercent.className = "loadingPercent"
+    loadingPercent.className = "loadingPercent";
 
     /**
     * Base
@@ -307,6 +306,7 @@ export function removeCanvas(){
     const infoIcon = document.getElementById("infoIcon");
     const closeIconInfo = document.getElementById("closeIconInfo");
     const arLink = document.getElementById("arLink");
+    const closeIconCanvas = document.getElementById("closeIcon")
     var loadingBar = document.querySelector(".loading-bar");
 
     infoIcon.addEventListener("click", function(){
@@ -318,14 +318,13 @@ export function removeCanvas(){
     })
 
     closeIcon.addEventListener("click", function(){
-        test.remove(), 
-        closeIcon.style.display = "none",
-        infoIcon.style.display = "none",
-        vrButton.remove(), 
+        test.remove()
+        closeIcon.style.display = "none"
+        infoIcon.style.display = "none"
+        vrButton.remove()
         loadingBar.classList.remove("ended")
-        // window.cancelAnimationFrame(tick)
-        arLink.remove();
-        location.reload();
+        arLink.remove()
+        location.reload()
     })
 }
 

@@ -1,10 +1,12 @@
-@font-face {
+/* @font-face {
     font-family: "Apercu";
     src: local("Apercu"),
          url("assets/Fonts/apercu_bold_pro.otf") format("opentype")
-}
+} */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
 
 *
 {
@@ -16,10 +18,19 @@ html,
 body
 {
     position: relative;
+    background-color: #f1f0eb;
 }
 
 h1, h2{
-    font-family: 'Lato900', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}
+
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: #000;
 }
 
 button{
@@ -41,14 +52,14 @@ button{
 }
 
 .loading-bar{
-    position: absolute; 
-    top: 80%; 
+    position: fixed; 
+    top: 50%; 
     width: 90%; 
     height: 2px;
     background: #ffffff;
     transform: scaleX(0);
     transform-origin: top left;
-    margin-left: 5%;
+    margin-left: 4%;
     transition: transform 0.5s;
     will-change: transform;
 }
@@ -56,15 +67,15 @@ button{
 .loadingPercent{
     z-index: 99999; 
     color: #ffffff; 
-    position: absolute; 
+    position: fixed; 
     margin: auto; 
     left: 50%;
-    top: 75%;
+    top: 43%;
     transition: transform 3s;
 }
 
 #VRButton{
-    position: absolute!important;
+    position: fixed!important;
 }
 
 #ARButton{
@@ -105,9 +116,11 @@ button{
 
 .webgl
 {
-    position: absolute;
+    position: fixed;
     outline: none;
     bottom: 1em;
+    height: 680px!important;
+    margin-left: 4%;
 }
 
 #canvas, #canvasDiv{
@@ -115,14 +128,15 @@ button{
     /* width: 1200px!important;  */
     width: 90%!important; 
     /* height: 650px!important; */
-    height: 40%!important;
-    margin-left: 5%;
+    height: 95%!important;
+    /* margin-left: 5%; */
     margin-top: 2%;
     border-radius: 15px;
     box-shadow: -1px -1px 147px 33px rgba(0,0,0,0.75);
     -webkit-box-shadow: -1px -1px 147px 33px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px -1px 147px 33px rgba(0,0,0,0.75);
     /* margin-top: -42em; */
+    position: fixed;
 }
 
 .parent {
@@ -137,12 +151,10 @@ button{
     background-size: contain;
     background-repeat: no-repeat;
     margin: auto;
-
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    /* position: fixed; */
     border: #000000 solid 11px;
 }
 
@@ -160,40 +172,40 @@ button{
     bottom: 4em; 
     right: 0; 
     left: 0; 
-    width: 76%; 
+    width: 72%; 
     border-radius: 15px
 }
 
 #closeIconInfo{
     margin-left: 76%; 
-    margin-top: 4.8em;
+    top: 2%;
 }
 
 #closeHelpButton{
-    margin-top: -8px; 
-    margin-left: -10px; 
     background-color: #fff; 
     border-radius: 50%; 
     border: 1.2px #000 solid; 
     z-index: 999999; 
     position: absolute; 
-    margin-top: -1.2em;
+    top: 0.2%;
+    right: 14.2%;
 }
 
 #infoButton{
     display: none; 
-    position: absolute; 
-    margin-left: 21%;
+    position: fixed; 
+    top: 6%; 
+    text-align: center;
 }
 
 #closeIcon{
     /* margin-left: 1241px; */
-    right: 4%;
+    right: 6.7%;
     margin-top: 13px;
     z-index: 999999; 
     width: 14px;
     height: 15px; 
-    position: absolute;
+    position: fixed;
     background-color: #fff; 
     padding: 5px 10px 10px 8px;
     border-radius: 50%;
@@ -202,15 +214,15 @@ button{
     -ms-user-select: none; /* Internet explorer */
     user-select: none; /* Propriété standard */
     text-align: center;
-    margin-top: 0.3em;
+    top: 2%;
     border: 1.8px #000 solid;
+    display: none;
 }
 
 #infoIcon{
-    right: 6%;
-    position: absolute;
-    /* margin-top: -1.2em; */
-    margin-right: 0.5em;
+    right: 9.5%;
+    position: fixed;
+    top: 3%;
 }
 
 #belierPoint{
@@ -247,18 +259,26 @@ button{
 
 .parentTextExplications {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 0.2fr repeat(4, 1fr);
-    grid-column-gap: 30px;
+    grid-template-columns: 0.1fr 0.5fr repeat(2, 1fr) 0.5fr 0.1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: -10em;
 }
     
-.textExplication1 { grid-area: 2 / 2 / 5 / 4; }
-.textExplication2 { grid-area: 2 / 4 / 5 / 6; }
-.textExplication3 { grid-area: 2 / 6 / 5 / 8; }
+.textExplication1 { grid-area: 2 / 3 / 3 / 4; }
+.textExplication2 { grid-area: 4 / 4 / 5 / 5; }
+.textExplication3 { grid-area: 6 / 3 / 7 / 4; margin-top: -4em; height: 400px!important;}
 
 .textExplication{
     /* padding: 1em 3em 3em;  */
     text-align: justify;
+    background-color: #f9f9f9;
+    padding: 15px 20px; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 32px 0px rgba(186,186,186,0.75);
+    -webkit-box-shadow: 0px 0px 32px 0px rgba(186,186,186,0.75);
+    -moz-box-shadow: 0px 0px 32px 0px rgba(186,186,186,0.75);
 }
 
 #infobutton{
@@ -267,3 +287,160 @@ button{
     margin-left: 24%; 
     margin-top: 3%;
 }
+
+#nameText{
+    text-align : end; 
+}
+
+/*** Background shapes ****/
+
+#shape1{
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); 
+    width: 6em; 
+    border-radius: 50%; 
+    filter: blur(1.5rem);
+}
+
+
+
+
+/******** Mobile **********/
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (orientation: landscape) {
+
+    #body{
+        text-align: center!important;
+    }
+    .parentTextExplications{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 0 repeat(2, 1fr) 0.4fr repeat(2, 1fr) 0.2fr repeat(2, 1fr) 0.2fr repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin-top: -105%;
+        /* margin-left: 0%; */
+        /* width: 84em; */
+        text-align: justify;
+
+    }
+
+    #firstText{
+        margin-top: 2em;
+        grid-area: 2 / 2 / 3 / 8;
+    }
+
+    #nameText{
+        margin-top: 0.2em;
+        grid-area: 3 / 6 / 4 / 8;
+        margin-bottom: 5em;
+
+    }
+
+    .textExplication1{
+        grid-area: 5 / 2 / 7 / 8;
+    }
+
+    .textExplication2{
+        margin-top: 0.2em;
+        grid-area: 8 / 2 / 10 / 8;
+        margin-right: 3em;
+    }
+
+    .textExplication3{
+        grid-area: 11 / 2 / 13 / 8;
+    }
+
+    .parent{
+        text-align: center;
+        /* margin-left: 7%; */
+    }
+
+    #catacombesTitle{
+        width: 100%;
+        /* margin-left: 18%; */
+    }
+
+    #firstText{
+        width: 100%;
+        font-size: 30px;
+        /* margin-left: 16%; */
+    }
+    .parent{
+        width: 90%;
+        text-align: center;
+        height: 400px;
+    }
+
+    #canvas, #canvasDiv{
+        height: 12%!important;
+        width: 95%!important;
+        margin-right: auto; 
+        margin-left: auto;
+        text-align: center;
+    }
+
+    #infoIcon{
+        margin-top: 5em;
+        right: 7%;
+    }
+
+    #closeIcon{
+        margin-top: 5.3em;
+    }
+
+    .loading-bar{
+        top: 95%!important;
+        margin-left: 0.5%;   
+        width: 95%;  
+
+    }
+
+    .loadingPercent{
+        top: 92%!important;
+        left: 45%;
+    }
+}
+
+
+
+/* test scroll */
+.c-direction-block_item.-one {
+    top: 12%;
+    transform: translateX(3vw) rotate(-8deg);
+  }
+  .c-direction-block_item.-two {
+    top: 14%;
+    transform: translateX(3vw) rotate(2deg);
+  }
+  .c-direction-block_item.-three {
+    top: 16%;
+    transform: rotate(-1deg);
+  }
+  .c-direction-block_item.-four {
+    top: 21%;
+    transform: translateX(0vw) rotate(-11deg);
+  }
+  .c-direction-block_item.-five {
+    top: 22%;
+    transform: translateX(0vw) rotate(-7deg);
+  }
+
+  .c-direction-block_item {
+    position: absolute;
+    font-size: 3vw;
+    white-space: nowrap;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .c-direction-block_item span {
+    display: block;
+    background-color: #fff;
+    white-space: nowrap;
+    padding: 0 20px;
+  }
+
+
