@@ -23,7 +23,7 @@ export function salle(modele3d, bakedJpg, linkAR){
 
     // Loading Percent 
     var loadingPercent = document.createElement("h2");
-    var loadingPercentContent = document.createTextNode("");
+    var loadingPercentContent = document.createTextNode("1 %");
     loadingPercent.className = "loadingPercent";
 
     /**
