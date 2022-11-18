@@ -283,21 +283,34 @@ export function salle(modele3d, bakedJpg, linkAR){
 /**
  * Display rooms ( room name, id, 3D Model (glb), baked image (jpg), page area )
  */
-export function displaySalle(nomSalle, id, modele3d, bakedJpg, area, linkAR){
+export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, linkAR){
+    const modaleRoom3D = document.getElementById("modaleRoom3D");
     var btn = document.createElement("button"); 
+    var titreModale = document.createElement("h3")
     var mapParent = document.getElementById("parentDiv");
     const closeIcon = document.getElementById("closeIcon");
     const infoIcon = document.getElementById("infoIcon");
 
-    btn.setAttribute("id", id)
-    var t = document.createTextNode(nomSalle);      
-    btn.appendChild(t);   
+    btn.setAttribute("id", id);
+    btn.setAttribute("class", "buttonRoom3D");
+    btn.style.gridArea = "6 / 2 / 7 / 3";
+    var t = document.createTextNode(nomSalle);     
+    titreModale.appendChild(t);
+    titreModale.setAttribute("class", "nameRoom");
+    titreModale.setAttribute("id", titre);
+    titreModale.style.gridArea = "1 / 2 / 2 / 3";
+    titreModale.style.textAlign = "center";
+
+    var nameButton = document.createTextNode("ENTER 3D");
+    // modaleRoom3D.appendChild(t);   
+    btn.appendChild(nameButton);
     btn.onclick = function(){salle(modele3d, bakedJpg, linkAR); closeIcon.style.display = "block"; infoIcon.style.display= "block";};         
-    document.getElementById(area).appendChild(btn);
+    // document.getElementById(area).appendChild(btn);
+    document.getElementById("modaleRoom3D").appendChild(titreModale);
+    document.getElementById("modaleRoom3D").appendChild(btn);
     btn.style.display = "none";
+    titreModale.style.display = "none";
 }
-
-
 
 export function removeCanvas(){
     const test = document.getElementById("canvas");

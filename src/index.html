@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
 
     </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <body id="body" data-scroll-container>
 
         
@@ -156,7 +158,9 @@
                  </svg>
             </div>
 
-            <div class="parent" id="parentDiv" >
+            <div class="parent" id="parentDiv">
+
+                <div id="modaleRoom3D" style=""></div>
                 <!-- Belier / Concretion -->
                 <div class="div1" id="belier">
                     <p id="belierPoint">📍</p>
@@ -165,21 +169,20 @@
 
                 <!-- Plage / Soleil / Anubis  -->
                 <div class="div2" id="plage">
-                    <p id="anubisPoint">📍</p>
-                    <p id="plagePoint">📍</p>
-                    <p id="soleilPoint">📍</p>
-
+                    <p id="anubisPoint" class="pointRoom">📍</p>
+                    <p id="plagePoint" class="pointRoom">📍</p>
+                    <p id="soleilPoint" class="pointRoom">📍</p>
                 </div>
 
                 <!-- Cellier -->
                 <div class="div3" id="cellier">
-                    <p id="cellierPoint">📍</p>
+                    <p id="cellierPoint" class="pointRoom">📍</p>
                 </div>
 
                 <!-- Boutik / Ossa Arrida -->
                 <div class="div4" id="boutik">
-                    <p id="boutikPoint">📍</p>
-                    <p id="ossaPoint">📍</p>
+                    <p id="boutikPoint" class="pointRoom">📍</p>
+                    <p id="ossaPoint" class="pointRoom">📍</p>
                 </div>
 
             </div>

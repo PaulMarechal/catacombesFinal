@@ -58,13 +58,14 @@ p{
 button{
     height: 3em; 
     background-color: #ffffff;
-    box-shadow: 0px 0px 61px 3px rgba(0,0,0,0.75);
+    /* box-shadow: 0px 0px 61px 3px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 0px 61px 3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 61px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 61px 3px rgba(0,0,0,0.75); */
     border: 0.5px solid #dbdbdb;
     border-radius: 30px;
     padding: 5px 10px; 
     font-size: 15px;
+    border: 0.2px #303030 solid;
 }
 
 #catacombesTitle{
@@ -294,7 +295,7 @@ button{
     margin-left: 28%;
 }
 
-#belierDiv, #concretionDiv{
+/* #belierDiv, #concretionDiv{
     grid-area: 11 / 6 / 12 / 7;
 }
 
@@ -312,8 +313,25 @@ button{
 
 #boutikDiv, #ossaDiv{
     grid-area: 9 / 7 / 10 / 8;
-}
+} */
 
+#boutikDiv, #ossaDiv, 
+#anubisDiv, #plageDiv, 
+#soleilDiv, #cellierDiv, 
+#belierDiv, #concretionDiv{
+    grid-area: 6 / 2 / 7 / 3;
+} 
+
+
+#modaleRoom3D{
+    grid-area: 4 / 9 / 10 / 12;
+    background: #fff;
+    border: 0.2px #303030 solid;
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-rows: repeat(6, 1fr);
+    border-radius: 10px; 
+}
 
 .parentTextExplications {
     display: grid;
