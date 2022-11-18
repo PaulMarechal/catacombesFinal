@@ -89,6 +89,8 @@ export function catasRooms(){
 function hideOthers(){
     var buttonRoom3D = document.getElementsByClassName("buttonRoom3D");
     var nameRoom = document.getElementsByClassName("nameRoom")
+    const modaleRoom3D = document.getElementById("modaleRoom3D");
+    modaleRoom3D.style.display = "block"
 
     for(var i = 0; i<buttonRoom3D.length; i++){
         buttonRoom3D[i].style.display = "none"

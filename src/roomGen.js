@@ -290,26 +290,32 @@ export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, link
     var mapParent = document.getElementById("parentDiv");
     const closeIcon = document.getElementById("closeIcon");
     const infoIcon = document.getElementById("infoIcon");
+    const buttonEnter3D = document.getElementsByClassName("buttonRoom3D");
 
     btn.setAttribute("id", id);
     btn.setAttribute("class", "buttonRoom3D");
-    btn.style.gridArea = "6 / 2 / 7 / 3";
     var t = document.createTextNode(nomSalle);     
     titreModale.appendChild(t);
     titreModale.setAttribute("class", "nameRoom");
     titreModale.setAttribute("id", titre);
     titreModale.style.gridArea = "1 / 2 / 2 / 3";
+    titreModale.style.marginTop = "0.5em"
+    // btn.style.gridArea = "6 / 2 / 7 / 3";
+    btn.style.marginTop = "90%"
+    btn.style.marginLeft = "auto"
+    btn.style.marginRight = "auto"
     titreModale.style.textAlign = "center";
-
     var nameButton = document.createTextNode("ENTER 3D");
     // modaleRoom3D.appendChild(t);   
     btn.appendChild(nameButton);
+
     btn.onclick = function(){salle(modele3d, bakedJpg, linkAR); closeIcon.style.display = "block"; infoIcon.style.display= "block";};         
     // document.getElementById(area).appendChild(btn);
     document.getElementById("modaleRoom3D").appendChild(titreModale);
     document.getElementById("modaleRoom3D").appendChild(btn);
     btn.style.display = "none";
     titreModale.style.display = "none";
+    modaleRoom3D.style.display = "none";
 }
 
 export function removeCanvas(){
@@ -320,6 +326,7 @@ export function removeCanvas(){
     const closeIconInfo = document.getElementById("closeIconInfo");
     const arLink = document.getElementById("arLink");
     const closeIconCanvas = document.getElementById("closeIcon")
+    const modaleRoom3D = document.getElementById("modaleRoom3D")
     var loadingBar = document.querySelector(".loading-bar");
 
     infoIcon.addEventListener("click", function(){
@@ -334,6 +341,7 @@ export function removeCanvas(){
         test.remove()
         closeIcon.style.display = "none"
         infoIcon.style.display = "none"
+        modaleRoom3D.style.display = "none"
         vrButton.remove()
         loadingBar.classList.remove("ended")
         arLink.remove()

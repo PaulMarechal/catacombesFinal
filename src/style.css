@@ -333,6 +333,10 @@ button{
     border-radius: 10px; 
 }
 
+.buttonRoom3D{
+    grid-area: 6 / 2 / 7 / 3;
+}
+
 .parentTextExplications {
     display: grid;
     grid-template-columns: 0.1fr 0.5fr repeat(2, 1fr) 0.5fr 0.1fr;
