@@ -48,6 +48,7 @@ export function catasRooms(){
     let anubisPoint = document.getElementById("anubisPoint");
     let boutikPoint = document.getElementById("boutikPoint");
     let ossaPoint = document.getElementById("ossaPoint");
+    let modaleRoom = document.getElementById("modaleRoom3D")
     
     //Show button ( mouse enter )
     belierPoint.addEventListener("mouseenter",function(){hideOthers(), belierDiv.style.display="block", belierTitre.style.display="block"});
@@ -76,14 +77,14 @@ export function catasRooms(){
     // plageDiv.addEventListener("mouseleave",function(){setTimeout(plageDiv.style.display="none", 3000)});
     // cellierDiv.addEventListener("mouseleave",function(){setTimeout(cellierDiv.style.display="none", 3000)});
 
-    belierDiv.addEventListener("mouseleave",function(){belierDiv.style.display="none", belierTitre.style.display="none"});
-    plageDiv.addEventListener("mouseleave",function(){plageDiv.style.display="none", plageTitre.style.display="none"});
-    cellierDiv.addEventListener("mouseleave",function(){cellierDiv.style.display="none", cellierTitre.style.display="none"});
-    concretionDiv.addEventListener("mouseleave",function(){concretionDiv.style.display="none", concretionTitre.style.display="none"});
-    soleilDiv.addEventListener("mouseleave",function(){soleilDiv.style.display="none", soleilTitre.style.display="none"});
-    anubisDiv.addEventListener("mouseleave",function(){anubisDiv.style.display="none", anubisTitre.style.display="none"});
-    boutikDiv.addEventListener("mouseleave",function(){boutikDiv.style.display="none", boutikTitre.style.display="none"});
-    ossaDiv.addEventListener("mouseleave",function(){ossaDiv.style.display="none", ossaTitre.style.display="none"});
+    belierDiv.addEventListener("mouseleave",function(){belierDiv.style.display="none", belierTitre.style.display="none", modaleRoom.style.display="none"});
+    plageDiv.addEventListener("mouseleave",function(){plageDiv.style.display="none", plageTitre.style.display="none", modaleRoom.style.display="none"});
+    cellierDiv.addEventListener("mouseleave",function(){cellierDiv.style.display="none", cellierTitre.style.display="none", modaleRoom.style.display="none"});
+    concretionDiv.addEventListener("mouseleave",function(){concretionDiv.style.display="none", concretionTitre.style.display="none", modaleRoom.style.display="none"});
+    soleilDiv.addEventListener("mouseleave",function(){soleilDiv.style.display="none", soleilTitre.style.display="none", modaleRoom.style.display="none"});
+    anubisDiv.addEventListener("mouseleave",function(){anubisDiv.style.display="none", anubisTitre.style.display="none", modaleRoom.style.display="none"});
+    boutikDiv.addEventListener("mouseleave",function(){boutikDiv.style.display="none", boutikTitre.style.display="none", modaleRoom.style.display="none"});
+    ossaDiv.addEventListener("mouseleave",function(){ossaDiv.style.display="none", ossaTitre.style.display="none", modaleRoom.style.display="none"});
 }
 
 function hideOthers(){

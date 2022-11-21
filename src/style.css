@@ -362,6 +362,13 @@ button{
     z-index: 999;
 }
 
+
+#logoVR{
+    text-align: center; 
+    margin-left: 33%; 
+    margin-top: -9.5em;
+}
+
 #infobutton{
     display: none; 
     position: absolute;
@@ -391,6 +398,54 @@ button{
     margin-left: 80%;
 }
 
+/**** Locomotive scroll ***/
+/* test scroll */
+.c-direction-block_item.-one {
+    top: 18%;
+    transform: translateX(3vw) rotate(-8deg);
+}
+
+.c-direction-block_item.-two {
+    top: 20.5%;
+    transform: translateX(3vw) rotate(2deg);
+}
+  
+.c-direction-block_item.-three {
+    top: 23%;
+    transform: rotate(-1deg);
+}
+  
+.c-direction-block_item.-four {
+    top: 27%;
+    transform: translateX(0vw) rotate(-11deg);
+}
+  
+.c-direction-block_item.-five {
+    top: 28.5%;
+    transform: translateX(0vw) rotate(-7deg);
+}
+  
+.c-direction-block_item {
+    position: absolute;
+    font-size: 3vw;
+    white-space: nowrap;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+}
+  
+.c-direction-block_item span {
+    display: block;
+    background-color: #fff;
+    white-space: nowrap;
+    padding: 0 20px;
+}
+
+.mainTitleHeader{
+    text-align: center;
+}
+
+
 
 
 
@@ -401,20 +456,16 @@ button{
   and (max-device-width: 568px)
   and (orientation: landscape) {
 
-    #body{
-        text-align: center!important;
-    }
     .parentTextExplications{
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: 0 repeat(2, 1fr) 0.4fr repeat(2, 1fr) 0.2fr repeat(2, 1fr) 0.2fr repeat(2, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        margin-top: -105%;
+        margin-top: -150%;
         /* margin-left: 0%; */
         /* width: 84em; */
         text-align: justify;
-
     }
 
     #firstText{
@@ -436,16 +487,25 @@ button{
     .textExplication2{
         margin-top: 0.2em;
         grid-area: 8 / 2 / 10 / 8;
-        margin-right: 3em;
+        /* margin-right: 3em; */
     }
 
     .textExplication3{
         grid-area: 11 / 2 / 13 / 8;
+        margin-top: 0.2em;
+        margin-bottom: -2em;
     }
 
     .parent{
         text-align: center;
         /* margin-left: 7%; */
+        margin-top: -6em;
+    }
+
+    .icon-tabler-cardboards, .icon-tabler-augmented-reality, 
+    .icon-tabler-augmented-reality-2{
+        display: none;
+
     }
 
     #catacombesTitle{
@@ -462,7 +522,15 @@ button{
         width: 90%;
         text-align: center;
         height: 400px;
-        margin-bottom: 3em;
+        /* margin-bottom: 3em; */
+        margin-top: -6em
+    }
+
+    #parentDiv{
+        width: 760px;
+        height: 460px;
+        grid-template-columns: repeat(12, 63.33px);
+        grid-template-rows: repeat(12, 38.33px);
     }
 
     #canvas, #canvasDiv{
@@ -493,45 +561,223 @@ button{
         top: 92%!important;
         left: 45%;
     }
+
+    .mainTitleFirst, 
+    .mainTitleSecond{
+        font-size: 16vw; 
+        /* text-align: initial!important; */
+        margin-left: -1.3em!important;
+    }
+
+    .mainTitleHeader{
+        text-align: left!important;
+        margin-left: 11.5em;
+        margin-top: -0.8em;
+    }
+
+    #logoVR{
+        margin-top: -8em;
+        margin-left: 4em;
+    }
+
+    .c-direction-block_item.-one{
+        top: 10%;
+        font-size: 6vw;
+        margin-left: 1.2em!important;
+        z-index: 999;
+        transform: translateX(3vw) rotate(-2deg);
+    }
+
+    .c-direction-block_item.-two{
+        font-size: 6vw;
+        top: 11.7%;
+        margin-left: 1.9em!important;
+    }
+
+    .c-direction-block_item.-three{
+        top: 13.2%;
+        font-size: 6vw;
+        margin-left: 0.6em!important;
+    }
+
+    .c-direction-block_item.-four{
+        top: 16.2%;
+        font-size: 6vw;
+        margin-left: 7.5em!important;
+        transform: translateX(0vw) rotate(-2deg)
+    }
+
+    .c-direction-block_item.-five{
+        top: 18%;
+        font-size: 6vw; 
+        margin-left: 10em!important;
+    }
 }
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (orientation: portrait) {
+
+    body{
+        width: 100%;
+    }
+    .mainTitleFirst, .mainTitleSecond{
+        font-size: 21vw;
+        margin-left: 0.1em;
+    }
+    .mainTitleSecond{
+        margin-right: -1.05em;
+    }
+
+    #logoVR{
+        text-align: right;
+        margin-left: 20em!important;
+        /* margin-top: -1em; */
+        margin-top: -7em;
+        /* margin-left: 2em; */
+    }
+
+    .icon-tabler-badge-vr{
+        width: 60px;
+    }
+
+    .c-direction-block_item {
+        position: absolute;
+        text-align: center;
+        font-size: 5.5vw;
+        margin-top: 2em;
+
+    }
+
+    .c-direction-block_item.-one{
+        top: 6.3%;
+        /* font-size: 5vw; */
+        z-index: 999;
+        margin-left: -0em!important;
+        transform: translateX(3vw) rotate(-2deg);
+
+    }
+
+    .c-direction-block_item.-two{
+        top: 8.1%;
+        margin-left: 0.2em!important;
+        z-index: 999;
+    }
+
+    .c-direction-block_item.-three{
+        top: 9.2%;
+        margin-left: -0.3em!important;
+        z-index: 999;
+    }
+
+    .c-direction-block_item.-four{
+        top: 11.5%;
+        margin-left: 4em!important;
+        transform: translateX(0vw) rotate(-3deg)
+
+    }
+
+    .c-direction-block_item.-five{
+        top: 13%;
+        margin-left: 5em!important;
+        transform: translateX(0vw) rotate(2deg);
+    }
+
+    #parentDiv{
+        width: 389px;
+        height: 237px;
+        grid-template-columns: repeat(12, 33px);
+        grid-template-rows: repeat(12, 19.75px);
+    }
+
+    .parentTextExplications{
+        margin-top: -38em;
+    }
+
+    .parentTextExplications{
+        display: block;
+        grid-template-columns: 0.1fr 1fr 0.1fr;
+        grid-template-rows: 1fr 0.1fr 1fr 0.1fr 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        padding: 0px 20px;
+    }
+
+    .textExplication1{
+        grid-area: 1 / 2 / 2 / 3!important;
+    }
+
+    .textExplication2{
+        grid-area: 3 / 2 / 4 / 3!important;
+    }
+
+    .textExplication3{
+        grid-area: 5 / 2 / 6 / 3!important;
+        height: 530px!important;
+        margin-top: 3em;
+        margin-bottom: 2em;
+    }
+
+    .tablerIcone{
+        display: none;
+    }
+
+    #modaleRoom3D{
+        height: 170px;
+    }
+
+    button{
+        height: 3em;
+        width: 6em;
+    }
+
+    #canvas, #canvasDiv{
+        width: 75%!important;
+        height: 47%!important;
+        position: fixed;
+    }
+
+    #closeIcon{
+        right: 23%;
+        top: 51%;
+        position: fixed;
+    }
+
+    #infoIcon{
+        right: 21.98%;
+        top: 56%;
+        position: fixed;
+    }
+
+    .loading-bar{
+        top: 74%;
+        width: 74%;
+    }
+    .loadingPercent{
+        top: 70%;
+        margin-left: -2.4em;
+    }
+
+    #shape2{
+        margin-left: 0%;
+        top: 5%;
+    }
+
+    #imgHelp{
+        /* top: 80%; */
+        width: 67%;
+        margin-left: -5em;
+        margin-bottom: -54em;
+    }
+
+    #closeIconInfo{
+        /* margin-bottom: -50em; */
+    }
+     
+  }
 
 
-/* test scroll */
-.c-direction-block_item.-one {
-    top: 18%;
-    transform: translateX(3vw) rotate(-8deg);
-  }
-  .c-direction-block_item.-two {
-    top: 20.5%;
-    transform: translateX(3vw) rotate(2deg);
-  }
-  .c-direction-block_item.-three {
-    top: 23%;
-    transform: rotate(-1deg);
-  }
-  .c-direction-block_item.-four {
-    top: 27%;
-    transform: translateX(0vw) rotate(-11deg);
-  }
-  .c-direction-block_item.-five {
-    top: 28.5%;
-    transform: translateX(0vw) rotate(-7deg);
-  }
 
-  .c-direction-block_item {
-    position: absolute;
-    font-size: 3vw;
-    white-space: nowrap;
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 1;
-  }
-  .c-direction-block_item span {
-    display: block;
-    background-color: #fff;
-    white-space: nowrap;
-    padding: 0 20px;
-  }
 
 
