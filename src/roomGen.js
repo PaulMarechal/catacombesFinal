@@ -117,7 +117,6 @@ export function salle(modele3d, bakedJpg, linkAR){
     /**
     * Textures
     */
-    // const bakedTexture = textureLoader.load('baked.jpg')
     const bakedTexture = textureLoader.load(bakedJpg)
     bakedTexture.flipY = false
     bakedTexture.encoding = THREE.sRGBEncoding
@@ -133,10 +132,8 @@ export function salle(modele3d, bakedJpg, linkAR){
     */
     gltfLoader.load(
         modele3d, 
-        (gltf) =>
-        {
+        (gltf) => {
             const bakedMesh = gltf.scene.children.find(child => child.name === 'baked')
-
             scene.add(gltf.scene)
         }
     )
@@ -149,8 +146,7 @@ export function salle(modele3d, bakedJpg, linkAR){
         height: window.innerHeight
     }
 
-    window.addEventListener('resize', () =>
-    {
+    window.addEventListener('resize', () => {
         // Update sizes
         sizes.width = window.innerWidth
         sizes.height = window.innerHeight
@@ -218,7 +214,6 @@ export function salle(modele3d, bakedJpg, linkAR){
     /**
      * Teleport VR 
      */
-    
     const teleportVR = new TeleportVR(scene, camera);
     const controllerModelFactory = new XRControllerModelFactory();  
 
@@ -239,17 +234,6 @@ export function salle(modele3d, bakedJpg, linkAR){
     })
 
     displayAR.arDisplay(linkAR);
-
-
-    // test 
-    // gui.add(cone.rotation, 'x').min(-60).max(60).step(0.01).name('camera x')
-    // gui.add(cone.rotation, 'y').min(-60).max(60).step(0.01).name('Plane2 y')
-    // gui.add(cone.rotation, 'z').min(-60).max(60).step(0.01).name('Plane2 z')
-    // gui.add(cone.position, 'x').min(-60).max(60).step(0.01).name('position  x')
-    // gui.add(cone.position, 'y').min(-60).max(60).step(0.01).name('position y')
-    // gui.add(cone.position, 'z').min(-60).max(60).step(0.01).name('position z')
-    // fin test 
-
 
     removeCanvas();
 
@@ -300,17 +284,14 @@ export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, link
     titreModale.setAttribute("id", titre);
     titreModale.style.gridArea = "1 / 2 / 2 / 3";
     titreModale.style.marginTop = "0.5em"
-    // btn.style.gridArea = "6 / 2 / 7 / 3";
     btn.style.marginTop = "90%"
     btn.style.marginLeft = "auto"
     btn.style.marginRight = "auto"
     titreModale.style.textAlign = "center";
-    var nameButton = document.createTextNode("ENTER 3D");
-    // modaleRoom3D.appendChild(t);   
+    var nameButton = document.createTextNode("ENTER 3D");  
     btn.appendChild(nameButton);
 
     btn.onclick = function(){salle(modele3d, bakedJpg, linkAR); closeIcon.style.display = "block"; infoIcon.style.display= "block";};         
-    // document.getElementById(area).appendChild(btn);
     document.getElementById("modaleRoom3D").appendChild(titreModale);
     document.getElementById("modaleRoom3D").appendChild(btn);
     btn.style.display = "none";
