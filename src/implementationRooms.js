@@ -3,7 +3,7 @@ import jquery from 'jquery';
 
 export function catasRooms(){
     // 3D Canvas
-    roomGen.displaySalle("Bélier", "belierDiv", "belierTitre", "./Belier/portal.glb", "./Belier/baked.jpg", "parentDiv", "./Belier/belier.usdz");
+    roomGen.displaySalle("Bélier", "belierDiv", "belierTitre", "./Belier/portal.glb", "./Belier/baked.jpg", "parentDiv", "./Belier/portal.usdz");
     roomGen.displaySalle("Concrétion", "concretionDiv", "concretionTitre", "./Concretion/concretion.glb", "./Concretion/concretion.jpg", "parentDiv", "./Concretion/concretion.usdz");
     roomGen.displaySalle("La Plage", "plageDiv", "plageTitre", "./Plage/plage.glb", "./Plage/La_Plage.jpg", "parentDiv", "./Plage/plage.usdz");
     roomGen.displaySalle("Cellier", "cellierDiv", "cellierTitre", "./Cellier/cellier.glb", "./Cellier/Cellier.jpg", "parentDiv", "./Cellier/cellier.usdz");
@@ -11,6 +11,11 @@ export function catasRooms(){
     roomGen.displaySalle("Anubis (Chaumière)", "anubisDiv", "anubisTitre", "./Anubis/Anubis.glb", "./Anubis/Anubis.jpg", "parentDiv", "./Anubis/Anubis.usdz");
     roomGen.displaySalle("Boutik", "boutikDiv", "boutikTitre", "./Boutik/Boutik.glb", "./Boutik/Boutik.jpg", "parentDiv", "./Boutik/Boutik.usdz");
     roomGen.displaySalle("Ossa Arida", "ossaDiv", "ossaTitre", "./Ossa/Ossa.glb", "./Ossa/Ossa.jpg", "parentDiv", "./Ossa/Ossa.usdz");
+    roomGen.displaySalle("Cabanis", "cabanisDiv", "cabanisTitre", "./Cabanis/Cabanis.glb", "./Cabanis/Cabanis.jpg", "parentDiv", "./Cabanis/Cabanis.usdz");
+    roomGen.displaySalle("Kraken", "krakenDiv", "krakenTitre", "./Kraken/Kraken.glb", "./Kraken/Kraken.jpg", "parentDiv", "./Kraken/Kraken.usdz");
+    roomGen.displaySalle("Salle du Dragon", "dragonDiv", "dragonTitre", "./SalleDuDragon/SalleDuDragon.glb", "./SalleDuDragon/SalleDuDragon.jpg", "parentDiv", "./SalleDuDragon/SalleDuDragon.usdz");
+    roomGen.displaySalle("Cabinet Mineralogique", "cabinetDiv", "cabinetTitre", "./CabinetMineralogique/CabinetMineralogique.glb", "./CabinetMineralogique/CabinetMineralogique.jpg", "parentDiv", "./CabinetMineralogique/CabinetMineralogique.usdz");
+    roomGen.displaySalle("Cabi-Bis", "cabiBisDiv", "cabiBisTitre", "./Cabi-Bis/Cabi-Bis.glb", "./Cabi-Bis/Cabi-Bis.jpg", "parentDiv", "./Cabi-Bis/Cabi-Bis.usdz");
 
 
     // Selectors ( select the IDs of the page )
@@ -38,7 +43,20 @@ export function catasRooms(){
     let ossaDiv = document.getElementById("ossaDiv");
     let ossaTitre = document.getElementById("ossaTitre");
 
-    
+    let cabanisDiv = document.getElementById("cabanisDiv");
+    let cabanisTitre = document.getElementById("cabanisTitre");
+
+    let krakenDiv = document.getElementById("krakenDiv");
+    let krakenTitre = document.getElementById("krakenTitre");
+
+    let dragonDiv = document.getElementById("dragonDiv");
+    let dragonTitre = document.getElementById("dragonTitre");
+
+    let cabinetDiv = document.getElementById("cabinetDiv");
+    let cabinetTitre = document.getElementById("cabinetTitre");
+
+    let cabiBisDiv = document.getElementById("cabiBisDiv");
+    let cabiBisTitre = document.getElementById("cabiBisTitre");
 
     let belierPoint = document.getElementById("belierPoint");
     let plagePoint = document.getElementById("plagePoint");
@@ -48,6 +66,11 @@ export function catasRooms(){
     let anubisPoint = document.getElementById("anubisPoint");
     let boutikPoint = document.getElementById("boutikPoint");
     let ossaPoint = document.getElementById("ossaPoint");
+    let cabanisPoint = document.getElementById("cabanisPoint");
+    let krakenPoint = document.getElementById("krakenPoint");
+    let dragonPoint = document.getElementById("dragonPoint");
+    let cabinetPoint = document.getElementById("cabinetPoint");
+    let cabiBisPoint = document.getElementById("cabiBisPoint");
     let modaleRoom = document.getElementById("modaleRoom3D")
     
     //Show button ( mouse enter )
@@ -59,6 +82,11 @@ export function catasRooms(){
     anubisPoint.addEventListener("mouseenter",function(){hideOthers(), anubisDiv.style.display="block", anubisTitre.style.display="block"});
     boutikPoint.addEventListener("mouseenter",function(){hideOthers(), boutikDiv.style.display="block", boutikTitre.style.display="block"});
     ossaPoint.addEventListener("mouseenter",function(){hideOthers(), ossaDiv.style.display="block", ossaTitre.style.display="block"});
+    cabanisPoint.addEventListener("mouseenter",function(){hideOthers(), cabanisDiv.style.display="block", cabanisTitre.style.display="block"});
+    krakenPoint.addEventListener("mouseenter",function(){hideOthers(), krakenDiv.style.display="block", krakenTitre.style.display="block"});
+    dragonPoint.addEventListener("mouseenter",function(){hideOthers(), dragonDiv.style.display="block", dragonTitre.style.display="block"});
+    cabinetPoint.addEventListener("mouseenter",function(){hideOthers(), cabinetDiv.style.display="block", cabinetTitre.style.display="block"});
+    cabiBisPoint.addEventListener("mouseenter",function(){hideOthers(), cabiBisDiv.style.display="block", cabiBisTitre.style.display="block"});
 
 
     // onclick for mobile version
@@ -70,6 +98,11 @@ export function catasRooms(){
     anubisPoint.addEventListener('click', event => { anubisDiv.style.display="block" });
     boutikPoint.addEventListener('click', event => { boutikDiv.style.display="block" });
     ossaPoint.addEventListener('click', event => { ossaDiv.style.display="block" });
+    cabanisPoint.addEventListener('click', event => { cabanisDiv.style.display="block" });
+    krakenPoint.addEventListener('click', event => { krakenDiv.style.display="block" });
+    dragonPoint.addEventListener('click', event => { dragonDiv.style.display="block" });
+    cabinetPoint.addEventListener('click', event => { cabinetDiv.style.display="block" });
+    cabiBisPoint.addEventListener('click', event => { cabiBisDiv.style.display="block" });
 
 
     // Remove button ( mouse leave )
@@ -85,6 +118,11 @@ export function catasRooms(){
     anubisDiv.addEventListener("mouseleave",function(){anubisDiv.style.display="none", anubisTitre.style.display="none", modaleRoom.style.display="none"});
     boutikDiv.addEventListener("mouseleave",function(){boutikDiv.style.display="none", boutikTitre.style.display="none", modaleRoom.style.display="none"});
     ossaDiv.addEventListener("mouseleave",function(){ossaDiv.style.display="none", ossaTitre.style.display="none", modaleRoom.style.display="none"});
+    cabanisDiv.addEventListener("mouseleave",function(){cabanisDiv.style.display="none", cabanisTitre.style.display="none", modaleRoom.style.display="none"});
+    krakenDiv.addEventListener("mouseleave",function(){krakenDiv.style.display="none", krakenTitre.style.display="none", modaleRoom.style.display="none"});
+    dragonDiv.addEventListener("mouseleave",function(){dragonDiv.style.display="none", dragonTitre.style.display="none", modaleRoom.style.display="none"});
+    cabinetDiv.addEventListener("mouseleave",function(){cabinetDiv.style.display="none", cabinetTitre.style.display="none", modaleRoom.style.display="none"});
+    cabiBisDiv.addEventListener("mouseleave",function(){cabiBisDiv.style.display="none", cabiBisTitre.style.display="none", modaleRoom.style.display="none"});
 }
 
 function hideOthers(){

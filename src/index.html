@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AEROBAY</title>
+        <meta name="keywords" content="Catacombes, Paris, Ktas, katas, catas, catacombes illegales, catacombes interdites, catacombes paris, carrieres, grs, GRS, explo, three.js, developper, web, plans catacombes, VR, Three.js, Three, JS, HTML, CSS, AR, Javascript, XR, Oculus quest 2, realite virtuelle">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
+        <meta name="description" content="Découverte des Catacombes interdites en 3D / VR / AR ">
+        <meta itemprop="name" content="Découverte des Catacombes Interdites sous Paris">
+        <meta itemprop="description" content="Découverte des Catacombes interdites en 3D / VR / AR ">
+        <meta property="og:url" content="https://catacombes.xyz">
+        <meta property="og:title" content="Découverte des Catacombes interdites en 3D / VR / AR ">
+        <meta property="og:description" content="Découvrir les catacombes interdites sous Paris en realité augmenté et virtuelle">
+        <meta property="og:image" content="https://paulmarechal.xyz/test/assets/images/1200x630_catacombes">
+        <meta itemprop="image" content="https://paulmarechal.xyz/test/assets/images/1200x630_catacombes">
+        <meta name="apple-mobile-web-app-title" content="Catacombes interdites">
+        <meta name="application-name" content="Visitez les catacombes interdites en 3D / VR / AR">
+        <meta name="author" content="Paul Marechal">
+        <link rel="alternate" hreflang="fr" href="https://catacombes.xyz">
+
 
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -12,10 +26,144 @@
     <body id="body" data-scroll-container>
 
         
-        <div data-scroll-section style="margin-bottom: 3em; margin-top: 3em;">
+        <div data-scroll-section style="margin-bottom: 3em;">
 
+            <!-- test -->
+
+            <div class="parentMain">
+                <!-- Main title -->
+                <div class="div11" style="border: #b1b1b1 solid 0.2px; padding: 10px 20px; width: 108%;" data-scroll data-scroll-direction="horizontal" data-scroll-speed="4">
+                    <h2 class="mainTitleFirst" style="margin-left: 1.2em">catacombes</h2>
+                    <h3 class="mainTitleSecond" style="margin-left: 1.45em"> unofficial</h3>
+                    <div id="logoVR" style="">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-badge-vr" width="60" height="60" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                            <path d="M14 12h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6m3 0l-2 -3"></path>
+                            <path d="M7 9l2 6l2 -6"></path>
+                         </svg>
+                    </div>
+                </div>
+
+                <div class="div22" style="border: #dbdbdb solid 0.1px; width: 108%; margin-left: 2.7em;" data-scroll data-scroll-direction="horizontal" data-scroll-speed="2"> </div>
+
+                <div class="div33" style="border: #dbdbdb solid 0.1px; margin-right: 5em;" data-scroll data-scroll-direction="horizontal" data-scroll-speed="17"> </div>
+
+                <div class="div44" style="border: #dbdbdb solid 0.1px; margin-left: 5em;" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-17"> </div>
+
+                <div class="div55" style="border: #dbdbdb solid 0.1px; width: 100%; margin-left: -20.3em" data-scroll data-scroll-direction="horizontal" data-scroll-speed="12"> </div>
+
+                <div class="div66" style="border: #dbdbdb solid 0.1px; font-size: 2vw; padding: 5px 20px; text-align: end; font-family: 'Bebas Neue', cursive;text-transform: uppercase; width: 94%; margin-left: 11.3em" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-12">
+                    <h3>" Il n'est pas de penseur qui n'ait </br>contemplé les magnificences d'en bas "</h3>
+                    <h3 style="margin-top: 15px;">les Misérables</h3>
+                    <h3>Victor Hugo</h3>
+                </div>
+
+                <!-- Img first page -->
+                <div class="div77" class="mainTitleFirst imageBackground" style="border: #b1b1b1 solid 0.2px; border-radius: 150px; margin: 30px 50px;" data-scroll data-scroll-direction="vertical" data-scroll-speed="12"> 
+                    <!-- <img class="" style="max-width: 100%; max-height: 100%; display: block" src="assets/Images/pc.png" alt="Image de la petite ceinture - Paris"> -->
+                </div>
+            </div>
+
+
+
+            <div data-scroll data-scroll-direction="vertical" data-scroll-speed="14" style="margin-top: -5em;">
+                <div class="parent" id="parentDiv">
+
+                    <div id="modaleRoom3D"></div>
+    
+                    <!-- Belier / Concretion -->
+                    <div class="div1" id="belier">
+                        <div class="parentMapping">
+                            <p id="belierPoint">📍</p>
+                            <p id="concretionPoint">📍</p>
+                        </div>
+                    </div>
+    
+                    <!-- Plage / Soleil / Anubis  -->
+                    <div class="div2" id="plage">
+                        <div class="parentMapping">
+                            <p id="anubisPoint" class="pointRoom">📍</p>
+                            <p id="plagePoint" class="pointRoom">📍</p>
+                            <p id="soleilPoint" class="pointRoom">📍</p>
+                        </div>
+                    </div>
+    
+                    <!-- Cellier -->
+                    <div class="div3" id="cellier">
+                        <div class="parentMapping">
+                            <p id="cellierPoint" class="pointRoom">📍</p>
+                        </div>
+                    </div>
+    
+                    <!-- Boutik / Ossa Arrida -->
+                    <div class="div4" id="boutik">
+                        <div class="parentMapping">
+                            <p id="krakenPoint" class="pointRoom">📍</p>
+                            <p id="boutikPoint" class="pointRoom">📍</p>
+                            <p id="ossaPoint" class="pointRoom">📍</p>
+                            <p id="cabanisPoint" class="pointRoom">📍</p>
+                            <p id="dragonPoint" class="pointRoom">📍</p>
+                            <p id="cabiBisPoint" class="pointRoom">📍</p>
+                        </div>
+                    </div>
+
+                    <div class="div5" id="cabinet">
+                        <div class="parentMapping">
+                            <p id="cabinetPoint" class="pointRoom">📍</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div class="parentTextExplications">
+
+                <!-- History text 1 -->
+                <div class="textExplication1 textExplication" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-20" >
+                    <p>L'histoire des carrières de Paris commence dès le 1er siècle avec la création de carrières à ciel ouvert dans l'actuel XIIIe arrondissement de Paris ou sous l'Arène de Lutèce pour les plus connus ( <a style="text-decoration: none; color: #000; cursor: pointer;" href="https://www.persee.fr/doc/bulmo_0007-473x_1966_num_124_2_7689">Plus d'informations <b>ici</b></a> )</p>
+                    <p>À partir du XIVe siècle, les premières carrières souterraines font leurs appartitions. Elles permettent d'extraire de la roche qui sert ensuite à l'édification du Louvre ou de Notre-Dame de Paris par exemple. Au cours du XVIe siècle, suite</p>
+                    <p>à de nombreux incidents et aussi dans le but d'améliorer la production, une nouvelle méthode appelée "extraction par hagues et bourrage" est mis au point dans les carrières du faubourg Saint-Jacques. L'histoire des Catacombes de Paris remonte </p>
+                    <p>au XVIIIe siècle, lorsque surviennent de graves problèmes de salubrité dans les rues de Paris, en particulier dans le secteur des Halles et de la fontaine des Saint-Innocents. La décision est donc prise de transférer leurs contenus dans les anciennes carrières de Paris.</p> 
+                    <p>Ils choisissent donc de les placer dans un lieu facile d'accès et ( à l'époque ) en dehors de Paris... Les carrières de la Tombe-Issoire qui ne représentent qu'une petite partie des tunnels présents sous la ville.</p>
+                </div>
+
+                <!-- History text 2 -->
+                <div class="textExplication2 textExplication" data-scroll data-scroll-direction="horizontal" data-scroll-speed="45" style="margin-top: 3%;">        
+                    <p>Cette tâche est confiée à Charles-Axel Guillaumot, inspecteur général des carrières ( IGC ). Hasard ou fatalité le jour même de sa prise de poste, un effondrement d'une extrême gravité se produit rue d'Enfert ( actuel Boulevard Saint-Jacques ). Une panique générale envahit la ville, un gouffre vient d'engloutir </p>
+                    <p>trois cents mètres de rue, des bâtiments ont sombré dans une excavation de près de quarante mètres. Le plus ironique sur les récits d'époque est le fait que les pierres ayant servi à construire Notre-Dame proviennent des carrières de la rue d'Enfert. Il est l'homme </p>
+                    <p>qui qui sauva Paris de l'effondrement grace à ses travaux de consolidations des anciennes carrières. L'IGC fut fondé sous le régne de Louis XIV dans le but de consolider les anciennes carrières suite à de graves </p>
+                    <p>effondrements au cours du XVIIIe. Les cimetières sont à l'époque en pleins paris et sont un lieu de promenade. Mais faute d'entretiens certains pants de murs s'effondrent sur la rue libérant les dépouilles qu'ils contiennent. Les premières évacuations </p>
+                    <p>débutent à la fin du XVIIIe siècle et débutent par le cimetière des Saints-Innocents ( Paris 1er ). Les ossements déplacés de nuits pour éviter les problèmes avec la population et l'église.</p>
+                </div>
+
+                <!-- History text 3 -->
+                <div class="textExplication3 textExplication" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-65">
+                    <p>Les ossements sont ensuite déversés dans divers puits de service des catacombes ( sous l'actuel cimetière du Montparnasse ou Cimetière de Montrouge... ). Les carrières changent donc de nom pour prendre celui d'Ossuaire Municipal puis Catacombes pour reprendre le terme utilisé pour décrire la nécropole de Rome.</p> 
+                    <p>Dès 1809 les catacombes ouvrent au public et rencontrent rapidement un grand succès. À la suite d'un gigantesque incendie qui détruit les plans des carrières, Héricart de Thuny est nommé pour remettre à jour les plans restants et veiller à une bonne conservation</p>
+                    <p>des lieux. On retrouve encore aujourd'hui de nombreuses traces de son passage grace aux inscriptions HT ainsi que la date de consolidation des tunnels présents un peu partout dans les carrières. Aujourd'hui de nombreuses zones ne sont plus accessibles à la suite </p>
+                    <p>d'effondrements ou d'injection. Car de plus en plus d'injection ont lieu dans les tunnels dès qu'il y a une construction pour éviter tout risque de tassement de terrain ou d'effondrements. Vous allez donc découvrir sur la carte interactive des Carrières de Paris </p>
+                    <p>interdites et ainsi découvrir que sous les pavés se cache vraiment la plage... </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+            
+            <!-- fin test -->
             <!-- Main title -->
-            <div class="mainTitleHeader">
+            <!-- <div class="mainTitleHeader"> -->
                 <!-- <img id="catacombesTitle" src="assets/Images/catacombes.png" alt="CATACOMBES main site title"> -->
                 <!--
                 <div class="c-direction-block_item " style="margin-left: 5em;">
@@ -28,7 +176,8 @@
                 </div>
                 -->
 
-                <div>
+                
+                    <!--
                     <h2 class="mainTitleFirst">catacombes</h2>
                     <h3 class="mainTitleSecond"> unofficial</h3>
                     <div id="logoVR" style="">
@@ -39,11 +188,12 @@
                             <path d="M7 9l2 6l2 -6"></path>
                          </svg>
                     </div>
-                </div>
+                    -->
+                
 
 
 
-            </div>
+            <!-- </div> -->
             <!-- Test main title-->
             <!-- 
             <div style="height: 10%; text-align: left; background-color: rgb(182, 182, 182); padding: 3em 2em;">
@@ -53,6 +203,7 @@
             -->
 
             <!-- Quote -->
+            <!--
             <div class="c-direction-block" id="direction" style="height: 60em">
                 <div class="c-direction-block_item -one" style="margin-left: 5em">
                     <span class="c-direction-block_item_inner" data-scroll data-scroll-direction="horizontal" data-scroll-speed="6" data-scroll-target="#direction">
@@ -81,20 +232,14 @@
                     </span>
                 </div>
             </div>
+            -->
             
 
 
             <!-- Catacombs history -->
-            <div class="parentTextExplications">
-                <!-- History text 1 -->
-                <div class="textExplication1 textExplication" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-12" >
-                    <p>L'histoire des carrières de Paris commence dès le 1er siècle avec la création de carrières à ciel ouvert dans l'actuel XIIIe arrondissement de Paris ou sous l'Arène de Lutèce pour les plus connus ( <a style="text-decoration: none; color: #000; cursor: pointer;" href="https://www.persee.fr/doc/bulmo_0007-473x_1966_num_124_2_7689">Plus d'informations <b>ici</b></a> )</p>
-                    <p>À partir du XIVe siècle, les premières carrières souterraines font leurs appartitions. Elles permettent d'extraire de la roche qui sert ensuite à l'édification du Louvre ou de Notre-Dame de Paris par exemple. Au cours du XVIe siècle, suite</p>
-                    <p>à de nombreux incidents et aussi dans le but d'améliorer la production, une nouvelle méthode appelée "extraction par hagues et bourrage" est mis au point dans les carrières du faubourg Saint-Jacques. L'histoire des Catacombes de Paris remonte </p>
-                    <p>au XVIIIe siècle, lorsque surviennent de graves problèmes de salubrité dans les rues de Paris, en particulier dans le secteur des Halles et de la fontaine des Saint-Innocents. La décision est donc prise de transférer leurs contenus dans les anciennes carrières de Paris.</p> 
-                    <p>Ils choisissent donc de les placer dans un lieu facile d'accès et ( à l'époque ) en dehors de Paris... Les carrières de la Tombe-Issoire qui ne représentent qu'une petite partie des tunnels présents sous la ville.</p>
-                </div>
+            
 
+                <!--
                 <div style="text-align: end; margin-right: 10%">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cardboards" width="60" height="60" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -103,22 +248,11 @@
                         <circle cx="16" cy="12" r="1"></circle>
                      </svg>
                 </div>
+                -->
+
                 
 
-                <!-- gravures carrieres de paris ancienne  -->
-
-                <div id="shape1"></div>
-
-                <!-- History text 2 -->
-                <div class="textExplication2 textExplication" data-scroll data-scroll-direction="horizontal" data-scroll-speed="17">        
-                    <p>Cette tâche est confiée à Charles-Axel Guillaumot, inspecteur général des carrières ( IGC ). Hasard ou fatalité le jour même de sa prise de poste, un effondrement d'une extrême gravité se produit rue d'Enfert ( actuel Boulevard Saint-Jacques ). Une panique générale envahit la ville, un gouffre vient d'engloutir </p>
-                    <p>trois cents mètres de rue, des bâtiments ont sombré dans une excavation de près de quarante mètres. Le plus ironique sur les récits d'époque est le fait que les pierres ayant servi à construire Notre-Dame proviennent des carrières de la rue d'Enfert. Il est l'homme </p>
-                    <p>qui qui sauva Paris de l'effondrement grace à ses travaux de consolidations des anciennes carrières. L'IGC fut fondé sous le régne de Louis XIV dans le but de consolider les anciennes carrières suite à de graves </p>
-                    <p>effondrements au cours du XVIIIe. Les cimetières sont à l'époque en pleins paris et sont un lieu de promenade. Mais faute d'entretiens certains pants de murs s'effondrent sur la rue libérant les dépouilles qu'ils contiennent. Les premières évacuations </p>
-                    <p>débutent à la fin du XVIIIe siècle et débutent par le cimetière des Saints-Innocents ( Paris 1er ). Les ossements déplacés de nuits pour éviter les problèmes avec la population et l'église.</p>
-                </div>
-
-                <!-- Charles axel guillaumot, cimetiere des saints innocents  -->
+                <!--
                 <div style="grid-area: 5 / 4 / 6 / 5; text-align: end;" class="tablerIcone">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-augmented-reality" width="130" height="130" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -131,22 +265,10 @@
                         <path d="M8 10v4.5l4 2.5"></path>
                      </svg>
                 </div>
-
-                <!-- History text 3 -->
-                <div class="textExplication3 textExplication" data-scroll data-scroll-direction="vertical" data-scroll-speed="5">
-                    <p>Les ossements sont ensuite déversés dans divers puits de service des catacombes ( sous l'actuel cimetière du Montparnasse ou Cimetière de Montrouge... ). Les carrières changent donc de nom pour prendre celui d'Ossuaire Municipal puis Catacombes pour reprendre le terme utilisé pour décrire la nécropole de Rome.</p> 
-                    <p>Dès 1809 les catacombes ouvrent au public et rencontrent rapidement un grand succès. À la suite d'un gigantesque incendie qui détruit les plans des carrières, Héricart de Thuny est nommé pour remettre à jour les plans restants et veiller à une bonne conservation</p>
-                    <p>des lieux. On retrouve encore aujourd'hui de nombreuses traces de son passage grace aux inscriptions HT ainsi que la date de consolidation des tunnels présents un peu partout dans les carrières. Aujourd'hui de nombreuses zones ne sont plus accessibles à la suite </p>
-                    <p>d'effondrements ou d'injection. Car de plus en plus d'injection ont lieu dans les tunnels dès qu'il y a une construction pour éviter tout risque de tassement de terrain ou d'effondrements. Vous allez donc découvrir sur la carte interactive des Carrières de Paris </p>
-                    <p>interdites et ainsi découvrir que sous les pavés se cache vraiment la plage... </p>
-                </div>
-                
-
-                <!-- Mini plan ktas, hericart de thuny ( gravure ou signature ktas ) -->
-            </div>
-
+            -->
 
             <!-- <div class="loading-bar"></div> -->
+            <!--
             <div class="tablerIcone" style="text-align:start; margin-left: 1em;">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-augmented-reality-2" width="120" height="120" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -157,37 +279,8 @@
                     <path d="M11 4h2"></path>
                  </svg>
             </div>
+            -->
 
-            <div class="parent" id="parentDiv">
-
-                <div id="modaleRoom3D"></div>
-
-                <!-- Belier / Concretion -->
-                <div class="div1" id="belier">
-                    <p id="belierPoint">📍</p>
-                    <p id="concretionPoint">📍</p>
-                </div>
-
-                <!-- Plage / Soleil / Anubis  -->
-                <div class="div2" id="plage">
-                    <p id="anubisPoint" class="pointRoom">📍</p>
-                    <p id="plagePoint" class="pointRoom">📍</p>
-                    <p id="soleilPoint" class="pointRoom">📍</p>
-                </div>
-
-                <!-- Cellier -->
-                <div class="div3" id="cellier">
-                    <p id="cellierPoint" class="pointRoom">📍</p>
-                </div>
-
-                <!-- Boutik / Ossa Arrida -->
-                <div class="div4" id="boutik">
-                    <p id="boutikPoint" class="pointRoom">📍</p>
-                    <p id="ossaPoint" class="pointRoom">📍</p>
-                </div>
-
-            </div>
-        </div>
 
         <!-- Loading Bar -->
         <div class="loading-bar"></div>
