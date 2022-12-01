@@ -16,6 +16,8 @@ export function catasRooms(){
     roomGen.displaySalle("Salle du Dragon", "dragonDiv", "dragonTitre", "./SalleDuDragon/SalleDuDragon.glb", "./SalleDuDragon/SalleDuDragon.jpg", "parentDiv", "./SalleDuDragon/SalleDuDragon.usdz");
     roomGen.displaySalle("Cabinet Mineralogique", "cabinetDiv", "cabinetTitre", "./CabinetMineralogique/CabinetMineralogique.glb", "./CabinetMineralogique/CabinetMineralogique.jpg", "parentDiv", "./CabinetMineralogique/CabinetMineralogique.usdz");
     roomGen.displaySalle("Cabi-Bis", "cabiBisDiv", "cabiBisTitre", "./Cabi-Bis/Cabi-Bis.glb", "./Cabi-Bis/Cabi-Bis.jpg", "parentDiv", "./Cabi-Bis/Cabi-Bis.usdz");
+    roomGen.displaySalle("Cube", "cubeDiv", "cubeTitre", "./Cube/Cube.glb", "./Cube/Cube.jpg", "parentDiv", "./Cube/Cube.usdz");
+    roomGen.displaySalle("Faco", "facoDiv", "facoTitre", "./Faco/Faco.glb", "./Faco/Faco.jpg", "parentDiv", "./Faco/Faco.usdz");
 
 
     // Selectors ( select the IDs of the page )
@@ -58,6 +60,12 @@ export function catasRooms(){
     let cabiBisDiv = document.getElementById("cabiBisDiv");
     let cabiBisTitre = document.getElementById("cabiBisTitre");
 
+    let cubeDiv = document.getElementById("cubeDiv");
+    let cubeTitre = document.getElementById("cubeTitre");
+
+    let facoDiv = document.getElementById("facoDiv");
+    let facoTitre = document.getElementById("facoTitre");
+
     let belierPoint = document.getElementById("belierPoint");
     let plagePoint = document.getElementById("plagePoint");
     let cellierPoint = document.getElementById("cellierPoint");
@@ -71,6 +79,8 @@ export function catasRooms(){
     let dragonPoint = document.getElementById("dragonPoint");
     let cabinetPoint = document.getElementById("cabinetPoint");
     let cabiBisPoint = document.getElementById("cabiBisPoint");
+    let cubePoint = document.getElementById("cubePoint");
+    let facoPoint = document.getElementById("facoPoint");
     let modaleRoom = document.getElementById("modaleRoom3D")
     
     //Show button ( mouse enter )
@@ -87,6 +97,8 @@ export function catasRooms(){
     dragonPoint.addEventListener("mouseenter",function(){hideOthers(), dragonDiv.style.display="block", dragonTitre.style.display="block"});
     cabinetPoint.addEventListener("mouseenter",function(){hideOthers(), cabinetDiv.style.display="block", cabinetTitre.style.display="block"});
     cabiBisPoint.addEventListener("mouseenter",function(){hideOthers(), cabiBisDiv.style.display="block", cabiBisTitre.style.display="block"});
+    cubePoint.addEventListener("mouseenter",function(){hideOthers(), cubeDiv.style.display="block", cubeTitre.style.display="block"});
+    facoPoint.addEventListener("mouseenter",function(){hideOthers(), facoDiv.style.display="block", facoTitre.style.display="block"});
 
 
     // onclick for mobile version
@@ -103,6 +115,8 @@ export function catasRooms(){
     dragonPoint.addEventListener('click', event => { dragonDiv.style.display="block" });
     cabinetPoint.addEventListener('click', event => { cabinetDiv.style.display="block" });
     cabiBisPoint.addEventListener('click', event => { cabiBisDiv.style.display="block" });
+    cubePoint.addEventListener('click', event => { cubeDiv.style.display="block" });
+    facoPoint.addEventListener('click', event => { facoDiv.style.display="block" });
 
 
     // Remove button ( mouse leave )
@@ -123,6 +137,8 @@ export function catasRooms(){
     dragonDiv.addEventListener("mouseleave",function(){dragonDiv.style.display="none", dragonTitre.style.display="none", modaleRoom.style.display="none"});
     cabinetDiv.addEventListener("mouseleave",function(){cabinetDiv.style.display="none", cabinetTitre.style.display="none", modaleRoom.style.display="none"});
     cabiBisDiv.addEventListener("mouseleave",function(){cabiBisDiv.style.display="none", cabiBisTitre.style.display="none", modaleRoom.style.display="none"});
+    cubeDiv.addEventListener("mouseleave",function(){cubeDiv.style.display="none", cubeTitre.style.display="none", modaleRoom.style.display="none"});
+    facoDiv.addEventListener("mouseleave",function(){facoDiv.style.display="none", facoTitre.style.display="none", modaleRoom.style.display="none"});
 }
 
 function hideOthers(){
