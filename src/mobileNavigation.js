@@ -8,6 +8,7 @@ export function mobileOrNot(){
             var content = document.createTextNode("Pour Profiter pleinement de l'expérience merci de tourner votre téléphone en mode paysage ou de vous connecter depuis un ordinateur");
             newContent.appendChild(content);
             newContent.setAttribute("id", "informations")
+            newModale.setAttribute("id", "modaleMobilePortrait")
             newModale.appendChild(newContent)
 
             // newModale.style.display = 'fixed'; 
@@ -26,16 +27,20 @@ export function mobileOrNot(){
             newModale.style.left = "0";
             newModale.style.border = "solid #000 10px";
             newModale.style.textAlign = "justify";
+            newModale.style.boxShadow = "0px 0px 162px 40px rgba(41,41,41,0.75)";
+            newModale.style.webKitBoxShadow = "0px 0px 162px 40px rgba(41,41,41,0.75)";
+            newModale.style.mozBoxShadow = "0px 0px 162px 40px rgba(41,41,41,0.75)";
 
-
-
+            newModale.addEventListener('click', event => {
+                newModale.style.display = "none"
+            });
 
 
             var mainDoc = document.getElementById("parentMain");
             document.body.insertBefore(newModale, mainDoc);
 
             const infos = document.getElementById("informations")
-            infos.style.padding = "7em 1em"
+            infos.style.padding = "3em 1em"
             
         }
     } else {
