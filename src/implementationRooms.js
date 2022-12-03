@@ -15,16 +15,17 @@ export function catasRooms(){
         "kraken", 
         "cube", 
         "faco", 
-        "manoir"
+        "manoir", 
+        "belier", 
+        "dragon", 
+        "cabinet", 
+        "cabiBis"
     ];
 
     for(let a = 0; a < name.length; a++){
         roomName(name[a])
     }
-    // roomName("belier")
-    // roomName("dragon")
-    // roomName("cabinet")
-    // roomName("cabiBis")
+
 }
 
 function hideOthers(){
@@ -32,7 +33,7 @@ function hideOthers(){
     var nameRoom = document.getElementsByClassName("nameRoom")
     const modaleRoom3D = document.getElementById("modaleRoom3D");
     modaleRoom3D.style.display = "block"
-    
+
     for(var i = 0; i<buttonRoom3D.length; i++){
         buttonRoom3D[i].style.display = "none"
     }
