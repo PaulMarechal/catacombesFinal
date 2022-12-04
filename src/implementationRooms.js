@@ -19,20 +19,21 @@ export function catasRooms(){
         "belier", 
         "dragon", 
         "cabinet", 
-        "cabiBis"
+        "cabiBis", 
+        "philibert"
     ];
 
     for(let a = 0; a < name.length; a++){
-        roomName(name[a])
+        roomName(name[a]);
     }
 
 }
 
 function hideOthers(){
     var buttonRoom3D = document.getElementsByClassName("buttonRoom3D");
-    var nameRoom = document.getElementsByClassName("nameRoom")
+    var nameRoom = document.getElementsByClassName("nameRoom");
     const modaleRoom3D = document.getElementById("modaleRoom3D");
-    modaleRoom3D.style.display = "block"
+    modaleRoom3D.style.display = "block";
 
     for(var i = 0; i<buttonRoom3D.length; i++){
         buttonRoom3D[i].style.display = "none"
@@ -46,9 +47,9 @@ function hideOthers(){
 function mouseEventOnMap(name){
 
     // Concat
-    const nameDiv = name.concat('', "Div")
-    const roomName = name.concat('', "Titre")
-    const roomPoint = name.concat('', "Point")
+    const nameDiv = name.concat('', "Div");
+    const roomName = name.concat('', "Titre");
+    const roomPoint = name.concat('', "Point");
 
     // Selectors 
     let nameRoomDiv = document.getElementById(nameDiv);
@@ -72,16 +73,16 @@ function initRoom(name){
     const Name = (name+'').charAt(0).toUpperCase()+name.substr(1);
 
     // Concatenation 
-    const nameDiv = name.concat('', "Div")
-    const roomName = name.concat('', "Titre")
+    const nameDiv = name.concat('', "Div");
+    const roomName = name.concat('', "Titre");
 
     // Base path
-    const routeBase = "./" + Name + "/"
+    const routeBase = "./" + Name + "/" ;
 
     // Path for GLB, JPG, USDZ
-    const routeGlb = routeBase + Name.concat("", ".glb")
-    const routeJpg = routeBase + Name.concat('', ".jpg")
-    const routeUsdz = routeBase + Name.concat('', ".usdz")
+    const routeGlb = routeBase + Name.concat("", ".glb");
+    const routeJpg = routeBase + Name.concat('', ".jpg");
+    const routeUsdz = routeBase + Name.concat('', ".usdz");
 
     // To display the room
     roomGen.displaySalle(Name, nameDiv, roomName, routeGlb, routeJpg, "parentDiv", routeUsdz);

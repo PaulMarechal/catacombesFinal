@@ -57,13 +57,13 @@ button{
 .div77 { 
     grid-area: 2 / 4 / 8 / 6; 
     background-image: url("assets/Images/pc1.png");
-    background-size: contain; 
+    background-size: cover; 
     background-position: center;
 }
 
-.imageBackground{
+/* #imageBackground1{
     background-image:url('./assets/Images/pc.png');
-}
+} */
 
 #catacombesTitle{
     text-align: center;
@@ -123,6 +123,7 @@ button{
 .div4 { grid-area: 9 / 7 / 10 / 8;}
 .div5 { grid-area: 8 / 7 / 9 / 8;}
 .div6 { grid-area: 7 / 7 / 8 / 8;}
+.div7 { grid-area: 6 / 7 / 7 / 8;}
 
 /****** Room placement on map ******/
 .parentMapping{
@@ -195,6 +196,14 @@ button{
 
 #facoPoint{
     grid-area: 1 / 2 / 2 / 3;
+}
+
+#philibertPoint{
+    grid-area: 4 / 5 / 5 / 6;
+}
+
+#manoirPoint{
+    grid-area: 4 / 5 / 5 / 6;
 }
 
 #boutikDiv, #ossaDiv, 
@@ -385,6 +394,33 @@ button{
     400px!important;
 }
 
+.image1 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.image2 {
+    grid-area: 2 / 5 / 3 / 6;
+}
+
+.image3 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.imgBackgroundText{
+    background-size: cover; 
+    background-position: center;
+    width:100%;
+}
+
+#imageBackground2{
+    margin-top: -4em;
+}
+
+#imageBackground3{
+    margin-top: 15em;
+    margin-left: -3em;
+}
+
 .textExplication{
     /* padding: 1em 3em 3em;  */
     text-align: justify;
@@ -571,6 +607,10 @@ button{
         margin-left: 11.5em;
         margin-top: -0.8em;
     }
+
+    .image1, .image2, .image3{
+        display:none;
+    }
 }
 
 @media only screen 
@@ -710,6 +750,10 @@ button{
     #ARButton{
         margin-left: -24%;
         height: 16px;
+    }
+
+    .image1, .image2, .image3{
+        display:none;
     }
 
 }
