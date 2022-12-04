@@ -87,6 +87,11 @@ button{
     margin-top:-0.4em;
 }
 
+#logoVR{
+    margin-left: 23em;
+    margin-top: -4.7em;
+}
+
 /**** Paris map ****/
 .parent {
     display: grid;
@@ -138,8 +143,8 @@ button{
     grid-area: 3 / 2 / 4 / 3;
 } 
 
-#concretionPoint{
-    grid-area: 2 / 2 / 3 / 3;
+#concressionPoint{
+    grid-area: 2 / 3 / 3 / 4;
 }
 
 #cellierPoint{
@@ -203,7 +208,7 @@ button{
 }
 
 #manoirPoint{
-    grid-area: 4 / 5 / 5 / 6;
+    grid-area: 5 / 6 / 6 / 7;;
 }
 
 #boutikDiv, #ossaDiv, 
@@ -247,6 +252,14 @@ button{
     -webkit-box-shadow: -1px -1px 147px 33px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px -1px 147px 33px rgba(0,0,0,0.75);
     position: fixed;
+}
+
+#qrCode{
+    position: fixed;
+    z-index: 99999;
+    bottom: 0px;
+    display: none;
+    padding: 7px 14px;
 }
 
 #ARButton{
@@ -491,6 +504,8 @@ button{
     #logoVR{
         margin-top: -4.6em;
         margin-left: 11.2em;
+        /* margin-left: 23em;
+        margin-top: -4.7em; */
     }
 
     .parentTextExplications{

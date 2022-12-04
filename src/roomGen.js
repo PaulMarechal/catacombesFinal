@@ -18,6 +18,8 @@ export function salle(modele3d, bakedJpg, linkAR){
     /**
      * Selectors
      */
+
+    const qrCode = document.getElementById("qrCode");
     // Loading bar 
     const loadingBarElement = document.querySelector('.loading-bar');
 
@@ -74,6 +76,7 @@ export function salle(modele3d, bakedJpg, linkAR){
     })
     const overlay = new THREE.Mesh(overlayGeometry, overlayMaterial)
     scene.add(overlay)
+    
 
     /**
     * Loaders
@@ -87,7 +90,12 @@ export function salle(modele3d, bakedJpg, linkAR){
                 loadingBarElement.classList.add('ended');
                 loadingBarElement.style.transform = '';
                 loadingPercent.remove();
-            })
+            }); 
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+                qrCode.style.display = "none";
+            } else {
+                qrCode.style.display = "block";
+            }
         }, 
 
         // Progress
@@ -243,7 +251,7 @@ export function salle(modele3d, bakedJpg, linkAR){
         // removeCanvas()
         const test = document.getElementById("canvas");
         const vrButton = document.getElementById("VRButton");
-        var loadingBar = document.querySelector(".loading-bar")
+        var loadingBar = document.querySelector(".loading-bar");
 
         // Update controls
         controls.update()
@@ -309,6 +317,7 @@ export function removeCanvas(){
     const closeIconCanvas = document.getElementById("closeIcon")
     const modaleRoom3D = document.getElementById("modaleRoom3D")
     var loadingBar = document.querySelector(".loading-bar");
+    const qrCode = document.getElementById("qrCode");
 
     infoIcon.addEventListener("click", function(){
         infoButton.style.display = "block";
@@ -324,6 +333,7 @@ export function removeCanvas(){
         infoIcon.style.display = "none"
         modaleRoom3D.style.display = "none"
         vrButton.remove()
+        qrCode.style.display = "none";
         loadingBar.classList.remove("ended")
         arLink.remove()
         location.reload()
@@ -346,3 +356,28 @@ export function signature(){
         "                   \\/__/         \\/__/         \\/__/              \\/__/         \\/__/         \\|__|         \\/__/         \\/__/         \\/__/         \\/__/         \\/__/  "
     ].join( '\n' ) );
 }
+
+// export function qrGen(){
+//     // crée un nouvel élément div
+//     var div = document.createElement("div");
+//     var img = document.createElement("img");
+//     img.setAttribute("src","https://paulmarechal.xyz/assets/images/qrCode.png");
+//     div.setAttribute("id", "qrCode");
+//     // et lui donne un peu de contenu
+//     var newContent = document.createTextNode('VR for iPhone');
+//     // ajoute le nœud texte au nouveau div créé
+//     div.appendChild(img);
+//     div.appendChild(newContent);
+
+//     div.style.position = "fixed";
+//     div.style.zIndex = "99999";
+//     div.style.bottom = "0";
+//     div.style.display = "none"
+
+//     img.style.width = "50%";
+
+//     // ajoute le nouvel élément créé et son contenu dans le DOM
+//     var canvas = document.getElementById('canvas');
+
+//     document.body.insertBefore(div, canvas);
+// }

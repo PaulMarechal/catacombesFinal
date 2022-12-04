@@ -11,6 +11,9 @@ ImplementationRooms.catasRooms();
 // Help for mobile ( VR / AR )
 MobileNavigation.mobileOrNot();
 
+// QR Code
+// RoomGen.qrGen();
+
 // Locomotive scroll 
 Scroll.locomotiveScroll();
 

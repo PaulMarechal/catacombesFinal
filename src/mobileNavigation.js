@@ -5,11 +5,11 @@ export function mobileOrNot(){
         if(screen.height > screen.width){
             var newModale = document.createElement("div");
             var newContent = document.createElement("h4");
-            var content = document.createTextNode("Pour Profiter pleinement de l'expérience merci de tourner votre téléphone en mode paysage ou de vous connecter depuis un ordinateur");
+            var content = document.createTextNode("Pour profiter pleinement de l'expérience merci de tourner votre téléphone en mode paysage ou de vous connecter depuis un ordinateur / casque VR");
             newContent.appendChild(content);
-            newContent.setAttribute("id", "informations")
-            newModale.setAttribute("id", "modaleMobilePortrait")
-            newModale.appendChild(newContent)
+            newContent.setAttribute("id", "informations"); 
+            newModale.setAttribute("id", "modaleMobilePortrait");
+            newModale.appendChild(newContent); 
 
             // newModale.style.display = 'fixed'; 
             newModale.style.marginTop = "-550%"; 
@@ -30,6 +30,8 @@ export function mobileOrNot(){
             newModale.style.boxShadow = "0px 0px 162px 40px rgba(41,41,41,0.75)";
             newModale.style.webKitBoxShadow = "0px 0px 162px 40px rgba(41,41,41,0.75)";
             newModale.style.mozBoxShadow = "0px 0px 162px 40px rgba(41,41,41,0.75)";
+
+            
 
             newModale.addEventListener('click', event => {
                 newModale.style.display = "none"
