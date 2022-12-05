@@ -48,4 +48,8 @@ export function mobileOrNot(){
     } else {
         document.getElementById("imgHelp").src="https://paulmarechal.xyz/assets/images/helpDesktop.png";
     }
+    const width = screen.width
+    const height = screen.height
+    console.log("width : " + width)
+    console.log("height : " + height)
 }
