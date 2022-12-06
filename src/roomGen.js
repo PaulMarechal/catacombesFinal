@@ -347,9 +347,10 @@ function qrCodeRoom(linkQR){
 
     const Name = (linkQR+'').charAt(0).toUpperCase()+linkQR.substr(1);
 
-    const qrCodePath = "https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fpaulmarechal.xyz%2Fcatacombes%2F" + Name + "%2F" + Name + ".usdz&chs=120x120&choe=UTF-8&chld=L|2"
-    console.log(qrCodePath)
-    console.log(Name)
+    // paulmarechal.xyz
+    // const qrCodePath = "https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fpaulmarechal.xyz%2Fcatacombes%2F" + Name + "%2F" + Name + ".usdz&chs=120x120&choe=UTF-8&chld=L|2"
+    // catacombes.xyz
+    const qrCodePath = "https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fcatacombes.xyz%2F" + Name + "%2F" + Name + ".usdz&chs=120x120&choe=UTF-8&chld=L|2"
 
     qrCodeAr.setAttribute("src", qrCodePath)
 }
