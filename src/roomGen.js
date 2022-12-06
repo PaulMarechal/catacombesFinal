@@ -14,12 +14,10 @@ import * as displayAR from './ar.js';
 /**
  * Room creation ( base Three.js code to create rooms)
  */
-export function salle(modele3d, bakedJpg, linkAR){
+export function salle(modele3d, bakedJpg, linkAR, linkQR){
     /**
      * Selectors
      */
-
-    const qrCode = document.getElementById("qrCode");
     // Loading bar 
     const loadingBarElement = document.querySelector('.loading-bar');
 
@@ -41,7 +39,10 @@ export function salle(modele3d, bakedJpg, linkAR){
     canvas.className = 'webgl';
     canvas.setAttribute("id","canvas");
     document.body.insertBefore(canvas, loadingBarElement);
-    canvas.style.display = "block"
+    canvas.style.display = "block"; 
+
+    // QR Code
+    qrCodeRoom(linkQR);
 
     // Close button
     var closeIcon = document.getElementById("closeIcon");
@@ -275,7 +276,7 @@ export function salle(modele3d, bakedJpg, linkAR){
 /**
  * Display rooms ( room name, id, 3D Model (glb), baked image (jpg), page area )
  */
-export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, linkAR){
+export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, linkAR, linkQR){
     const modaleRoom3D = document.getElementById("modaleRoom3D");
     var btn = document.createElement("button"); 
     var titreModale = document.createElement("h3")
@@ -299,7 +300,7 @@ export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, link
     var nameButton = document.createTextNode("ENTER 3D");  
     btn.appendChild(nameButton);
 
-    btn.onclick = function(){salle(modele3d, bakedJpg, linkAR); closeIcon.style.display = "block"; infoIcon.style.display= "block";};         
+    btn.onclick = function(){salle(modele3d, bakedJpg, linkAR, linkQR);  closeIcon.style.display = "block"; infoIcon.style.display= "block";};         
     document.getElementById("modaleRoom3D").appendChild(titreModale);
     document.getElementById("modaleRoom3D").appendChild(btn);
     btn.style.display = "none";
@@ -338,6 +339,19 @@ export function removeCanvas(){
         arLink.remove()
         location.reload()
     })
+}
+
+function qrCodeRoom(linkQR){
+
+    const qrCodeAr = document.getElementById("qrCodeAR");
+
+    const Name = (linkQR+'').charAt(0).toUpperCase()+linkQR.substr(1);
+
+    const qrCodePath = "https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fpaulmarechal.xyz%2Fcatacombes%2F" + Name + "%2F" + Name + ".usdz&chs=120x120&choe=UTF-8&chld=L|2"
+    console.log(qrCodePath)
+    console.log(Name)
+
+    qrCodeAr.setAttribute("src", qrCodePath)
 }
 
 export function signature(){

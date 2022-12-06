@@ -20,7 +20,10 @@ export function catasRooms(){
         "dragon", 
         "cabinet", 
         "cabiBis", 
-        "philibert"
+        "philibert", 
+        "fontaine", 
+        "anschluss", 
+        "chapelle"
     ];
 
     for(let a = 0; a < name.length; a++){
@@ -68,7 +71,6 @@ function mouseEventOnMap(name){
 }
 
 function initRoom(name){
-
     // Room name ( first letter in capital )
     const Name = (name+'').charAt(0).toUpperCase()+name.substr(1);
 
@@ -79,13 +81,13 @@ function initRoom(name){
     // Base path
     const routeBase = "./" + Name + "/" ;
 
-    // Path for GLB, JPG, USDZ
+    // Path for GLB, JPG, USDZ, QR code VR
     const routeGlb = routeBase + Name.concat("", ".glb");
     const routeJpg = routeBase + Name.concat('', ".jpg");
     const routeUsdz = routeBase + Name.concat('', ".usdz");
 
     // To display the room
-    roomGen.displaySalle(Name, nameDiv, roomName, routeGlb, routeJpg, "parentDiv", routeUsdz);
+    roomGen.displaySalle(Name, nameDiv, roomName, routeGlb, routeJpg, "parentDiv", routeUsdz, Name);
 }
 
 function roomName(name){

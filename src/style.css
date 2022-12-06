@@ -209,7 +209,19 @@ button{
 }
 
 #manoirPoint{
-    grid-area: 5 / 6 / 6 / 7;;
+    grid-area: 5 / 6 / 6 / 7;
+}
+
+#fontainePoint{
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+#anschlussPoint{
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+#chapellePoint{
+    grid-area: 3 / 4 / 4 / 5; 
 }
 
 #boutikDiv, #ossaDiv, 
@@ -261,6 +273,22 @@ button{
     bottom: 0px;
     display: none;
     padding: 7px 14px;
+}
+
+.parentQrCode {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: 0.5fr repeat(2, 1fr);
+}
+    
+.vrForIphone { 
+    grid-area: 1 / 1 / 2 / 3; 
+    width: 120px; 
+    border-radius: 8px 8px 0 0;
+}
+.qrCodeRoomId { 
+    grid-area: 2 / 1 / 4 / 3; 
+    border-radius: 0 0 8px 8px;
 }
 
 #ARButton{
