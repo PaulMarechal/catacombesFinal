@@ -7,9 +7,16 @@ export function mobileOrNot(){
             var newContent = document.createElement("h4");
             var content = document.createTextNode("Pour profiter pleinement de l'expérience merci de tourner votre téléphone en mode paysage ou de vous connecter depuis un ordinateur / casque VR");
             newContent.appendChild(content);
+
+            var imageRotate = document.createElement("img");
+            imageRotate.setAttribute("src", "https://catacombes.xyz/assets/images/rotateScreen.png");
+            imageRotate.setAttribute("alt", "Rotate mobile screen");
+            imageRotate.setAttribute("id", "rotateScreen");
+
             newContent.setAttribute("id", "informations"); 
             newModale.setAttribute("id", "modaleMobilePortrait");
             newModale.appendChild(newContent); 
+            newModale.appendChild(imageRotate);
 
             // newModale.style.display = 'fixed'; 
             newModale.style.marginTop = "-550%"; 
@@ -30,6 +37,9 @@ export function mobileOrNot(){
             newModale.style.boxShadow = "0px 0px 162px 40px rgba(41,41,41,0.75)";
             newModale.style.webKitBoxShadow = "0px 0px 162px 40px rgba(41,41,41,0.75)";
             newModale.style.mozBoxShadow = "0px 0px 162px 40px rgba(41,41,41,0.75)";
+            newModale.style.padding = "5px 10px"
+            
+
 
             
 
@@ -41,6 +51,12 @@ export function mobileOrNot(){
             var mainDoc = document.getElementById("parentMain");
             document.body.insertBefore(newModale, mainDoc);
 
+            const rotateScreen = document.getElementById("rotateScreen"); 
+            rotateScreen.style.width = "50%";
+            rotateScreen.style.marginLeft = "26%";
+            rotateScreen.style.marginTop = "-2em";
+ 
+
             const infos = document.getElementById("informations")
             infos.style.padding = "3em 1em"
             
@@ -48,8 +64,4 @@ export function mobileOrNot(){
     } else {
         document.getElementById("imgHelp").src="https://paulmarechal.xyz/assets/images/helpDesktop.png";
     }
-    const width = screen.width
-    const height = screen.height
-    console.log("width : " + width)
-    console.log("height : " + height)
 }

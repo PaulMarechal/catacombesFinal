@@ -23,7 +23,10 @@ export function catasRooms(){
         "philibert", 
         "fontaine", 
         "anschluss", 
-        "chapelle"
+        "chapelle", 
+        "chateau", 
+        "byzance", 
+        "sarko"
     ];
 
     for(let a = 0; a < name.length; a++){

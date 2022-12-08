@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AEROBAY</title>
+        <title>Catacombes en 3D | AR | VR</title>
         <meta name="keywords" content="Catacombes, Paris, Ktas, katas, catas, catacombes illegales, catacombes interdites, catacombes paris, carrieres, grs, GRS, explo, three.js, developper, web, plans catacombes, VR, Three.js, Three, JS, HTML, CSS, AR, Javascript, XR, Oculus quest 2, realite virtuelle">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> 
         <meta name="description" content="Découverte des Catacombes interdites en 3D / VR / AR ">
@@ -93,6 +93,10 @@
                     <div class="div3" id="cellier">
                         <div class="parentMapping">
                             <p id="cellierPoint" class="pointRoom">📍</p>
+                            <p id="chateauPoint" class="pointRoom">📍</p>
+                            <p id="sarkoPoint" class="pointRoom">📍</p>
+                            <p id="byzancePoint" class="pointRoom">📍</p>
+
                         </div>
                     </div>
     
@@ -172,6 +176,18 @@
                     </p>
                 </div>
 
+                <div class="image4" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-29" >
+                    <img class="imgBackgroundText" src="assets/Images/fontaineChartreux.png" id="imageBackground5" alt="..." style="margin-left: -21em; margin-top: 3em;"> 
+                </div>
+
+                <div class="image5" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-25" >
+                    <img class="imgBackgroundText" src="assets/Images/philibertAspair.png" id="imageBackground6" alt="..." style="margin-left: 12em;"> 
+                </div>
+
+                <div class="image6" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-15" >
+                    <img class="imgBackgroundText" src="assets/Images/bunker.png" id="imageBackground7" alt="..." style="margin-left: -13em; margin-top: 19em;"> 
+                </div>
+
                 <!-- Images effondrements, Charles Axel Guillaumot , cimetiere saints innocents-->
 
                 <!-- History text 3 -->
@@ -230,5 +246,18 @@
             </div>
         </div>
         <!-- Ajouter bouton vue premiere personne : https://github.com/mrdoob/three.js/blob/master/examples/games_fps.html-->
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org/",
+              "@type": "WebSite",
+              "name": "Catacombes 3D | AR | VR",
+              "url": "https://catacombes.xyz",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://catacombes.xyz{search_term_string}Permet de visiter en 3D | AR | VR les salles des catacombes interdites sous Paris.",
+                "query-input": "required name=search_term_string"
+              }
+            }
+        </script>
     </body>
 </html>

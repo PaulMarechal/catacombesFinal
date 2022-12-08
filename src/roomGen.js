@@ -274,7 +274,7 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 }
 
 /**
- * Display rooms ( room name, id, 3D Model (glb), baked image (jpg), page area )
+ * Display rooms ( room name, id, 3D Model (glb), baked image (jpg), page area, path to AR file, QR code to AR room )
  */
 export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, linkAR, linkQR){
     const modaleRoom3D = document.getElementById("modaleRoom3D");
@@ -309,16 +309,17 @@ export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, link
 }
 
 export function removeCanvas(){
-    const test = document.getElementById("canvas");
+    const canvas = document.getElementById("canvas");
     const vrButton = document.getElementById("VRButton");
     const infoButton = document.getElementById("infoButton"); 
     const infoIcon = document.getElementById("infoIcon");
     const closeIconInfo = document.getElementById("closeIconInfo");
     const arLink = document.getElementById("arLink");
-    const closeIconCanvas = document.getElementById("closeIcon")
-    const modaleRoom3D = document.getElementById("modaleRoom3D")
-    var loadingBar = document.querySelector(".loading-bar");
+    const closeIconCanvas = document.getElementById("closeIcon");
+    const modaleRoom3D = document.getElementById("modaleRoom3D");
     const qrCode = document.getElementById("qrCode");
+    
+    var loadingBar = document.querySelector(".loading-bar");
 
     infoIcon.addEventListener("click", function(){
         infoButton.style.display = "block";
@@ -329,15 +330,19 @@ export function removeCanvas(){
     })
 
     closeIcon.addEventListener("click", function(){
-        test.remove()
-        closeIcon.style.display = "none"
-        infoIcon.style.display = "none"
-        modaleRoom3D.style.display = "none"
-        vrButton.remove()
+        closeIcon.style.display = "none";
+        infoIcon.style.display = "none";
+        modaleRoom3D.style.display = "none";
         qrCode.style.display = "none";
-        loadingBar.classList.remove("ended")
-        arLink.remove()
-        location.reload()
+        loadingBar.classList.remove("ended");
+        canvas.remove();
+        vrButton.remove();
+
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+            arLink.remove();
+        } else {
+            location.reload();
+        }
     })
 }
 
@@ -372,27 +377,4 @@ export function signature(){
     ].join( '\n' ) );
 }
 
-// export function qrGen(){
-//     // crée un nouvel élément div
-//     var div = document.createElement("div");
-//     var img = document.createElement("img");
-//     img.setAttribute("src","https://paulmarechal.xyz/assets/images/qrCode.png");
-//     div.setAttribute("id", "qrCode");
-//     // et lui donne un peu de contenu
-//     var newContent = document.createTextNode('VR for iPhone');
-//     // ajoute le nœud texte au nouveau div créé
-//     div.appendChild(img);
-//     div.appendChild(newContent);
 
-//     div.style.position = "fixed";
-//     div.style.zIndex = "99999";
-//     div.style.bottom = "0";
-//     div.style.display = "none"
-
-//     img.style.width = "50%";
-
-//     // ajoute le nouvel élément créé et son contenu dans le DOM
-//     var canvas = document.getElementById('canvas');
-
-//     document.body.insertBefore(div, canvas);
-// }

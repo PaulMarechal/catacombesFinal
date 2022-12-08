@@ -149,9 +149,15 @@ button{
 }
 
 #cellierPoint{
-    grid-area: 2 / 5 / 3 / 6;
-    margin-left: 0.7em;
-    margin-top: 0.2em;
+    grid-area: 2 / 7 / 3 / 8;
+}
+
+#byzancePoint{
+    grid-area: 1 / 7 / 2 / 8;
+}
+
+#chateauPoint{
+    grid-area: 2 / 6 / 3 / 7; 
 }
 
 #plagePoint{
@@ -166,6 +172,10 @@ button{
 #anubisPoint{
     grid-area: 1 / 2 / 2 / 3;
     margin-left: -0.2em;
+}
+
+#sarkoPoint{
+    grid-area: 1 / 6 / 2 / 7;
 }
 
 #boutikPoint{
@@ -428,11 +438,12 @@ button{
     margin-top: 1em;
 }
     
-.textExplication1 { grid-area: 2 / 3 / 3 / 4; }
-.textExplication2 { grid-area: 4 / 4 / 5 / 5; }
+.textExplication1 { grid-area: 2 / 3 / 3 / 4; z-index: 9;}
+.textExplication2 { grid-area: 4 / 4 / 5 / 5; z-index:9;}
 .textExplication3 { 
     grid-area: 6 / 3 / 7 / 4; 
     margin-top: -4em; 
+    z-index:9;
 }
 
 .image1 {
@@ -445,6 +456,18 @@ button{
 
 .image3 {
     grid-area: 2 / 2 / 3 / 3;
+}
+
+.image4{
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.image5{
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.image6{
+    grid-area: 4 / 5 / 5 / 6;
 }
 
 .imgBackgroundText{
