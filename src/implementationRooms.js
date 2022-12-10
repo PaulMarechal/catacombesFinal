@@ -39,14 +39,17 @@ function hideOthers(){
     var buttonRoom3D = document.getElementsByClassName("buttonRoom3D");
     var nameRoom = document.getElementsByClassName("nameRoom");
     const modaleRoom3D = document.getElementById("modaleRoom3D");
+    let roomImagePoint = document.getElementsByClassName("imageRoom");
     modaleRoom3D.style.display = "block";
 
     for(var i = 0; i<buttonRoom3D.length; i++){
-        buttonRoom3D[i].style.display = "none"
+        buttonRoom3D[i].style.display = "none",
+        roomImagePoint[i].style.display = "none"
     }
 
     for(var i = 0; i<nameRoom.length; i++){
-        nameRoom[i].style.display = "none"
+        nameRoom[i].style.display = "none",
+        roomImagePoint[i].style.display = "none"
     }
 }
 
@@ -56,21 +59,33 @@ function mouseEventOnMap(name){
     const nameDiv = name.concat('', "Div");
     const roomName = name.concat('', "Titre");
     const roomPoint = name.concat('', "Point");
+    const roomImage = name.concat('', "Image");
 
     // Selectors 
     let nameRoomDiv = document.getElementById(nameDiv);
     let nameRoomTitre = document.getElementById(roomName);
     let roomNamePoint = document.getElementById(roomPoint);
+    let roomImagePoint = document.getElementById(roomImage);
     const modaleRoom = document.getElementById("modaleRoom3D");
 
     //Show button ( mouse enter )
-    roomNamePoint.addEventListener("mouseenter",function(){hideOthers(), nameRoomDiv.style.display="block", nameRoomTitre.style.display="block"});
+    roomNamePoint.addEventListener("mouseenter",function(){
+        hideOthers(), 
+        nameRoomDiv.style.display="block", 
+        nameRoomTitre.style.display="block", 
+        roomImagePoint.style.display = "block";
+    });
 
     // onclick for mobile version
     roomNamePoint.addEventListener('click', event => { nameRoomDiv.style.display="block" });
 
     // Remove button ( mouse leave )
-    nameRoomDiv.addEventListener("mouseleave",function(){nameRoomDiv.style.display="none", nameRoomTitre.style.display="none", modaleRoom.style.display="none"});
+    nameRoomDiv.addEventListener("mouseleave",function(){
+        nameRoomDiv.style.display="none", 
+        nameRoomTitre.style.display="none", 
+        modaleRoom.style.display="none",
+        roomImagePoint.style.display = "none"
+    });
 }
 
 function initRoom(name){
@@ -78,8 +93,9 @@ function initRoom(name){
     const Name = (name+'').charAt(0).toUpperCase()+name.substr(1);
 
     // Concatenation 
-    const nameDiv = name.concat('', "Div");
-    const roomName = name.concat('', "Titre");
+    const nameDiv = name.concat('', 'Div');
+    const roomName = name.concat('', 'Titre');
+    const roomImagePoint = name.concat('', 'Image');
 
     // Base path
     const routeBase = "./" + Name + "/" ;
@@ -88,9 +104,10 @@ function initRoom(name){
     const routeGlb = routeBase + Name.concat("", ".glb");
     const routeJpg = routeBase + Name.concat('', ".jpg");
     const routeUsdz = routeBase + Name.concat('', ".usdz");
+    const routeImagePresentation = routeBase + Name.concat('', ".png");
 
     // To display the room
-    roomGen.displaySalle(Name, nameDiv, roomName, routeGlb, routeJpg, "parentDiv", routeUsdz, Name);
+    roomGen.displaySalle(Name, nameDiv, roomName, routeGlb, routeJpg, "parentDiv", routeUsdz, Name, routeImagePresentation, roomImagePoint);
 }
 
 function roomName(name){

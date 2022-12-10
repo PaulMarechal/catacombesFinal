@@ -78,7 +78,7 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     const overlay = new THREE.Mesh(overlayGeometry, overlayMaterial)
     scene.add(overlay)
     
-
+    loadingPercent.innerHTML = " - Chargement en cours - "; 
     /**
     * Loaders
     */
@@ -101,6 +101,8 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
         // Progress
         (itemUrl, itemsLoaded, itemsTotal) => {
+            loadingPercent.innerHTML = " - Chargement en cours - "; 
+            
             // console.log("progress")
             const progressRatio = itemsLoaded / itemsTotal
             loadingBarElement.style.transform = `scaleX(${progressRatio})`
@@ -276,10 +278,11 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 /**
  * Display rooms ( room name, id, 3D Model (glb), baked image (jpg), page area, path to AR file, QR code to AR room )
  */
-export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, linkAR, linkQR){
+export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, linkAR, linkQR, imagePath, idImageSalle){
     const modaleRoom3D = document.getElementById("modaleRoom3D");
     var btn = document.createElement("button"); 
     var titreModale = document.createElement("h3")
+    var image = document.createElement("img")
     var mapParent = document.getElementById("parentDiv");
     const closeIcon = document.getElementById("closeIcon");
     const infoIcon = document.getElementById("infoIcon");
@@ -287,25 +290,34 @@ export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, link
 
     btn.setAttribute("id", id);
     btn.setAttribute("class", "buttonRoom3D");
+    image.setAttribute("src", imagePath)
+    image.setAttribute("id", idImageSalle)
+    image.setAttribute("class", "imageRoom")
     var t = document.createTextNode(nomSalle);     
     titreModale.appendChild(t);
     titreModale.setAttribute("class", "nameRoom");
     titreModale.setAttribute("id", titre);
     titreModale.style.gridArea = "1 / 2 / 2 / 3";
     titreModale.style.marginTop = "0.5em"
-    btn.style.marginTop = "90%"
     btn.style.marginLeft = "auto"
     btn.style.marginRight = "auto"
     titreModale.style.textAlign = "center";
+    image.style.width = "79%";
+    //image.style.marginRight = "auto";
+    //image.style.marginLeft = "auto";
+    image.style.margin = "1em auto";
+    image.style.borderRadius = "9px";
     var nameButton = document.createTextNode("ENTER 3D");  
     btn.appendChild(nameButton);
 
     btn.onclick = function(){salle(modele3d, bakedJpg, linkAR, linkQR);  closeIcon.style.display = "block"; infoIcon.style.display= "block";};         
     document.getElementById("modaleRoom3D").appendChild(titreModale);
+    document.getElementById("modaleRoom3D").appendChild(image);
     document.getElementById("modaleRoom3D").appendChild(btn);
     btn.style.display = "none";
     titreModale.style.display = "none";
     modaleRoom3D.style.display = "none";
+    image.style.display = "none";
 }
 
 export function removeCanvas(){
