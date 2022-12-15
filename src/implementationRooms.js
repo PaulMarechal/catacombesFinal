@@ -95,6 +95,7 @@ function initRoom(name){
     // Concatenation 
     const nameDiv = name.concat('', 'Div');
     const roomName = name.concat('', 'Titre');
+    // Taille capture d'écran 230x230
     const roomImagePoint = name.concat('', 'Image');
 
     // Base path
