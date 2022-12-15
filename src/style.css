@@ -438,12 +438,12 @@ button{
     /* margin-top: 1em; */
 }
     
-.textExplication1 { grid-area: 2 / 2 / 3 / 4; z-index: 9;}
-.textExplication2 { grid-area: 3 / 3 / 4 / 5; z-index:9;}
+.textExplication1 { grid-area: 2 / 2 / 3 / 4; z-index: 99;}
+.textExplication2 { grid-area: 3 / 3 / 4 / 5; z-index:99;}
 .textExplication3 { 
     grid-area: 4 / 2 / 5 / 4;
     /* margin-top: -4em;  */
-    z-index:9;
+    z-index:99;
 }
 
 .image1 {
@@ -470,7 +470,9 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
-
+    width:95%; 
+    height:96%;
+    margin: auto;
 }
 
 .image4{
@@ -479,7 +481,9 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
-
+    width:95%; 
+    height:96%;
+    margin: auto;
 }
 
 .image5{
@@ -531,6 +535,7 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
+    z-index: 9;
 
 }
 
@@ -642,6 +647,22 @@ button{
 
 .image24{
     grid-area: 4 / 3 / 5 / 4;
+    background-image: url("assets/Images/solcarlus.png");
+    background-size: cover; 
+    background-position: center;
+    margin: 10px;
+}
+
+.image25 { 
+    grid-area: 2 / 4 / 3 / 5; 
+    background-image: url("assets/Images/solcarlus.png");
+    background-size: cover; 
+    background-position: center;
+    margin: 10px;
+}
+
+.image26 { 
+    grid-area: 2 / 1 / 3 / 2;
     background-image: url("assets/Images/solcarlus.png");
     background-size: cover; 
     background-position: center;
@@ -880,7 +901,11 @@ button{
     .image11, .image12, 
     .image13, .image14, 
     .image15, .image16, 
-    .image17, .image18{
+    .image17, .image18,
+    .image19, .image20, 
+    .image21, .image22, 
+    .image23, .image24, 
+    .image25, .image26 {
         display:none;
     }
 }
@@ -1032,7 +1057,11 @@ button{
     .image11, .image12, 
     .image13, .image14, 
     .image15, .image16, 
-    .image17, .image18{
+    .image17, .image18,
+    .image19, .image20, 
+    .image21, .image22, 
+    .image23, .image24, 
+    .image25, .image26 {
         display:none;
     }
 
