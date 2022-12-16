@@ -26,7 +26,10 @@ export function catasRooms(){
         "chapelle", 
         "chateau", 
         "byzance", 
-        "sarko"
+        "sarko", 
+        "rats", 
+        "bocal", 
+        "atlas"
     ];
 
     for(let a = 0; a < name.length; a++){

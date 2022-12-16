@@ -41,8 +41,8 @@ button{
 /**** Main page ****/
 .parentMain {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 15em);
+    grid-template-rows: repeat(8, 5.63em);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     height: 45em;
@@ -60,6 +60,8 @@ button{
     background-size: cover; 
     background-position: center;
     width: 60%;
+    height: 100%;
+    margin: auto;
 }
 
 /* #imageBackground1{
@@ -232,6 +234,18 @@ button{
 
 #chapellePoint{
     grid-area: 3 / 4 / 4 / 5; 
+}
+
+#ratsPoint{
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+#bocalPoint{
+    grid-area: 5 / 1 / 6 / 2; 
+}
+
+#atlasPoint{
+    grid-area: 4 / 5 / 5 / 6;
 }
 
 #boutikDiv, #ossaDiv, 
