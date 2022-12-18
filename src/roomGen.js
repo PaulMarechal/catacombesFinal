@@ -79,6 +79,7 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     scene.add(overlay)
     
     loadingPercent.innerHTML = " - Chargement en cours - "; 
+console.log(loadingPercent)
     /**
     * Loaders
     */
@@ -342,6 +343,7 @@ export function removeCanvas(){
     })
 
     closeIcon.addEventListener("click", function(){
+        $("#canvas").load(window.location.href + " #canvas" );
         closeIcon.style.display = "none";
         infoIcon.style.display = "none";
         modaleRoom3D.style.display = "none";
@@ -350,10 +352,13 @@ export function removeCanvas(){
         canvas.remove();
         vrButton.remove();
 
+
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
             arLink.remove();
         } else {
-            location.reload();
+        location.reload();
+        // $("#canvas").load(window.location.href + " #canvas" );
+
         }
     })
 }
