@@ -47,7 +47,9 @@ button{
     grid-row-gap: 0px;
     height: 41em;
     width: 80%;
-    margin-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-left: 10%; */
     margin-top: 2%;
 }
     
@@ -57,15 +59,16 @@ button{
 .mainTitleDiv4 { grid-area: 3 / 4 / 5 / 7; }
 .mainTitleDiv5 { grid-area: 5 / 1 / 7 / 4; }
 .mainTitleDiv6 { grid-area: 5 / 4 / 7 / 7; }
-.mainTitleDiv7 { grid-area: 2 / 3 / 6 / 5; margin-left: 0.3em;}
-.mainTitleDiv8 { 
+/* .mainTitleDiv7 { grid-area: 2 / 3 / 6 / 5; margin-left: 0.3em;} */
+.mainTitleDiv7 { 
     grid-area: 2 / 3 / 6 / 5; 
     /* margin-left: 0.3em; */
     background-image: url("assets/Images/pc1.png");
     background-size: cover; 
     background-position: center;
-    width: 60%;
+    width: 50%;
     height: 100%;
+    margin-left: 1em;
     /* margin: auto; */
 }
 
@@ -763,22 +766,39 @@ button{
 
     .parentMainTitle {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: 0.8fr repeat(7, 0.5fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 0.8fr repeat(2, 1fr);
         height: 25em;
     }
 
-    .mainTitleDiv7{grid-area: 1 / 6 / 7 / 8; width: 80%; }
-    .mainTitleDiv5{display: none;}
-    .mainTitleDiv6{display: none}
+    .mainTitleDiv1{grid-area: 1 / 1 / 2 / 3;};
+    .mainTitleDiv2 { grid-area: 1 / 3 / 2 / 5; }
+    .mainTitleDiv3 { grid-area: 2 / 1 / 3 / 2; }
+    .mainTitleDiv4 { grid-area: 2 / 2 / 3 / 4; }
+    .mainTitleDiv5 { grid-area: 2 / 4 / 3 / 5; }
+    .mainTitleDiv6{display: none!important;}
+    .mainTitleDiv7{grid-area: 1 / 5 / 3 / 6; }
+
+    /* .mainTitleDiv5{display: none;} */
+    .backgroundColorImage{
+        display: none;
+    }
+
+    .mainTitleDiv7 { 
+        grid-area: 1 / 5 / 3 / 6;
+        background-image: url("assets/Images/pc1.png");
+        background-size: cover; 
+        background-position: center;
+        width: 100%;
+        /* height: 100%; */
+        /* margin-left: 2em!important; */
+    }
 
     .mainTitleFirst, .mainTitleSecond{
         font-size: 7vw;
         margin-top: auto;
         margin-bottom: auto;
-        margin-left: 0.1em!important;
+        margin-left: -0.9em!important;
     }
 
     .mainTitleSecond{
@@ -794,7 +814,7 @@ button{
 
     #logoVR{
         margin-top: -4.6em;
-        margin-left: 11.2em;
+        margin-left: 8.2em;
         /* margin-left: 23em;
         margin-top: -4.7em; */
     }
@@ -960,13 +980,13 @@ button{
 
     .mainTitleFirst, .mainTitleSecond{
         font-size: 21vw;
-        margin-left: -3%!important;
+        margin-left: -37%!important;
         /* text-align: left; */
     }
 
     #logoVR{
         /* text-align: right; */
-        margin-left: 17.5em!important;
+        margin-left: 13.5em!important;
         margin-top: -5.3em;
     }
 
@@ -995,6 +1015,7 @@ button{
 
     .textExplication1{
         grid-area: 1 / 2 / 2 / 3!important;
+        margin-bottom: 3em;
     }
 
     .textExplication2{
