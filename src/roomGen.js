@@ -10,6 +10,10 @@ import { gsap } from 'gsap';
 import * as locomotion from './moveCameraXR.js';
 import TeleportVR from 'teleportvr';
 import * as displayAR from './ar.js';
+import * as WidthVR from './widthVR.js';
+// import ThreeMeshUI from 'three-mesh-ui';
+// import FontJSON from './assets/Fonts/Roboto-msdf.json'
+// import FontImage from './assets/Fonts/Roboto-msdf.png'
 
 /**
  * Room creation ( base Three.js code to create rooms)
@@ -25,14 +29,16 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     var loadingPercent = document.createElement("h2");
     var loadingPercentContent = document.createTextNode("1 %");
     loadingPercent.className = "loadingPercent";
+    loadingPercent.innerHTML = " - Chargement en cours - "; 
+
 
     /**
     * Base
     */
     //Debug
-    // const gui = new dat.GUI({
-    //     width: 400
-    // })
+    const gui = new dat.GUI({
+        width: 400
+    })
 
     // Canvas 
     const canvas = document.createElement("canvas");
@@ -78,8 +84,6 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     const overlay = new THREE.Mesh(overlayGeometry, overlayMaterial)
     scene.add(overlay)
     
-    loadingPercent.innerHTML = " - Chargement en cours - "; 
-console.log(loadingPercent)
     /**
     * Loaders
     */
@@ -147,6 +151,15 @@ console.log(loadingPercent)
         (gltf) => {
             const bakedMesh = gltf.scene.children.find(child => child.name === 'baked')
             scene.add(gltf.scene)
+
+            // VR UP / DOWN Panel 
+            // if user is in XR session = display button
+            if (navigator.xr && navigator.xr.isSessionSupported('immersive-vr')) {
+                navigator.xr.requestSession('immersive-vr').then(function(session) {
+                    WidthVR.makePanel(gltf.scene, scene, camera)
+                });
+            }  
+					
         }
     )
 
@@ -249,8 +262,8 @@ console.log(loadingPercent)
 
     removeCanvas();
 
-    const tick = () =>
-    {
+    const tick = () => {
+
         const elapsedTime = clock.getElapsedTime()
         // removeCanvas()
         const test = document.getElementById("canvas");
@@ -262,6 +275,11 @@ console.log(loadingPercent)
 
         // Teleport VR 
         teleportVR.update();
+
+        // ThreeMeshUI
+        ThreeMeshUI.update()
+
+        WidthVR.updateButtons(renderer, camera);
         
         // Render
         renderer.render(scene, camera)
