@@ -39,7 +39,6 @@ window.addEventListener( 'touchend', () => {
 } );
 
 
-
 export function makePanel(gltf, scene, camera) {
 
 	// Container block ( 2 buttons - UP | DOWN)
@@ -53,6 +52,26 @@ export function makePanel(gltf, scene, camera) {
 		padding: 0.02,
 		borderRadius: 0.11
 	} );
+
+    // Placer les buttons en dynamique
+    // A débug
+    /*
+    if (navigator.xr && navigator.xr.isSessionSupported('immersive-vr')) {
+        navigator.xr.requestSession('immersive-vr').then(function(session) {
+            session.addEventListener('end', function() {
+                console.log("La session VR s'est terminée");
+            });
+            session.requestAnimationFrame(function(time, frame) {
+                let viewerPose = frame.getViewerPose(referenceSpace);
+                let position = viewerPose.transform.position;
+                console.log("Coordonnées x : " + position.x);
+                console.log("Coordonnées y : " + position.y);
+                console.log("Coordonnées z : " + position.z);
+            });
+        });
+    }
+
+    */
 
 	container.position.set( 0.76, 0.76, -1.85 );
 	container.rotation.x = -0.55;
@@ -136,10 +155,6 @@ export function makePanel(gltf, scene, camera) {
 	} );
 	buttonNext.setupState( hoveredStateAttributes );
 	buttonNext.setupState( idleStateAttributes );
-
-	//
-
-    console.log(camera.position.y)
 
 	buttonPrevious.setupState( {
 		state: 'selected',
