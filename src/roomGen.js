@@ -317,13 +317,20 @@ export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, link
     titreModale.setAttribute("class", "nameRoom");
     titreModale.setAttribute("id", titre);
     titreModale.style.gridArea = "1 / 2 / 2 / 3";
-    titreModale.style.marginTop = "0.5em"
-    btn.style.marginLeft = "auto"
-    btn.style.marginRight = "auto"
-    titreModale.style.textAlign = "center";
+    titreModale.style.marginTop = "0.5em";
+    titreModale.style.textDecoration = "underline solid blue 10px";
+    titreModale.style.textUnderlinePosition = "auto";
+
+    btn.style.marginLeft = "30px";
+    btn.style.fontSize = "2em";
+    btn.style.border = "0.1px solid rgb(203 203 203)";
+    btn.style.marginBottom = "0.4em";
+    btn.style.background = "rgb(239 238 238)"; 
+    btn.style.borderRadius = "0"; 
+    btn.style.height = "1.5em";
+
+    titreModale.style.paddingLeft = "30px";
     image.style.width = "79%";
-    //image.style.marginRight = "auto";
-    //image.style.marginLeft = "auto";
     image.style.margin = "1em auto";
     image.style.borderRadius = "9px";
     var nameButton = document.createTextNode("ENTER 3D");  
@@ -374,9 +381,8 @@ export function removeCanvas(){
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
             arLink.remove();
         } else {
-        location.reload();
-        // $("#canvas").load(window.location.href + " #canvas" );
-
+            location.reload();
+            // $("#canvas").load(window.location.href + " #canvas" );
         }
     })
 }
