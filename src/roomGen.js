@@ -155,9 +155,9 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
             // VR UP / DOWN Panel 
             // if user is in XR session = display button
             if (navigator.xr && navigator.xr.isSessionSupported('immersive-vr')) {
-                navigator.xr.requestSession('immersive-vr').then(function(session) {
-                    WidthVR.makePanel(gltf.scene, scene, camera)
-                });
+                // navigator.xr.requestSession('immersive-vr').then(function(session) {
+                WidthVR.makePanel(gltf.scene, scene, camera)
+                // });
             }  
 					
         }

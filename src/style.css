@@ -142,13 +142,15 @@ button{
     width: 10%;
 }
 
-.div1 { grid-area: 11 / 6 / 12 / 7;}
-.div2 { grid-area: 10 / 7 / 11 / 8;}
-.div3 { grid-area: 10 / 6 / 11 / 7;}
-.div4 { grid-area: 9 / 7 / 10 / 8;}
-.div5 { grid-area: 8 / 7 / 9 / 8;}
-.div6 { grid-area: 7 / 7 / 8 / 8;}
-.div7 { grid-area: 6 / 7 / 7 / 8;}
+.div1 { grid-area: 11 / 6 / 12 / 7; }
+.div2 { grid-area: 10 / 7 / 11 / 8; }
+.div3 { grid-area: 10 / 6 / 11 / 7; }
+.div4 { grid-area: 9 / 7 / 10 / 8; }
+.div5 { grid-area: 8 / 7 / 9 / 8; }
+.div6 { grid-area: 7 / 7 / 8 / 8; }
+.div7 { grid-area: 6 / 7 / 7 / 8; }
+.div8 { grid-area: 8 / 6 / 9 / 7; }
+.div9 { grid-area: 7 / 6 / 8 / 7; }
 
 /****** Room placement on map ******/
 .parentMapping{
@@ -263,6 +265,14 @@ button{
 
 #atlasPoint{
     grid-area: 4 / 5 / 5 / 6;
+}
+
+#cochonPoint{
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+#bureauPoint{
+    grid-area: 3 / 6 / 4 / 7;
 }
 
 #boutikDiv, #ossaDiv, 
