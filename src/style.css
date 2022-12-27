@@ -603,7 +603,6 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
-
 }
 
 .image13{
@@ -612,7 +611,6 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
-
 }
 
 .image14{
@@ -621,7 +619,6 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
-
 }
 
 .image15{
@@ -630,7 +627,6 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
-
 }
 
 .image16{
@@ -639,7 +635,6 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
-
 }
 
 .image17{
@@ -648,7 +643,6 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
-
 }
 
 .image18{
@@ -657,7 +651,6 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
-
 }
 
 .image19{
@@ -666,7 +659,6 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
-
 }
 
 .image20{
@@ -675,7 +667,6 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
-
 }
 
 .image21{
@@ -684,7 +675,6 @@ button{
     background-size: cover; 
     background-position: center;
     margin: 10px;
-
 }
 
 .image22{
@@ -731,15 +721,6 @@ button{
     background-size: cover; 
     background-position: center;
     width:100%;
-}
-
-#imageBackground2{
-    /* margin-top: -4em; */
-}
-
-#imageBackground3{
-    /* margin-top: 15em; */
-    /* margin-left: -3em; */
 }
 
 .textExplication{
@@ -1194,6 +1175,95 @@ button{
         display:none;
     }
 
+}
+
+@media screen and (max-width: 800px) {
+    .parentMainTitle {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 0.8fr repeat(2, 1fr);
+        height: 25em;
+    }
+
+    .mainTitleDiv1{grid-area: 1 / 1 / 2 / 3;};
+    .mainTitleDiv2 { grid-area: 1 / 3 / 2 / 5; }
+    .mainTitleDiv3 { grid-area: 2 / 1 / 3 / 2; }
+    .mainTitleDiv4 { grid-area: 2 / 2 / 3 / 4; }
+    .mainTitleDiv5 { grid-area: 2 / 4 / 3 / 5; }
+    .mainTitleDiv6{display: none!important;}
+    .mainTitleDiv7{grid-area: 1 / 5 / 3 / 6; }
+
+    .backgroundColorImage{
+        display: none;
+    }
+
+    #parentDiv{
+        width: 760px;
+        height: 460px;
+        grid-template-columns: repeat(12, 62.33px);
+        grid-template-rows: repeat(12, 37.33px);
+        margin-top: 5em
+    }
+
+    .parentMapping{
+        display: grid;
+        grid-template-columns: repeat(7, 9.04px);
+        grid-template-rows: repeat(5, 7.66px);
+    }
+
+    #canvas, #canvasDiv{
+        height: 90%!important;
+        width: 95%!important;
+        margin-right: auto; 
+        margin-left: auto;
+        right: 0;
+        left: 0; 
+        text-align: center;
+        margin-left: 5%;
+    }
+
+    #infoIcon{
+        margin-top: 0.5em;
+        right: 7%;
+    }
+
+    #closeIcon{
+        margin-top: 1.1em;
+        right: 1%;
+    }
+
+    .loading-bar{
+        top: 50%!important;
+        margin-left: 5%;
+        width: 95%;
+    }
+
+    .loadingPercent{
+        top: 37%!important;
+        left: 50%;
+    }
+
+    .mainTitleHeader{
+        text-align: left!important;
+        margin-left: 11.5em;
+        margin-top: -0.8em;
+    }
+
+    .image1, .image2, 
+    .image3, .image4, 
+    .image5, .image6, 
+    .image7, .image8, 
+    .image9, .image10, 
+    .image11, .image12, 
+    .image13, .image14, 
+    .image15, .image16, 
+    .image17, .image18,
+    .image19, .image20, 
+    .image21, .image22, 
+    .image23, .image24, 
+    .image25, .image26 {
+        display:none;
+    }
 }
 
     

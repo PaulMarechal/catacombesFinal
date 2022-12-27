@@ -429,11 +429,8 @@ export function signature(){
     console.log( [
         " Developed with 🍔 by Paul M. ", 
         " - LinkedIn : https://www.linkedin.com/in/paul-marechal/",
+        " - site : https://www.paulmarechal.xyz", 
         " - Mail : contactme@paulmarechal.xyz",
-        "",
-        " Un grand MERCI à Gaspard Duval pour l'ensemble des images",
-        " - Instagram : ",
-        " - Mail : " 
     ].join( '\n' ) );
 }
 
