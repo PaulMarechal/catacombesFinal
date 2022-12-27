@@ -11,9 +11,7 @@ import * as locomotion from './moveCameraXR.js';
 import TeleportVR from 'teleportvr';
 import * as displayAR from './ar.js';
 import * as WidthVR from './widthVR.js';
-// import ThreeMeshUI from 'three-mesh-ui';
-// import FontJSON from './assets/Fonts/Roboto-msdf.json'
-// import FontImage from './assets/Fonts/Roboto-msdf.png'
+import VRControl from './assets/utils/VRControls.js';
 
 /**
  * Room creation ( base Three.js code to create rooms)
@@ -154,12 +152,9 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
             // VR UP / DOWN Panel 
             // if user is in XR session = display button
-            if (navigator.xr && navigator.xr.isSessionSupported('immersive-vr')) {
-                // navigator.xr.requestSession('immersive-vr').then(function(session) {
+            if(gamepad){
                 WidthVR.makePanel(gltf.scene, scene, camera)
-                // });
-            }  
-					
+            }	
         }
     )
 
@@ -227,9 +222,9 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     */
     document.body.appendChild( VRButton.createButton( renderer ) );
     renderer.xr.enabled = true;
-    renderer.setAnimationLoop(function () {
-        renderer.render( scene, camera );
-    });
+    // renderer.setAnimationLoop(function () {
+    //     renderer.render( scene, camera );
+    // });
 
     /**
     * Animate
@@ -239,8 +234,23 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     /**
      * Teleport VR 
      */
+    let vrControl;
+
     const teleportVR = new TeleportVR(scene, camera);
     const controllerModelFactory = new XRControllerModelFactory();  
+
+    // Controllers
+    vrControl = VRControl( renderer, camera, scene );
+    scene.add( vrControl.controllerGrips[ 0 ], vrControl.controllers[ 0 ] );
+
+    vrControl.controllers[ 0 ].addEventListener( 'selectstart', () => {
+        selectState = true;
+    } );
+
+    vrControl.controllers[ 0 ].addEventListener( 'selectend', () => {
+        selectState = false;
+    } );
+
 
     // Left hand 
     const controllerGrip0 = renderer.xr.getControllerGrip(0)
@@ -260,6 +270,14 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
     displayAR.arDisplay(linkAR);
 
+    
+    // webXR controller recovery
+    let gamepad = navigator.getGamepads()[0];
+    if(gamepad){
+        // Joystick movement in VR
+        TeleportVR.updateCharacterPosition();
+    }
+
     removeCanvas();
 
     const tick = () => {
@@ -271,26 +289,32 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
         var loadingBar = document.querySelector(".loading-bar");
 
         // Update controls
-        controls.update()
+        controls.update();
 
         // Teleport VR 
         teleportVR.update();
 
         // ThreeMeshUI
-        ThreeMeshUI.update()
+        ThreeMeshUI.update();
 
         WidthVR.updateButtons(renderer, camera);
+
+        // User movement VR 
+        if(gamepad){
+            TeleportVR.updateCharacterPosition();
+        }
         
         // Render
-        renderer.render(scene, camera)
+        renderer.render(scene, camera);
 
         // Call tick again on the next frame
-        window.requestAnimationFrame(tick)
+        window.requestAnimationFrame(tick);
 
         closeIcon.addEventListener("click", function(){
             window.cancelAnimationFrame(tick)
         })
     }
+
     tick()
 }
 

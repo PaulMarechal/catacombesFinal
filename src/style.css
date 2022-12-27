@@ -22,6 +22,15 @@ h1, h2{
     font-weight: 900;
 }
 
+.firstSentence{
+    border: #dbdbdb solid 0.1px; 
+    font-size: 2em; 
+    padding: 5px 20px; 
+    text-align: end; 
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+}
+
 p{
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
@@ -717,25 +726,6 @@ button{
     background-position: center;
     margin: 10px;
 }
-/*
-.image17{
-    
-}
-
-.image18{
-    
-}
-
-.image19{
-    grid-area: 3 / 1 / 5 / 2;
-}
-
-.image20{
-    grid-area: 2 / 5 / 4 / 6;
-} */
-
-
-
 
 .imgBackgroundText{
     background-size: cover; 
@@ -779,6 +769,77 @@ button{
     filter: blur(1.5em);
     height: 10em;
     margin-left: 80%;
+}
+
+.parentFooter{
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 0.5fr;
+}
+
+.iconeFooter{
+    grid-area: 1 / 1 / 2 / 2;
+    margin: auto 0 auto 1em;
+}
+
+.imageIconFooter{
+    width: 40%; 
+    padding: 10px 15px; 
+    background-color: #fff; 
+    border-radius: 10px;
+}
+
+.contactMe{
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.photosGaspard{
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+.contactLinkParent{
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.titleContactLinkFooter{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.websiteLinkFooter{
+    grid-area: 2 / 1 / 3 / 2;
+    padding-left: 20px;
+}
+
+.mailLinkFooter{
+    grid-area: 3 / 1 / 4 / 2;
+    padding-left: 20px;
+}
+
+.contactLinkParent a {
+    text-decoration: none; 
+    color: inherit; 
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.parentIconeText{
+    display: grid;
+    grid-template-columns: repeat(2, 2em);
+    grid-template-rows: 1fr;
+}
+
+.footerText{
+    /* border: #dbdbdb solid 0.1px;  */
+    font-size: 1.2em; 
+    /* padding: 5px 20px;  */
+    text-align: start; 
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    /* margin-top: 5em; */
+    position: relative; 
+    bottom: -30px;
 }
 
 

@@ -3,7 +3,6 @@ import ThreeMeshUI from 'three-mesh-ui';
 import FontJSON from './assets/Fonts/Roboto-msdf.json'
 import FontImage from './assets/Fonts/Roboto-msdf.png'
 
-
 // Constructor 
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
