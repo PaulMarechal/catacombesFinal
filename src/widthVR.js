@@ -172,9 +172,12 @@ export function makePanel(gltf, scene, camera) {
 
 }
 
+/*
 export function updateButtons(renderer, camera) {
 
 	// Find closest intersecting object
+
+    let vrControl;
 
 	let intersect;
 
@@ -229,6 +232,7 @@ export function updateButtons(renderer, camera) {
     
 
 }
+*/
 
 
 

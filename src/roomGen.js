@@ -152,9 +152,9 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
             // VR UP / DOWN Panel 
             // if user is in XR session = display button
-            if(gamepad){
-                WidthVR.makePanel(gltf.scene, scene, camera)
-            }	
+            // if(gamepad){
+                // WidthVR.makePanel(gltf.scene, scene, camera)
+            // }	
         }
     )
 
@@ -222,9 +222,9 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     */
     document.body.appendChild( VRButton.createButton( renderer ) );
     renderer.xr.enabled = true;
-    // renderer.setAnimationLoop(function () {
-    //     renderer.render( scene, camera );
-    // });
+    renderer.setAnimationLoop(function () {
+        renderer.render( scene, camera );
+    });
 
     /**
     * Animate
@@ -240,16 +240,16 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     const controllerModelFactory = new XRControllerModelFactory();  
 
     // Controllers
-    vrControl = VRControl( renderer, camera, scene );
-    scene.add( vrControl.controllerGrips[ 0 ], vrControl.controllers[ 0 ] );
+    // vrControl = VRControl( renderer, camera, scene );
+    // scene.add( vrControl.controllerGrips[ 0 ], vrControl.controllers[ 0 ] );
 
-    vrControl.controllers[ 0 ].addEventListener( 'selectstart', () => {
-        selectState = true;
-    } );
+    // vrControl.controllers[ 0 ].addEventListener( 'selectstart', () => {
+    //     selectState = true;
+    // } );
 
-    vrControl.controllers[ 0 ].addEventListener( 'selectend', () => {
-        selectState = false;
-    } );
+    // vrControl.controllers[ 0 ].addEventListener( 'selectend', () => {
+    //     selectState = false;
+    // } );
 
 
     // Left hand 
@@ -272,11 +272,11 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
     
     // webXR controller recovery
-    let gamepad = navigator.getGamepads()[0];
-    if(gamepad){
-        // Joystick movement in VR
-        TeleportVR.updateCharacterPosition();
-    }
+    // let gamepad = navigator.getGamepads()[0];
+    // if(gamepad){
+    //     // Joystick movement in VR
+    //     TeleportVR.updateCharacterPosition();
+    // }
 
     removeCanvas();
 
@@ -295,14 +295,12 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
         teleportVR.update();
 
         // ThreeMeshUI
-        ThreeMeshUI.update();
+        // ThreeMeshUI.update();
 
-        WidthVR.updateButtons(renderer, camera);
+        // WidthVR.updateButtons(renderer, camera);
 
-        // User movement VR 
-        if(gamepad){
-            TeleportVR.updateCharacterPosition();
-        }
+        // TeleportVR.updateCharacterPosition();
+
         
         // Render
         renderer.render(scene, camera);
