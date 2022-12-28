@@ -240,16 +240,16 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     const controllerModelFactory = new XRControllerModelFactory();  
 
     // Controllers
-    // vrControl = VRControl( renderer, camera, scene );
-    // scene.add( vrControl.controllerGrips[ 0 ], vrControl.controllers[ 0 ] );
+    vrControl = VRControl( renderer, camera, scene );
+    scene.add( vrControl.controllerGrips[ 0 ], vrControl.controllers[ 0 ] );
 
-    // vrControl.controllers[ 0 ].addEventListener( 'selectstart', () => {
-    //     selectState = true;
-    // } );
+    vrControl.controllers[ 0 ].addEventListener( 'selectstart', () => {
+        selectState = true;
+    } );
 
-    // vrControl.controllers[ 0 ].addEventListener( 'selectend', () => {
-    //     selectState = false;
-    // } );
+    vrControl.controllers[ 0 ].addEventListener( 'selectend', () => {
+        selectState = false;
+    } );
 
 
     // Left hand 
@@ -272,11 +272,11 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
     
     // webXR controller recovery
-    // let gamepad = navigator.getGamepads()[0];
-    // if(gamepad){
+    let gamepad = navigator.getGamepads()[0];
+    if(gamepad){
     //     // Joystick movement in VR
-    //     TeleportVR.updateCharacterPosition();
-    // }
+        TeleportVR.updateCharacterPosition();
+    }
 
     removeCanvas();
 
