@@ -149,7 +149,9 @@ export function makePanel(gltf, scene, camera) {
 		state: 'selected',
 		attributes: selectedAttributes,
 		onSet: () => {
-            gltf.position.y -= 1
+			console.log("test des familles")
+            // gltf.position.y -= 1
+			gltf.translateY(gltf.position.y -=1)
 		}
 	} );
 	buttonNext.setupState( hoveredStateAttributes );
@@ -159,7 +161,9 @@ export function makePanel(gltf, scene, camera) {
 		state: 'selected',
 		attributes: selectedAttributes,
 		onSet: () => {
-            gltf.position.y += 1
+			console.log("test slec")
+            // gltf.position.y += 1
+			gltf.translateY(gltf.position.y +=1)
 		}
 	} );
 	buttonPrevious.setupState( hoveredStateAttributes );
@@ -172,12 +176,12 @@ export function makePanel(gltf, scene, camera) {
 
 }
 
-/*
-export function updateButtons(renderer, camera) {
+
+export function updateButtons(vrControl, renderer, camera) {
 
 	// Find closest intersecting object
 
-    let vrControl;
+    // let vrControl;
 
 	let intersect;
 
@@ -232,7 +236,7 @@ export function updateButtons(renderer, camera) {
     
 
 }
-*/
+
 
 
 

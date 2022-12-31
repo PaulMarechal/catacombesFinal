@@ -1,6 +1,7 @@
 export function arDisplay(linkAR){
     
     var elementDiv = document.createElement("div");
+
     var elementA = document.createElement("a");
 
     // If AR available on mobile

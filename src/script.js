@@ -21,11 +21,11 @@ Developed with 🍔 by
                   \/__/         \/__/         \/__/              \/__/         \/__/         \|__|         \/__/         \/__/         \/__/         \/__/         \/__/ 
 */
 
-// Display catacombs room
-ImplementationRooms.catasRooms();
-
 // Help for mobile ( VR / AR )
 MobileNavigation.mobileOrNot();
+
+// Display catacombs room
+ImplementationRooms.catasRooms();
 
 // QR Code
 // RoomGen.qrGen();
@@ -36,5 +36,4 @@ Scroll.locomotiveScroll();
 // Console signature
 RoomGen.signature();
 
-// WidthVR.makePanel();
 

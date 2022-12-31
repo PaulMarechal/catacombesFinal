@@ -152,9 +152,16 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
             // VR UP / DOWN Panel 
             // if user is in XR session = display button
-            // if(gamepad){
-                // WidthVR.makePanel(gltf.scene, scene, camera)
-            // }	
+            if (navigator.xr) {
+                navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
+                    if (supported) {
+                        navigator.xr.requestSession('immersive-vr').then((session) => {
+                            console.log("Entered VR mode");
+                            WidthVR.makePanel(gltf.scene, scene, camera)
+                        });
+                    }
+                });
+            }
         }
     )
 
@@ -235,6 +242,7 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
      * Teleport VR 
      */
     let vrControl;
+    let selectState = false;
 
     const teleportVR = new TeleportVR(scene, camera);
     const controllerModelFactory = new XRControllerModelFactory();  
@@ -272,11 +280,11 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
     
     // webXR controller recovery
-    let gamepad = navigator.getGamepads()[0];
-    if(gamepad){
-    //     // Joystick movement in VR
-        TeleportVR.updateCharacterPosition();
-    }
+    // let gamepad = navigator.getGamepads()[0];
+    // if(gamepad){
+    // //     // Joystick movement in VR
+    //     TeleportVR.updateCharacterPosition();
+    // }
 
     removeCanvas();
 
@@ -295,9 +303,9 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
         teleportVR.update();
 
         // ThreeMeshUI
-        // ThreeMeshUI.update();
+        ThreeMeshUI.update();
 
-        // WidthVR.updateButtons(renderer, camera);
+        WidthVR.updateButtons(vrControl, renderer, camera);
 
         // TeleportVR.updateCharacterPosition();
 
@@ -375,6 +383,7 @@ export function removeCanvas(){
     const infoIcon = document.getElementById("infoIcon");
     const closeIconInfo = document.getElementById("closeIconInfo");
     const arLink = document.getElementById("arLink");
+    const arLinkDiv = document.getElementById("ARButton");
     const closeIconCanvas = document.getElementById("closeIcon");
     const modaleRoom3D = document.getElementById("modaleRoom3D");
     const qrCode = document.getElementById("qrCode");
@@ -398,13 +407,14 @@ export function removeCanvas(){
         loadingBar.classList.remove("ended");
         canvas.remove();
         vrButton.remove();
+        arLinkDiv.remove();
 
 
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
             arLink.remove();
         } else {
             location.reload();
-            // $("#canvas").load(window.location.href + " #canvas" );
+            $("#canvas").load(window.location.href + " #canvas" );
         }
     })
 }

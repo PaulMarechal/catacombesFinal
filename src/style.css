@@ -853,7 +853,7 @@ button{
 
     .mainTitleDiv7 { 
         grid-area: 1 / 5 / 3 / 6;
-        background-image: url("assets/Images/pc1.png");
+        background-image: url("assets/Images/porteOuverte.png");
         background-size: cover; 
         background-position: center;
         width: 100%;
@@ -875,7 +875,7 @@ button{
     }
 
     #modaleRoom3D{
-        height: 18em;
+        height: inherit;
         width: 14em;
     }
 
@@ -949,11 +949,16 @@ button{
     }
 
     #parentDiv{
-        width: 760px;
-        height: 460px;
-        grid-template-columns: repeat(12, 62.33px);
-        grid-template-rows: repeat(12, 37.33px);
+        width: 760px!important;
+        height: 460px!important;
+        grid-template-columns: repeat(12, 62.33px)!important;
+        grid-template-rows: repeat(12, 37.33px)!important; 
         margin-top: 5em;
+        /* width: 93%;
+        height: 100%;
+        grid-template-columns: repeat(12, 7.75%);
+        grid-template-rows: repeat(12, 8.33%);
+        margin-top: 5em */
     }
 
     .parentMapping{
@@ -973,6 +978,19 @@ button{
         left: 0;
         text-align: center;
         margin-left: 5%;
+    }
+
+    .nameRoom, .buttonRoom3D{
+        font-family: 'Bebas Neue', cursive;
+        text-transform: uppercase;
+        font-size: 2em;
+        font-weight: 600;
+        text-align: left!important;
+        color: rgb(0, 0, 0);
+    }
+
+    .buttonRoom3D{
+        text-align: left!important;
     }
 
     #infoIcon{
@@ -1016,6 +1034,30 @@ button{
     .image23, .image24, 
     .image25, .image26 {
         display:none;
+    }
+
+    .parentFooter{
+        display: grid!important; 
+        grid-template-columns: repeat(2, 48%);
+        grid-template-rows: 1fr;
+        width: 100%;
+    }
+
+    .imageIconFooter{
+        width: 100%!important;
+    }
+
+    .iconeFooter{
+        grid-area: 1 / 1 / 2 / 2;
+        width: 50%!important;
+    }
+
+    .contactMe{
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .photosGaspard{
+        display: none;
     }
 }
 
@@ -1175,13 +1217,45 @@ button{
         display:none;
     }
 
+    .parentFooter{
+        display: grid!important; 
+        grid-template-columns: repeat(2, 45%);
+        grid-template-rows: 1fr;
+        width: 100%;
+    }
+
+    .imageIconFooter{
+        width: 100%!important;
+    }
+
+    .iconeFooter{
+        grid-area: 1 / 1 / 2 / 2;
+        width: 50%!important;
+    }
+
+    /* .imageIconFooter{
+        width: 60%!important;
+    } */
+
+    .contactMe{
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .photosGaspard{
+        display: none;
+    }
+
+    /* .contactLinkParent{
+        grid-template-columns: 13em!important;
+    } */
+
 }
 
 @media screen and (max-width: 800px) {
     .parentMainTitle {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 0.8fr repeat(2, 1fr);
+        /* grid-template-columns: repeat(5, 1fr); */
+        /* grid-template-rows: 0.8fr repeat(2, 1fr); */
         height: 25em;
     }
 
@@ -1198,10 +1272,15 @@ button{
     }
 
     #parentDiv{
-        width: 760px;
+        /* width: 760px;
         height: 460px;
         grid-template-columns: repeat(12, 62.33px);
         grid-template-rows: repeat(12, 37.33px);
+        margin-top: 5em */
+        width: 93%;
+        height: 100%;
+        grid-template-columns: repeat(12, 7.75%);
+        grid-template-rows: repeat(12, 8.33%);
         margin-top: 5em
     }
 
