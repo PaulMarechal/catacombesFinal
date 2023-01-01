@@ -21,8 +21,22 @@ Developed with 🍔 by
                   \/__/         \/__/         \/__/              \/__/         \/__/         \|__|         \/__/         \/__/         \/__/         \/__/         \/__/ 
 */
 
-// Help for mobile ( VR / AR )
+// MobileNavigation.mobileOrNot();
+window.addEventListener('orientationchange', function() {
+     var orientation = window.orientation;
+     console.log(orientation)
+     if (orientation === 0) {
+          MobileNavigation.mobileOrNot();
+     } else {
+          const modale = document.getElementById("modaleMobilePortrait");
+          modale.style.display = "none";
+     }
+});
+
 MobileNavigation.mobileOrNot();
+
+// Help for mobile ( VR / AR )
+// MobileNavigation.mobileOrNot();
 
 // Display catacombs room
 ImplementationRooms.catasRooms();

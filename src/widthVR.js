@@ -161,9 +161,9 @@ export function makePanel(gltf, scene, camera) {
 		state: 'selected',
 		attributes: selectedAttributes,
 		onSet: () => {
-			console.log("test slec")
-            // gltf.position.y += 1
-			gltf.translateY(gltf.position.y +=1)
+			// console.log("test slec")
+            gltf.position.y += 1
+			// gltf.translateY(gltf.position.y +=1)
 		}
 	} );
 	buttonPrevious.setupState( hoveredStateAttributes );

@@ -152,15 +152,19 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
             // VR UP / DOWN Panel 
             // if user is in XR session = display button
-            if (navigator.xr) {
-                navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
-                    if (supported) {
-                        navigator.xr.requestSession('immersive-vr').then((session) => {
-                            console.log("Entered VR mode");
-                            WidthVR.makePanel(gltf.scene, scene, camera)
-                        });
-                    }
-                });
+            // if (navigator.xr) {
+            //     navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
+            //         if (supported) {
+            //             navigator.xr.requestSession('immersive-vr').then((session) => {
+            //                 console.log("Entered VR mode");
+            //                 WidthVR.makePanel(gltf.scene, scene, camera)
+            //             });
+            //         }
+            //     });
+            // }
+            // let gamepad = navigator.getGamepads()[0];
+            if(vrControl.controllerGrips[ 0 ]){
+                WidthVR.makePanel(gltf.scene, scene, camera)
             }
         }
     )
@@ -286,6 +290,7 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     //     TeleportVR.updateCharacterPosition();
     // }
 
+
     removeCanvas();
 
     const tick = () => {
@@ -296,9 +301,6 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
         const vrButton = document.getElementById("VRButton");
         var loadingBar = document.querySelector(".loading-bar");
 
-        // Update controls
-        controls.update();
-
         // Teleport VR 
         teleportVR.update();
 
@@ -308,6 +310,9 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
         WidthVR.updateButtons(vrControl, renderer, camera);
 
         // TeleportVR.updateCharacterPosition();
+        
+        // Update controls
+        controls.update();
 
         
         // Render
@@ -378,15 +383,17 @@ export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, link
 
 export function removeCanvas(){
     const canvas = document.getElementById("canvas");
-    const vrButton = document.getElementById("VRButton");
+    // const vrButton = document.getElementById("VRButton");
     const infoButton = document.getElementById("infoButton"); 
     const infoIcon = document.getElementById("infoIcon");
     const closeIconInfo = document.getElementById("closeIconInfo");
     const arLink = document.getElementById("arLink");
     const arLinkDiv = document.getElementById("ARButton");
+    const vrButton = document.getElementById("VRButton");
     const closeIconCanvas = document.getElementById("closeIcon");
     const modaleRoom3D = document.getElementById("modaleRoom3D");
     const qrCode = document.getElementById("qrCode");
+
     
     var loadingBar = document.querySelector(".loading-bar");
 
@@ -407,7 +414,7 @@ export function removeCanvas(){
         loadingBar.classList.remove("ended");
         canvas.remove();
         vrButton.remove();
-        arLinkDiv.remove();
+        // arLinkDiv.remove();
 
 
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){

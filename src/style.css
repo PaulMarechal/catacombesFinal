@@ -380,7 +380,8 @@ button{
 }
 
 #VRButton{
-    position: fixed!important;
+    position: absolute!important;
+    bottom: 20px;
 }
 
 #arLink{
@@ -1059,6 +1060,19 @@ button{
     .photosGaspard{
         display: none;
     }
+
+    #VRButton{
+        margin-left: -20%;
+        position: fixed!important;
+        z-index: 9999;
+        bottom: 20px!important;
+
+    }
+
+    .XrNotAvailable{
+        position: fixed!important;
+        bottom: 20px!important;
+    }
 }
 
 @media only screen 
@@ -1143,7 +1157,29 @@ button{
     }
 
     #modaleRoom3D{
-        height: 170px;
+        height: 140px;
+        width: 103%;
+        margin-left: 1em;
+        margin-top: -1em;
+    }
+
+    .nameRoom{
+        font-size: 1em;
+        padding-left: 10px!important;
+        text-decoration: underline 7px solid blue!important;
+    }
+
+    .imageRoom{
+        margin: 0.5em auto 1em!important;
+    }
+
+    .buttonRoom3D{
+        width: 80%;
+        height: 14%!important;
+        margin-left: 10px!important;
+        font-size: 0.7em!important;
+        margin-top: -0.7em;
+        color:rgb(0, 0, 0);
     }
 
     button{
@@ -1194,6 +1230,10 @@ button{
 
     #VRButton{
         margin-left: -20%;
+        position: fixed!important;
+        bottom: 20px!important;
+
+
     }
 
     #ARButton{
@@ -1248,6 +1288,11 @@ button{
     /* .contactLinkParent{
         grid-template-columns: 13em!important;
     } */
+
+    .XrNotAvailable{
+        position: fixed!important;
+        bottom: 20px!important;
+    }
 
 }
 
@@ -1342,6 +1387,21 @@ button{
     .image23, .image24, 
     .image25, .image26 {
         display:none;
+    }
+
+    #parentDiv{
+        /* width: 760px;
+        height: 460px;
+        grid-template-columns: repeat(12, 62.33px);
+        grid-template-rows: repeat(12, 37.33px); */
+        margin-top: 5em;
+        width: 89%;
+        height: 13.3em;
+        grid-template-columns: repeat(12, 8.33%);
+        grid-template-rows: repeat(12, 8.33%);
+        /* grid-template-columns: repeat(12, 7.75%);
+        grid-template-rows: repeat(12, 8.33%);
+        margin-top: 5em */
     }
 }
 
