@@ -380,7 +380,7 @@ button{
 }
 
 #VRButton{
-    position: absolute!important;
+    position: fixed!important;
     bottom: 20px;
 }
 
@@ -755,7 +755,7 @@ button{
 
 .parentFooter{
     display: grid; 
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 0.7fr 0.2fr 0.7fr 0.2fr 0.7fr;
     grid-template-rows: 0.5fr;
 }
 
@@ -765,10 +765,11 @@ button{
 }
 
 .imageIconFooter{
-    width: 40%; 
+    width: 200px; 
     padding: 10px 15px; 
     background-color: #fff; 
     border-radius: 10px;
+    margin-top: 7px;
 }
 
 .contactMe{
@@ -813,15 +814,13 @@ button{
 }
 
 .footerText{
-    /* border: #dbdbdb solid 0.1px;  */
     font-size: 1.2em; 
-    /* padding: 5px 20px;  */
-    text-align: start; 
+    text-align: left; 
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
-    /* margin-top: 5em; */
     position: relative; 
     bottom: -30px;
+    margin-bottom: -3em;
 }
 
 
