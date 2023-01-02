@@ -3,8 +3,8 @@ export function mobileOrNot(){
         document.getElementById("imgHelp").src="https://paulmarechal.xyz/assets/images/helpMobile.png";
         
         if(screen.height > screen.width){
-            // Création de la modale 
             
+            // Création de la modale 
             var newModale = document.createElement("div");
             var newContent = document.createElement("h4");
             var content = document.createTextNode("Pour profiter pleinement de l'expérience merci de tourner votre téléphone en mode paysage ou de vous connecter depuis un ordinateur / casque VR");

@@ -424,8 +424,10 @@ button{
 }
 
 #closeIconInfo{
-    margin-left: 76%; 
-    top: 2%;
+    position: fixed;
+    margin-left: 74.5%; 
+    top: 17.3%;
+    z-index: 9999999;
 }
 
 #closeHelpButton{
@@ -447,11 +449,13 @@ button{
 
 #imgHelp{
     z-index: 99999; 
+    position: fixed;
     margin: auto; 
-    bottom: 4em; 
     right: 0; 
     left: 0; 
-    width: 72%; 
+    top: 0; 
+    bottom: 0; 
+    width: 50%; 
     border-radius: 15px
 }
 
@@ -494,11 +498,11 @@ button{
     /* grid-template-columns: 0.1fr 0.5fr repeat(4, 1fr) 0.5fr 0.1fr; */
     /* grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.1fr 1fr 0.1fr; */
     grid-template-columns: repeat(5, 20%);
-    grid-template-rows: repeat(5, 20em);
+    grid-template-rows: repeat(5, 17.9em);
     /* margin-top: 1em; */
 }
     
-.textExplication1 { grid-area: 2 / 2 / 3 / 4; }
+.textExplication1 { grid-area: 2 / 2 / 3 / 4; z-index: 6;}
 .textExplication2 { grid-area: 3 / 3 / 4 / 5; }
 .textExplication3 { 
     grid-area: 4 / 2 / 5 / 4;
