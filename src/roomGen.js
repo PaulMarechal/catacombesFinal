@@ -152,20 +152,20 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
             // VR UP / DOWN Panel 
             // if user is in XR session = display button
-            // if (navigator.xr) {
-            //     navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
-            //         if (supported) {
-            //             navigator.xr.requestSession('immersive-vr').then((session) => {
-            //                 console.log("Entered VR mode");
-            //                 WidthVR.makePanel(gltf.scene, scene, camera)
-            //             });
-            //         }
-            //     });
-            // }
-            // let gamepad = navigator.getGamepads()[0];
-            if(vrControl.controllerGrips[ 0 ]){
-                WidthVR.makePanel(gltf.scene, scene, camera)
+            if (navigator.xr) {
+                navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
+                    if (supported) {
+                        navigator.xr.requestSession('immersive-vr').then((session) => {
+                            console.log("Entered VR mode");
+                            WidthVR.makePanel(gltf.scene, scene, camera)
+                        });
+                    }
+                });
             }
+            // let gamepad = navigator.getGamepads()[0];
+            // if(vrControl.controllerGrips[ 0 ]){
+            //     WidthVR.makePanel(gltf.scene, scene, camera)
+            // }
         }
     )
 
@@ -353,7 +353,7 @@ export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, link
     titreModale.setAttribute("id", titre);
     titreModale.style.gridArea = "1 / 2 / 2 / 3";
     titreModale.style.marginTop = "0.5em";
-    titreModale.style.textDecoration = "underline solid blue 10px";
+    titreModale.style.textDecoration = "underline solid #1e1c1c 10px";
     titreModale.style.textUnderlinePosition = "auto";
 
     btn.style.marginLeft = "30px";
@@ -414,11 +414,16 @@ export function removeCanvas(){
         loadingBar.classList.remove("ended");
         canvas.remove();
         vrButton.remove();
-        // arLinkDiv.remove();
+        if(arLinkDiv){
+            arLinkDiv.style.display = "none"
+        }
 
 
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
-            arLink.remove();
+            if(arLinkDiv){
+                arLinkDiv.style.display = "none";
+            }
+            vrButton.remove();
         } else {
             location.reload();
             $("#canvas").load(window.location.href + " #canvas" );
