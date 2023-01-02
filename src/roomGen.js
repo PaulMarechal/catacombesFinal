@@ -417,21 +417,11 @@ export function removeCanvas(){
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
             const arButton = document.getElementById("ARButton");
             const vrButton = document.getElementById("VRButton");
-            alert(vrButton);
             arButton.remove();
             vrButton.remove();
         } else {
             location.reload();
         }
-        
-        // if(arButton){
-        //     arButton.remove();
-        // } 
-        
-        // else {
-        //     location.reload();
-        //     $("#canvas").load(window.location.href + " #canvas" );
-        // }
     })
 }
 

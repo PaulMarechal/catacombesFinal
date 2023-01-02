@@ -856,7 +856,7 @@ button{
         background-image: url("assets/Images/porteOuverte.png");
         background-size: cover; 
         background-position: center;
-        width: 100%;
+        width: 2em!important;
         /* height: 100%; */
         /* margin-left: 2em!important; */
     }
@@ -908,16 +908,16 @@ button{
     }
 
     .textExplication1{
-        grid-area: 5 / 2 / 7 / 8;
+        grid-area: 5 / 2 / 7 / 8!important;
     }
 
     .textExplication2{
         margin-top: 0.2em;
-        grid-area: 8 / 2 / 10 / 8;
+        grid-area: 8 / 2 / 10 / 8!important;
     }
 
     .textExplication3{
-        grid-area: 11 / 2 / 13 / 8;
+        grid-area: 11 / 2 / 13 / 8!important;
         margin-top: 0.2em;
         margin-bottom: -2em;
     }
@@ -1027,7 +1027,7 @@ button{
         margin-top: -0.8em;
     }
 
-    .image1, .image2, 
+    /* .image1, .image2, 
     .image3, .image4, 
     .image5, .image6, 
     .image7, .image8, 
@@ -1041,13 +1041,45 @@ button{
     .image23, .image24, 
     .image25, .image26 {
         display:none;
+    } */
+
+    .parentTextExplications {
+        display: grid;
+        /* grid-template-columns: 0.1fr 0.5fr repeat(4, 1fr) 0.5fr 0.1fr; */
+        /* grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.1fr 1fr 0.1fr; */
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: repeat(5, 18em)!important;
+        width: 107%;
+        margin-top: 8em;
+        /* margin-top: 1em; */
+    }
+
+    /* .textExplication1{
+        grid-area: 6 / 1 / 7 / 6!important;
+        margin-bottom: 30%!important;
+    }
+
+    .textExplication2{
+        grid-area: 7 / 1 / 8 / 6!important;
+        margin-top: 120%;
+        font-size: 12px;
+    }
+
+    .textExplication3{
+        grid-area: 8 / 1 / 9 / 6!important;
+        margin-top: 5em;
+    } */
+
+    .textExplication1, .textExplication2, .textExplication3{
+        display: none;
     }
 
     .parentFooter{
         display: grid!important; 
-        grid-template-columns: repeat(2, 48%);
+        /* grid-template-columns: repeat(3, 33%); */
         grid-template-rows: 1fr;
-        width: 100%;
+        width: 105%!important;
+        grid-template-columns: 0.7fr 0.2fr 0.5fr 0.2fr 0.8fr;
     }
 
     .imageIconFooter{
@@ -1061,10 +1093,13 @@ button{
 
     .contactMe{
         grid-area: 1 / 2 / 2 / 3;
+        width: 60%!important;
     }
 
     .photosGaspard{
-        display: none;
+        /* display: none; */
+        width: 92%!important;
+        padding: 16px 10px;
     }
 
     #VRButton{
@@ -1411,17 +1446,17 @@ button{
         grid-template-columns: repeat(12, 62.33px);
         grid-template-rows: repeat(12, 37.33px); */
 
-        /* margin-top: 5em;
-        width: 89%;
-        height: 13.3em;
+        margin-top: 5em;
+        width: 84%;
+        height: 12.6em;
         grid-template-columns: repeat(12, 8.33%);
-        grid-template-rows: repeat(12, 8.33%); */
+        grid-template-rows: repeat(12, 8.33%);
 
-        margin-top: 3em;
+        /* margin-top: 3em;
         width: 593px;
         height: 361px;
         grid-template-columns: repeat(12, 46.42px);
-        grid-template-rows: repeat(12, 28.08px);
+        grid-template-rows: repeat(12, 28.08px); */
     }
 
     .parentTextExplications{
@@ -1450,7 +1485,8 @@ button{
     }
 
     .photosGaspard{
-        width: 91%!important;
+        width: 100%!important;
+        margin-left: -35%;
     }
 
     .mainTitleFirst, .mainTitleSecond{
