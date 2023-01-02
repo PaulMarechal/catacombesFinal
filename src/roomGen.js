@@ -289,6 +289,11 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     // //     // Joystick movement in VR
     //     TeleportVR.updateCharacterPosition();
     // }
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+        const arButton = document.getElementById("ARButton");
+        arButton.style.display = "block"
+    }
+
 
 
     removeCanvas();
@@ -297,9 +302,6 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
         const elapsedTime = clock.getElapsedTime()
         // removeCanvas()
-        const test = document.getElementById("canvas");
-        const vrButton = document.getElementById("VRButton");
-        var loadingBar = document.querySelector(".loading-bar");
 
         // Teleport VR 
         teleportVR.update();
@@ -335,8 +337,8 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, linkAR, linkQR, imagePath, idImageSalle){
     const modaleRoom3D = document.getElementById("modaleRoom3D");
     var btn = document.createElement("button"); 
-    var titreModale = document.createElement("h3")
-    var image = document.createElement("img")
+    var titreModale = document.createElement("h3");
+    var image = document.createElement("img");
     var mapParent = document.getElementById("parentDiv");
     const closeIcon = document.getElementById("closeIcon");
     const infoIcon = document.getElementById("infoIcon");
@@ -383,13 +385,10 @@ export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, link
 
 export function removeCanvas(){
     const canvas = document.getElementById("canvas");
-    // const vrButton = document.getElementById("VRButton");
     const infoButton = document.getElementById("infoButton"); 
     const infoIcon = document.getElementById("infoIcon");
     const closeIconInfo = document.getElementById("closeIconInfo");
     const arLink = document.getElementById("arLink");
-    const arLinkDiv = document.getElementById("ARButton");
-    const vrButton = document.getElementById("VRButton");
     const closeIconCanvas = document.getElementById("closeIcon");
     const modaleRoom3D = document.getElementById("modaleRoom3D");
     const qrCode = document.getElementById("qrCode");
@@ -413,21 +412,26 @@ export function removeCanvas(){
         qrCode.style.display = "none";
         loadingBar.classList.remove("ended");
         canvas.remove();
-        vrButton.remove();
-        if(arLinkDiv){
-            arLinkDiv.style.display = "none"
-        }
-
-
+        // vrButton.remove();
+        // vrButton.style.display = "none";
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
-            if(arLinkDiv){
-                arLinkDiv.style.display = "none";
-            }
+            const arButton = document.getElementById("ARButton");
+            const vrButton = document.getElementById("VRButton");
+            alert(vrButton);
+            arButton.remove();
             vrButton.remove();
         } else {
             location.reload();
-            $("#canvas").load(window.location.href + " #canvas" );
         }
+        
+        // if(arButton){
+        //     arButton.remove();
+        // } 
+        
+        // else {
+        //     location.reload();
+        //     $("#canvas").load(window.location.href + " #canvas" );
+        // }
     })
 }
 

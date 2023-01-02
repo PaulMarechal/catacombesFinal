@@ -78,6 +78,7 @@ button{
     width: 50%;
     height: 100%;
     margin-left: 12%;
+    z-index:2;
     /* margin: auto; */
 }
 
@@ -497,12 +498,11 @@ button{
     /* margin-top: 1em; */
 }
     
-.textExplication1 { grid-area: 2 / 2 / 3 / 4; z-index: 99;}
-.textExplication2 { grid-area: 3 / 3 / 4 / 5; z-index:99;}
+.textExplication1 { grid-area: 2 / 2 / 3 / 4; }
+.textExplication2 { grid-area: 3 / 3 / 4 / 5; }
 .textExplication3 { 
     grid-area: 4 / 2 / 5 / 4;
     /* margin-top: -4em;  */
-    z-index:99;
 }
 
 .image1 {
@@ -844,7 +844,7 @@ button{
     .mainTitleDiv4 { grid-area: 2 / 2 / 3 / 4; }
     .mainTitleDiv5 { grid-area: 2 / 4 / 3 / 5; }
     .mainTitleDiv6{display: none!important;}
-    .mainTitleDiv7{grid-area: 1 / 5 / 3 / 6; }
+    .mainTitleDiv7{grid-area: 1 / 5 / 3 / 6; z-index: 0;}
 
     /* .mainTitleDiv5{display: none;} */
     .backgroundColorImage{
@@ -1005,6 +1005,9 @@ button{
 
     #ARButton{
         bottom: 20px!important;
+        margin-left: -45%!important;
+        height: 16px;
+        display: none;
     }
 
     .loading-bar{
@@ -1136,7 +1139,7 @@ button{
         grid-row-gap: 0px;
         padding: 0px 20px;
         margin-top: 3em;
-        z-index: 99;
+        /* z-index: 99; */
     }
 
     .textExplication1{
@@ -1231,6 +1234,7 @@ button{
 
     #imgHelp{
         width: 67%;
+
         margin-left: -5em;
         margin-bottom: -54em;
     }
@@ -1238,15 +1242,15 @@ button{
     #VRButton{
         position: fixed!important;
         bottom: 20px!important;
-        left: 20px!important;
+        /* left: 25px!important; */
+        margin-right: -30%!important;
     }
 
     #ARButton{
-        /* margin-left: -24%; */
-        /* right: 0px!important; */
-        /* text-align: right!important; */
         height: 16px;
         bottom: 20px;
+        margin-left: -80%;
+        display: none;
     }
 
     .image1, .image2, 
@@ -1318,7 +1322,11 @@ button{
     .mainTitleDiv4 { grid-area: 2 / 2 / 3 / 4; }
     .mainTitleDiv5 { grid-area: 2 / 4 / 3 / 5; }
     .mainTitleDiv6{display: none!important;}
-    .mainTitleDiv7{grid-area: 1 / 5 / 3 / 6; }
+    .mainTitleDiv7{
+        grid-area: 1 / 5 / 3 / 6;     
+        width: 1em;
+        margin-left: 3.5em;
+    }
 
     .backgroundColorImage{
         display: none;
@@ -1381,7 +1389,7 @@ button{
         margin-top: -0.8em;
     }
 
-    .image1, .image2, 
+    /* .image1, .image2, 
     .image3, .image4, 
     .image5, .image6, 
     .image7, .image8, 
@@ -1395,22 +1403,60 @@ button{
     .image23, .image24, 
     .image25, .image26 {
         display:none;
-    }
+    } */
 
     #parentDiv{
         /* width: 760px;
         height: 460px;
         grid-template-columns: repeat(12, 62.33px);
         grid-template-rows: repeat(12, 37.33px); */
-        margin-top: 5em;
+
+        /* margin-top: 5em;
         width: 89%;
         height: 13.3em;
         grid-template-columns: repeat(12, 8.33%);
-        grid-template-rows: repeat(12, 8.33%);
-        /* grid-template-columns: repeat(12, 7.75%);
-        grid-template-rows: repeat(12, 8.33%);
-        margin-top: 5em */
+        grid-template-rows: repeat(12, 8.33%); */
+
+        margin-top: 3em;
+        width: 593px;
+        height: 361px;
+        grid-template-columns: repeat(12, 46.42px);
+        grid-template-rows: repeat(12, 28.08px);
     }
+
+    .parentTextExplications{
+        grid-template-rows: repeat(8, 18em);
+    }
+
+    .textExplication1{
+        grid-area: 6 / 1 / 7 / 6;
+    }
+
+    .textExplication2{
+        grid-area: 7 / 1 / 8 / 6;
+    }
+
+    .textExplication3{
+        grid-area: 8 / 1 / 9 / 6;
+        margin-top: 2em;
+    }
+
+    .parentFooter{
+        margin-top: 2em;
+        grid-template-columns: 0.7fr 0fr 0.7fr 0fr 0.7fr;
+        /* margin-bottom: 10px; */
+        position: relative;
+        bottom: 10px
+    }
+
+    .photosGaspard{
+        width: 91%!important;
+    }
+
+    .mainTitleFirst, .mainTitleSecond{
+        position: relative;
+    }
+
 }
 
     
