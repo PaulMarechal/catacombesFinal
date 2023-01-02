@@ -823,8 +823,7 @@ button{
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
     position: relative; 
-    bottom: -30px;
-    margin-bottom: -3em;
+    bottom: 3px;
 }
 
 
