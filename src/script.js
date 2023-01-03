@@ -2,7 +2,7 @@ import './style.css';
 import * as Scroll from './scroll.js';
 import * as ImplementationRooms from './implementationRooms.js'
 import * as RoomGen from './roomGen.js';
-// import * as MobileNavigation from './mobileNavigation.js';
+import * as MobileNavigation from './mobileNavigation.js';
 // import * as WidthVR from './widthVR.js';
 import $ from 'jquery'; 
 
@@ -45,8 +45,11 @@ Scroll.locomotiveScroll();
 // Console signature
 RoomGen.signature();
 
-// Display modale if mobile in mode 'portrait'
+// Modale if navigation width mobile in portrait mode
+MobileNavigation.mobileOrNot();
 RoomGen.modaleMobile();
+
+
 
 
 
