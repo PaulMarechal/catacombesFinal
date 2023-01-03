@@ -15,6 +15,7 @@ html,
 body {
     position: relative;
     background-color: #ffffff;
+    /* height: 191em; */
 }
 
 h1, h2{
@@ -502,11 +503,11 @@ button{
     /* margin-top: 1em; */
 }
     
-.textExplication1 { grid-area: 2 / 2 / 3 / 4; z-index: 6;}
-.textExplication2 { grid-area: 3 / 3 / 4 / 5; }
+.textExplication1 { grid-area: 2 / 2 / 3 / 4; z-index: 10;}
+.textExplication2 { grid-area: 3 / 3 / 4 / 5; margin-top: 4em;}
 .textExplication3 { 
     grid-area: 4 / 2 / 5 / 4;
-    /* margin-top: -4em;  */
+    margin-top: 10em;
 }
 
 .image1 {
@@ -1345,6 +1346,7 @@ button{
 }
 
 @media screen and (max-width: 800px) {
+
     .parentMainTitle {
         display: grid;
         /* grid-template-columns: repeat(5, 1fr); */
@@ -1493,6 +1495,8 @@ button{
     .mainTitleFirst, .mainTitleSecond{
         position: relative;
     }
+
+    
 
 }
 
