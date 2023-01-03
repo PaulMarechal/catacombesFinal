@@ -12,6 +12,7 @@ import TeleportVR from 'teleportvr';
 import * as displayAR from './ar.js';
 import * as WidthVR from './widthVR.js';
 import VRControl from './assets/utils/VRControls.js';
+import * as MobileNavigation from './mobileNavigation.js';
 
 /**
  * Room creation ( base Three.js code to create rooms)
@@ -156,7 +157,7 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
                 navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
                     if (supported) {
                         navigator.xr.requestSession('immersive-vr').then((session) => {
-                            console.log("Entered VR mode");
+                            // console.log("Entered VR mode");
                             WidthVR.makePanel(gltf.scene, scene, camera)
                         });
                     }
@@ -301,7 +302,6 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     const tick = () => {
 
         const elapsedTime = clock.getElapsedTime()
-        // removeCanvas()
 
         // Teleport VR 
         teleportVR.update();
@@ -417,6 +417,7 @@ export function removeCanvas(){
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
             const arButton = document.getElementById("ARButton");
             const vrButton = document.getElementById("VRButton");
+            alert(vrButton);
             arButton.remove();
             vrButton.remove();
         } else {
@@ -448,4 +449,30 @@ export function signature(){
     ].join( '\n' ) );
 }
 
+export function modaleMobile(){
+//     window.addEventListener('load', function() {
+//         window.addEventListener('orientationchange', function() {
+//              var orientation = window.orientation;
+//              console.log(orientation)
+//             if (orientation === 0) {
+//                 MobileNavigation.mobileOrNot();
+//             } else {
+//                 const modale = document.getElementById("modaleMobilePortrait");
+//                 modale.style.display = "none";
+//             }
+//         });
+//    });
 
+
+const modale = document.getElementById("modaleMobilePortrait");
+
+if(window.screen.orientation.angle === 0){
+        MobileNavigation.mobileOrNot();
+} else {
+     if(modale){
+          modale.style.display = "none";
+     }
+}
+
+   
+}
