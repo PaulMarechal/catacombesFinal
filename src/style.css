@@ -1008,6 +1008,12 @@ button{
         color: rgb(0, 0, 0);
     }
 
+    .infoHelpTitle{
+        font-size: 1.2em;
+        /* text-align: left; */
+        padding-left: 0px;
+    }
+
     .buttonRoom3D{
         text-align: left!important;
     }
@@ -1209,7 +1215,7 @@ button{
         grid-area: 5 / 2 / 6 / 3!important;
         height: 530px!important;
         margin-top: 3em;
-        margin-bottom: 2em;
+        margin-bottom: 4em;
     }
 
     .tablerIcone{
@@ -1227,6 +1233,11 @@ button{
         font-size: 1em;
         padding-left: 10px!important;
         text-decoration: underline 7px solid #1e1c1c!important;
+    }
+
+    .infoHelpTitle{
+        font-size: 0.7em;
+        padding-left: 5px;
     }
 
     .imageRoom{

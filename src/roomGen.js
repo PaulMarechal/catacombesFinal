@@ -453,6 +453,16 @@ export function signature(){
 }
 
 export function modaleMobile(){
+
+    window.addEventListener('load', (event) => {
+        if (orientation === 0) {
+            MobileNavigation.mobileOrNot();
+        } else {
+            const modale = document.getElementById("modaleMobilePortrait");
+            modale.style.display = "none";
+        }
+    });
+    
     window.addEventListener('orientationchange', function() {
         var orientation = window.orientation;
         if (orientation === 0) {
@@ -462,13 +472,4 @@ export function modaleMobile(){
             modale.style.display = "none";
         }  
     });
-    // const modale = document.getElementById("modaleMobilePortrait");
-
-    // if(window.screen.orientation.angle === 0){
-    //         MobileNavigation.mobileOrNot();
-    // } else {
-    //     if(modale){
-    //         modale.style.display = "none";
-    //     }
-    // }
 }

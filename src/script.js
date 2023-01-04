@@ -21,21 +21,6 @@ Developed with 🍔 by
                   \/__/         \/__/         \/__/              \/__/         \/__/         \|__|         \/__/         \/__/         \/__/         \/__/         \/__/ 
 */
 
-// window.addEventListener('load', function() {
-//      window.addEventListener('orientationchange', function() {
-//           var orientation = window.orientation;
-//           console.log(orientation)
-//           if (orientation === 0) {
-//                MobileNavigation.mobileOrNot();
-//           } else {
-//                const modale = document.getElementById("modaleMobilePortrait");
-//                modale.style.display = "none";
-//           }
-//      });
-// });
-
-
-
 // Display catacombs room
 ImplementationRooms.catasRooms();
 
@@ -46,7 +31,6 @@ Scroll.locomotiveScroll();
 RoomGen.signature();
 
 // Modale if navigation width mobile in portrait mode
-MobileNavigation.mobileOrNot();
 RoomGen.modaleMobile();
 
 
