@@ -93,7 +93,7 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
             loadingPercent.style.left = "23%";
             loadingPercent.style.top = "20%";
         } else {
-            loadingPercent.style.left = "37%";
+            loadingPercent.style.left = "41%";
             loadingPercent.style.top = "31%";
         }
     } else {

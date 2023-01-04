@@ -86,7 +86,7 @@ function mouseEventOnMap(name){
     
     // Remove button ( mouse leave )
     nameRoomDiv.addEventListener("mouseleave",function(){
-        
+
         modaleRoom.style.transitionTiming="function: ease-in-out"
         modaleRoom.style.transition= "opacity 1s";
         modaleRoom.style.opacity = "0";
@@ -118,9 +118,9 @@ function initRoom(name){
 
     // Path for GLB, JPG, USDZ, QR code VR
     const routeGlb = routeBase + Name.concat("", ".glb");
-    const routeJpg = routeBase + Name.concat('', ".jpg");
-    const routeUsdz = routeBase + Name.concat('', ".usdz");
-    const routeImagePresentation = routeBase + Name.concat('', ".png");
+    const routeJpg = routeBase + Name.concat("", ".jpg");
+    const routeUsdz = routeBase + Name.concat("", ".usdz");
+    const routeImagePresentation = routeBase + Name.concat("", ".png");
 
     // To display the room
     roomGen.displaySalle(Name, nameDiv, roomName, routeGlb, routeJpg, "parentDiv", routeUsdz, Name, routeImagePresentation, roomImagePoint);

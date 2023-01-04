@@ -38,5 +38,7 @@ npm run build
 ```
 
 
+© Paul Maréchal 2022-2023
+
 
 
