@@ -114,7 +114,10 @@ function initRoom(name){
     const roomImagePoint = name.concat('', 'Image');
 
     // Base path
-    const routeBase = "./" + Name + "/" ;
+    // Production
+    const routeBase = "https://catacombes.xyz/" + Name + "/" ;
+    // Local
+    // const routeBase = "./" + Name + "/" ;
 
     // Path for GLB, JPG, USDZ, QR code VR
     const routeGlb = routeBase + Name.concat("", ".glb");
