@@ -86,11 +86,20 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     /**
     * Loaders
     */
-
     loadingPercent.innerHTML = "Chargement en cours </br>1%"; 
     loadingPercent.style.textAlign = "center";
-    loadingPercent.style.left = "43%";
-    loadingPercent.style.top = "39%";
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+        if(screen.height>screen.width){
+            loadingPercent.style.left = "23%";
+            loadingPercent.style.top = "20%";
+        } else {
+            loadingPercent.style.left = "37%";
+            loadingPercent.style.top = "31%";
+        }
+    } else {
+        loadingPercent.style.left = "43%";
+        loadingPercent.style.top = "39%";
+    }
 
     var currentDiv = document.querySelector("loading-bar");
     document.body.insertBefore(loadingPercent, currentDiv);
@@ -107,6 +116,7 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
                 loadingPercent.remove();
             }); 
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+                document.getElementById("imgHelp").src="https://paulmarechal.xyz/assets/images/helpMobile.png";
                 qrCode.style.display = "none";
             } else {
                 qrCode.style.display = "block";
@@ -119,13 +129,22 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
             // console.log("progress")
             const progressRatio = itemsLoaded / itemsTotal
             loadingBarElement.style.transform = `scaleX(${progressRatio})`
-            loadingPercent.style.left = "50%";
-            loadingPercent.style.top = "43%";
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+                if(screen.height>screen.width){
+                    loadingPercent.style.left = "50%";
+                    loadingPercent.style.top = "43%";
+                } else {
+                    loadingPercent.style.left = "50%";
+                    loadingPercent.style.top = "37%";
+                }
+            } else {
+                loadingPercent.style.left = "50%";
+                loadingPercent.style.top = "43%";
+            }
 
             loadingPercent.innerHTML = "";
             loadingPercent.innerHTML = `${Math.round(progressRatio*100)} %`
 
-            // var currentDiv = document.querySelector("loading-bar");
             document.body.insertBefore(loadingPercent, currentDiv);
         }
     )
