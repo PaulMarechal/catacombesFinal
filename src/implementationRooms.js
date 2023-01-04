@@ -115,9 +115,9 @@ function initRoom(name){
 
     // Base path
     // Production
-    const routeBase = "https://catacombes.xyz/" + Name + "/" ;
+    // const routeBase = "https://catacombes.xyz/" + Name + "/" ;
     // Local
-    // const routeBase = "./" + Name + "/" ;
+    const routeBase = "./" + Name + "/" ;
 
     // Path for GLB, JPG, USDZ, QR code VR
     const routeGlb = routeBase + Name.concat("", ".glb");

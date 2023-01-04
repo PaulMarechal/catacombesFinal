@@ -232,9 +232,6 @@ export function updateButtons(vrControl, renderer, camera) {
 		}
 
 	} );
-
-    
-
 }
 
 

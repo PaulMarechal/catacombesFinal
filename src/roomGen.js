@@ -485,6 +485,8 @@ export function signature(){
 
 export function modaleMobile(){
 
+    const orientation = screen.orientation; 
+    
     window.addEventListener('load', (event) => {
         if (orientation === 0) {
             MobileNavigation.mobileOrNot();

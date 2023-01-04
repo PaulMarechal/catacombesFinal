@@ -1440,15 +1440,6 @@ button{
         /* margin-left: 5%; */
     }
 
-    #infoIcon{
-        margin-top: 0.5em;
-        right: 3%;
-    }
-
-    #closeIcon{
-        margin-top: 1.1em;
-        right: 4%;
-    }
 
     .loading-bar{
         top: 50%!important;
@@ -1483,25 +1474,6 @@ button{
         display:none;
     } */
 
-    #parentDiv{
-        /* width: 760px;
-        height: 460px;
-        grid-template-columns: repeat(12, 62.33px);
-        grid-template-rows: repeat(12, 37.33px); */
-
-        margin-top: 5em;
-        width: 84%;
-        height: 12.6em;
-        grid-template-columns: repeat(12, 8.33%);
-        grid-template-rows: repeat(12, 8.33%);
-
-        /* margin-top: 3em;
-        width: 593px;
-        height: 361px;
-        grid-template-columns: repeat(12, 46.42px);
-        grid-template-rows: repeat(12, 28.08px); */
-    }
-
     .parentTextExplications{
         grid-template-rows: repeat(8, 18em);
     }
@@ -1535,6 +1507,57 @@ button{
     .mainTitleFirst, .mainTitleSecond{
         position: relative;
     }
+
+    #parentDiv{
+        /* width: 93%;
+        height: 80%; */
+        width: 389px;
+        height: 237px;
+        grid-template-columns: repeat(12, 7.70%)!important;
+        grid-template-rows: repeat(12, 6.66%)!important;
+        margin-top: 5em
+    }
+
+    /* .parentMapping{
+        grid-template-columns: repeat(7, 14.28%);
+        grid-template-rows: repeat(5, 0.472em);
+    } */
+
+
+    .infoHelpDiv{
+        grid-area: 2 / 2 / 3 / 7;
+    }
+
+    .infoHelpTitle{
+        font-size: 1.5em;
+        padding-left: 10px;
+    }
+
+    #closeIcon{
+        right: 7%;
+        top: 6%;
+        position: fixed;
+    }
+
+    #infoIcon{
+        right: 6%;
+        top: 14%;
+        z-index: 10;
+        position: fixed;
+    }
+
+    .loading-bar{
+        top: 50%;
+        width: 95%;
+        margin-left: 2.5%!important;
+    }
+
+    .loadingPercent{
+        top: 43%;
+        margin-right: auto; 
+        margin-left: auto;
+    }
+
 
 }
 
