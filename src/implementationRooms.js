@@ -83,13 +83,29 @@ function mouseEventOnMap(name){
 
     // onclick for mobile version
     roomNamePoint.addEventListener('click', event => { nameRoomDiv.style.display="block" });
-
+    
     // Remove button ( mouse leave )
     nameRoomDiv.addEventListener("mouseleave",function(){
-        nameRoomDiv.style.display="none", 
-        nameRoomTitre.style.display="none", 
-        modaleRoom.style.display="none",
-        roomImagePoint.style.display = "none"
+        // modaleRoom.style.transition="visibility 0s 2s, opacity 2s"
+        modaleRoom.style.transitionTiming="function: ease-in-out"
+
+        /* Quick on the way out */
+        modaleRoom.style.transition= "opacity 1s";
+        // modaleRoom.style.transition="opacity 4s linear 2s"
+
+        /* Hide thing by pushing it outside by default */
+        // modaleRoom.style.transform= "translateX(150%)";
+        modaleRoom.style.opacity = "0";
+        modaleRoom.style.transition="opacity 2s";
+
+        setTimeout(() => {
+            nameRoomDiv.style.display="none", 
+            nameRoomTitre.style.display="none", 
+            modaleRoom.style.display="none",
+            roomImagePoint.style.display = "none"
+            modaleRoom.style.opacity = "1"
+        }, 2000);
+        
     });
 }
 

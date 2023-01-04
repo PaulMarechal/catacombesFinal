@@ -417,9 +417,12 @@ export function removeCanvas(){
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
             const arButton = document.getElementById("ARButton");
             const vrButton = document.getElementById("VRButton");
-            alert(vrButton);
+            
             arButton.remove();
-            vrButton.remove();
+            if(vrButton){
+                vrButton.remove();
+            }
+            
         } else {
             location.reload();
         }
