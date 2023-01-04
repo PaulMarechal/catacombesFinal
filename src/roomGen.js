@@ -86,7 +86,17 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     /**
     * Loaders
     */
+
+    loadingPercent.innerHTML = "Chargement en cours </br>1%"; 
+    loadingPercent.style.textAlign = "center";
+    loadingPercent.style.left = "43%";
+    loadingPercent.style.top = "39%";
+
+    var currentDiv = document.querySelector("loading-bar");
+    document.body.insertBefore(loadingPercent, currentDiv);
+
     const loadingManager = new THREE.LoadingManager(
+        
         // Loaded
         () => {
             // console.log("loaded")
@@ -105,15 +115,17 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
         // Progress
         (itemUrl, itemsLoaded, itemsTotal) => {
-            loadingPercent.innerHTML = " - Chargement en cours - "; 
             
             // console.log("progress")
             const progressRatio = itemsLoaded / itemsTotal
             loadingBarElement.style.transform = `scaleX(${progressRatio})`
+            loadingPercent.style.left = "50%";
+            loadingPercent.style.top = "43%";
+
             loadingPercent.innerHTML = "";
             loadingPercent.innerHTML = `${Math.round(progressRatio*100)} %`
 
-            var currentDiv = document.querySelector("loading-bar");
+            // var currentDiv = document.querySelector("loading-bar");
             document.body.insertBefore(loadingPercent, currentDiv);
         }
     )
