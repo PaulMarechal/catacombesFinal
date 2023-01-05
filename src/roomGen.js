@@ -323,7 +323,9 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     // }
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
         const arButton = document.getElementById("ARButton");
-        arButton.style.display = "block"
+        if(arButton){
+            arButton.style.display = "block"
+        }
     }
 
 
@@ -448,11 +450,12 @@ export function removeCanvas(){
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
             const arButton = document.getElementById("ARButton");
             const vrButton = document.getElementById("VRButton");
-            
-            arButton.remove();
-            if(vrButton){
-                vrButton.remove();
-            }
+
+            arButton.style.display = "none";
+            vrButton.style.display = "none";
+            // if(arButton){
+            //     vrButton.remove();
+            // }
             
         } else {
             location.reload();
@@ -484,15 +487,14 @@ export function signature(){
 }
 
 export function modaleMobile(){
-
-    const orientation = screen.orientation; 
-    
     window.addEventListener('load', (event) => {
-        if (orientation === 0) {
-            MobileNavigation.mobileOrNot();
-        } else {
-            const modale = document.getElementById("modaleMobilePortrait");
-            modale.style.display = "none";
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+            if (orientation === 0) {
+                MobileNavigation.mobileOrNot();
+            } else {
+                const modale = document.getElementById("modaleMobilePortrait");
+                modale.style.display = "none";
+            }
         }
     });
     

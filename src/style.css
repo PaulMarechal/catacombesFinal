@@ -1027,13 +1027,13 @@ button{
     }
 
     #infoIcon{
-        margin-top: 0.5em;
+        margin-top: 0.7em;
         right: 9.5%!important;
     }
 
     #closeIcon{
-        margin-top: 1.1em;
-        right: 1%;
+        margin-top: 1.3em;
+        right: 4%;
     }
 
     #ARButton{
@@ -1045,7 +1045,7 @@ button{
 
     .loading-bar{
         top: 50%!important;
-        left: -1.2em!important;   
+        left: -1.5%!important;   
         width: 95%;  
     }
 
@@ -1189,7 +1189,7 @@ button{
 
     #parentDiv{
         width: 389px;
-        height: 237px;
+        height: 217px;
         grid-template-columns: repeat(12, 33px);
         grid-template-rows: repeat(12, 19.75px);
         margin-top: 2em;
@@ -1281,13 +1281,13 @@ button{
     }
 
     #closeIcon{
-        right: 7%;
-        top: 6%;
+        right: 5%;
+        top: 7%;
         position: fixed;
     }
 
     #infoIcon{
-        right: 6%;
+        right: 4%;
         top: 14%;
         position: fixed;
     }
@@ -1295,7 +1295,7 @@ button{
     .loading-bar{
         top: 50%;
         width: 90%;
-        margin-left: 2.5%!important;
+        margin-left: 4%!important;
     }
 
     .loadingPercent{
@@ -1417,7 +1417,7 @@ button{
         grid-template-rows: repeat(12, 37.33px);
         margin-top: 5em */
         width: 93%;
-        height: 100%;
+        /* height: 100%; */
         grid-template-columns: repeat(12, 7.75%);
         grid-template-rows: repeat(12, 8.33%);
         margin-top: 5em
@@ -1441,11 +1441,11 @@ button{
     }
 
 
-    .loading-bar{
+    /* .loading-bar{
         top: 50%!important;
         margin-left: 5%;
         width: 95%;
-    }
+    } */
 
     .loadingPercent{
         top: 37%!important;
@@ -1511,11 +1511,11 @@ button{
     #parentDiv{
         /* width: 93%;
         height: 80%; */
-        width: 389px;
-        height: 237px;
+        /* width: 389px; */
+        /* height: 237px;
         grid-template-columns: repeat(12, 7.70%)!important;
         grid-template-rows: repeat(12, 6.66%)!important;
-        margin-top: 5em
+        margin-top: 5em */
     }
 
     /* .parentMapping{
@@ -1523,17 +1523,17 @@ button{
         grid-template-rows: repeat(5, 0.472em);
     } */
 
-
+/* 
     .infoHelpDiv{
         grid-area: 2 / 2 / 3 / 7;
     }
 
     .infoHelpTitle{
-        font-size: 1.5em;
+        font-size: 1.2em;
         padding-left: 10px;
-    }
+    } */
 
-    #closeIcon{
+    /* #closeIcon{
         right: 7%;
         top: 6%;
         position: fixed;
@@ -1544,13 +1544,13 @@ button{
         top: 14%;
         z-index: 10;
         position: fixed;
-    }
+    } */
 
-    .loading-bar{
+    /* .loading-bar{
         top: 50%;
         width: 95%;
         margin-left: 2.5%!important;
-    }
+    } */
 
     .loadingPercent{
         top: 43%;
