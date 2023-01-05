@@ -98,7 +98,7 @@ function mouseEventOnMap(name){
             modaleRoom.style.display="none",
             roomImagePoint.style.display = "none"
             modaleRoom.style.opacity = "1"
-        }, 2000);
+        }, 1500);
         
     });
 }

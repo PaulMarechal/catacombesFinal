@@ -28,7 +28,8 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     var loadingPercent = document.createElement("h2");
     var loadingPercentContent = document.createTextNode("1 %");
     loadingPercent.className = "loadingPercent";
-    loadingPercent.innerHTML = " - Chargement en cours - "; 
+    loadingPercent.innerHTML = "Chargement en cours</br>1%"; 
+    loadingPercent.style.textAlign = "center";
 
 
     /**
@@ -86,21 +87,6 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     /**
     * Loaders
     */
-    loadingPercent.innerHTML = "Chargement en cours </br>1%"; 
-    loadingPercent.style.textAlign = "center";
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
-        if(screen.height>screen.width){
-            loadingPercent.style.left = "23%";
-            loadingPercent.style.top = "20%";
-        } else {
-            loadingPercent.style.left = "41%";
-            loadingPercent.style.top = "31%";
-        }
-    } else {
-        loadingPercent.style.left = "43%";
-        loadingPercent.style.top = "39%";
-    }
-
     var currentDiv = document.querySelector("loading-bar");
     document.body.insertBefore(loadingPercent, currentDiv);
 
@@ -268,6 +254,22 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     renderer.setAnimationLoop(function () {
         renderer.render( scene, camera );
     });
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+        const VRButton = document.getElementById("VRButton");
+        if(screen.height>screen.width){
+            loadingPercent.style.left = "40%";
+            loadingPercent.style.top = "20%";
+            VRButton.style.marginRight = "-30%";
+        } else {
+            loadingPercent.style.left = "41%";
+            loadingPercent.style.top = "31%";
+            VRButton.style.left = "60%";
+        }
+    } else {
+        loadingPercent.style.left = "43%";
+        loadingPercent.style.top = "39%";
+    }
 
     /**
     * Animate

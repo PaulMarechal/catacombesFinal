@@ -45,8 +45,8 @@ export function makePanel(gltf, scene, camera) {
 	const container = new ThreeMeshUI.Block( {
 		justifyContent: 'center',
 		contentDirection: 'row-reverse',
-		fontFamily: FontJSON,
-		fontTexture: FontImage,
+		fontFamily: "https://catacombes.xyz/assets/Fonts/Roboto-msdf.json",
+		fontTexture: "https://catacombes.xyz/assets/Fonts/Roboto-msdf.png",
 		fontSize: 0.07,
 		padding: 0.02,
 		borderRadius: 0.11

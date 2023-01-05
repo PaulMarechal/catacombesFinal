@@ -1000,7 +1000,7 @@ button{
         right: 0; 
         left: 0;
         text-align: center;
-        margin-left: 5%;
+        /* margin-left: 5%; */
     }
 
     .nameRoom, .buttonRoom3D{
@@ -1136,7 +1136,7 @@ button{
     }
 
     #VRButton{
-        margin-left: 60%;
+        left: 60%;
         position: fixed!important;
         z-index: 9999;
         bottom: 20px!important;
@@ -1552,11 +1552,11 @@ button{
         margin-left: 2.5%!important;
     } */
 
-    .loadingPercent{
+    /* .loadingPercent{
         top: 43%;
         margin-right: auto; 
         margin-left: auto;
-    }
+    } */
 
 
 }
