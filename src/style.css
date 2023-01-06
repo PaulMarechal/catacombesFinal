@@ -116,6 +116,7 @@ button{
     font-size: 2em;
     background-color: #FFF;
     padding: 5px 0px 3px 15px;
+    font-style: italic;
 }
 
 .infoHelpDiv{
@@ -846,7 +847,6 @@ button{
     text-transform: uppercase;
 }
 
-
 /******** Mobile **********/
 /* Portrait and Landscape */
 @media only screen 
@@ -1000,7 +1000,7 @@ button{
         right: 0; 
         left: 0;
         text-align: center;
-        /* margin-left: 5%; */
+        margin-left: 5%;
     }
 
     .nameRoom, .buttonRoom3D{
