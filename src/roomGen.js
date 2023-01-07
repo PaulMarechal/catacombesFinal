@@ -405,6 +405,7 @@ export function displaySalle(nomSalle, id, titre, modele3d, bakedJpg, area, link
     image.style.width = "79%";
     image.style.margin = "1em auto";
     image.setAttribute("title", nomSalle)
+    image.setAttribute("alt", `Salle : ${nomSalle}`)
     image.style.borderRadius = "9px";
     var nameButton = document.createTextNode("ENTER 3D");  
     btn.appendChild(nameButton);
