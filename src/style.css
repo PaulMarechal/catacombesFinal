@@ -559,6 +559,7 @@ button{
     width:95%; 
     height:96%;
     margin: auto;
+    z-index: 9;
 }
 
 .image4{
@@ -919,6 +920,16 @@ button{
         text-align: justify;
     }
 
+    .backgroundImageMobile{
+        background-image: url("https://catacombes.xyz/assets/images/etageInferieurCimetiereMontparnasse.png")!important;
+        background-size: cover!important; 
+        background-position: center!important;
+        margin: 10px!important;
+        width:95%!important; 
+        height:94%!important;
+        margin: auto!important;
+    }
+
     #firstText{
         margin-top: 2em;
         grid-area: 2 / 2 / 3 / 8;
@@ -1188,10 +1199,10 @@ button{
     }
 
     #parentDiv{
-        width: 389px;
-        height: 217px;
-        grid-template-columns: repeat(12, 33px);
-        grid-template-rows: repeat(12, 19.75px);
+        width: 360px;
+        height: 219px;
+        grid-template-columns: repeat(12, 27px);
+        grid-template-rows: repeat(12, 15.25px);
         margin-top: 2em;
     }
 
@@ -1208,6 +1219,10 @@ button{
         padding: 0px 20px;
         margin-top: 3em;
         /* z-index: 99; */
+    }
+
+    .modaleElemPresentation{
+        grid-area: 5 / 10 / 12 / 13;
     }
 
     .textExplication1{
@@ -1385,7 +1400,8 @@ button{
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px)
+and (orientation: landscape) {
 
     .parentMainTitle {
         display: grid;
@@ -1509,25 +1525,37 @@ button{
     }
 
     #parentDiv{
-        /* width: 93%;
-        height: 80%; */
-        /* width: 389px; */
-        /* height: 237px;
-        grid-template-columns: repeat(12, 7.70%)!important;
-        grid-template-rows: repeat(12, 6.66%)!important;
+        /* width: 760px;
+        height: 460px;
+        grid-template-columns: repeat(12, 62.33px);
+        grid-template-rows: repeat(12, 37.33px);
         margin-top: 5em */
+        width: 720px;
+        height: 438px;
+        grid-template-columns: repeat(12, 60px);
+        grid-template-rows: repeat(12, 36.5px);
+        margin-top: 5em
     }
 
-    /* .parentMapping{
-        grid-template-columns: repeat(7, 14.28%);
-        grid-template-rows: repeat(5, 0.472em);
-    } */
+    .parentMapping{
+        display: grid;
+        grid-template-columns: repeat(7, 9px);
+        grid-template-rows: repeat(5, 7.6px);
+    }
 
 /* 
     .infoHelpDiv{
         grid-area: 2 / 2 / 3 / 7;
     }
+*/
+    .textExplication2{
+        margin-top: -0.5em;
+    }
 
+    .textExplication3{
+        margin-top: -0.2em;
+    }
+/*
     .infoHelpTitle{
         font-size: 1.2em;
         padding-left: 10px;
