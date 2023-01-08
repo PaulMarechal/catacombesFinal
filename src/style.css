@@ -563,7 +563,7 @@ button{
 
 .image4{
     grid-area: 2 / 5 / 3 / 6;
-    background-image: url("https://catacombes.xyz/assets/images/fontaineChartreux.png");
+    background-image: url("https://catacombes.xyz/assets/images/etageInferieurCimetiereMontparnasse.png");
     background-size: cover; 
     background-position: center;
     margin: 10px;
@@ -592,7 +592,7 @@ button{
 
 .image7{
     grid-area: 1 / 4 / 2 / 5;
-    background-image: url("https://catacombes.xyz/assets/images/mineralogique.png");
+    background-image: url("https://catacombes.xyz/assets/images/cabinetMineraligiqueLhuillier.png");
     background-size: cover; 
     background-position: center;
     margin: 10px;
@@ -609,7 +609,7 @@ button{
 
 .image10{
     grid-area: 2 / 2 / 3 / 3;
-    background-image: url("https://catacombes.xyz/assets/images/philibertAspair.png");
+    background-image: url("https://catacombes.xyz/assets/images/aqueducArcueil.png");
     background-size: cover; 
     background-position: center;
     margin: 10px;
@@ -635,7 +635,7 @@ button{
 
 .image13{
     grid-area: 4 / 1 / 5 / 2; 
-    background-image: url("https://catacombes.xyz/assets/images/random.png");
+    background-image: url("https://catacombes.xyz/assets/images/couloirCatacombes.png");
     background-size: cover; 
     background-position: center;
     margin: 10px;
