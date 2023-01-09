@@ -871,9 +871,9 @@ button{
     .mainTitleDiv7{grid-area: 1 / 5 / 3 / 6; z-index: 0;}
 
     /* .mainTitleDiv5{display: none;} */
-    .backgroundColorImage{
+    /* .backgroundColorImage{
         display: none;
-    }
+    } */
 
     .mainTitleDiv7 { 
         grid-area: 1 / 5 / 3 / 6;
@@ -1422,9 +1422,9 @@ and (orientation: landscape) {
         margin-left: 3.5em;
     }
 
-    .backgroundColorImage{
+    /* .backgroundColorImage{
         display: none;
-    }
+    } */
 
     #parentDiv{
         /* width: 760px;
@@ -1554,6 +1554,16 @@ and (orientation: landscape) {
 
     .textExplication3{
         margin-top: -0.2em;
+    }
+
+    .backgroundImageMobile{
+        background-image: url("https://catacombes.xyz/assets/images/etageInferieurCimetiereMontparnasse.png")!important;
+        background-size: cover!important; 
+        background-position: center!important;
+        margin: 10px!important;
+        width:95%!important; 
+        height:94%!important;
+        margin: auto!important;
     }
 /*
     .infoHelpTitle{
