@@ -170,16 +170,16 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
             // VR UP / DOWN Panel 
             // if user is in XR session = display button
-            if (navigator.xr) {
-                navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
-                    if (supported) {
-                        navigator.xr.requestSession('immersive-vr').then((session) => {
-                            // console.log("Entered VR mode");
-                            WidthVR.makePanel(gltf.scene, scene, camera)
-                        });
-                    }
-                });
-            }
+            // if (navigator.xr) {
+            //     navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
+            //         if (supported) {
+            //             navigator.xr.requestSession('immersive-vr').then((session) => {
+            //                 // console.log("Entered VR mode");
+            //                 //WidthVR.makePanel(gltf.scene, scene, camera)
+            //             });
+            //         }
+            //     });
+            // }
             // let gamepad = navigator.getGamepads()[0];
             // if(vrControl.controllerGrips[ 0 ]){
             //     WidthVR.makePanel(gltf.scene, scene, camera)
