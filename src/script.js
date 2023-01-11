@@ -33,7 +33,7 @@ RoomGen.signature();
 // Modale if navigation width mobile in portrait mode
 RoomGen.modaleMobile();
 
-
+// © Paul Maréchal 2022-2023
 
 
 
