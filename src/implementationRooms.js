@@ -87,7 +87,7 @@ function mouseEventOnMap(name){
     // Remove button ( mouse leave )
     nameRoomDiv.addEventListener("mouseleave",function(){
 
-        modaleRoom.style.transitionTiming="function: ease-in-out"
+        modaleRoom.style.transitionTiming="function: ease-in-out";
         modaleRoom.style.transition= "opacity 1s";
         modaleRoom.style.opacity = "0";
         modaleRoom.style.transition="opacity 2s";
