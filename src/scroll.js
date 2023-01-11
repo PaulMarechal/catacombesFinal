@@ -1,7 +1,8 @@
 import LocomotiveScroll from 'locomotive-scroll';
 
 export function locomotiveScroll() {
-  const el = document.querySelector("[data-scroll-container]")
+    const el = document.querySelector("[data-scroll-container]")
+    const scrollDivElement = document.getElementById("mouseScroll");
 
     if (el) {
         const scroller = new LocomotiveScroll({
@@ -10,8 +11,6 @@ export function locomotiveScroll() {
         multiplier: 0.75,
         scrollFromAnywhere: true,
         });
-
-        const scrollDivElement = document.getElementById("mouseScroll");
 
         scroller.on('scroll', ({ limit, scroll }) => {
             const progress = scroll.y / limit.y * 100;
@@ -36,6 +35,11 @@ export function locomotiveScroll() {
     } else {
         console.error("Il y a un probleme avec l'attribut : data-scroll-container");
     }
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+        scrollDivElement.style.display = "none";
+    }
+
 }
 
 

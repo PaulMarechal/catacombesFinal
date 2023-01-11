@@ -1314,6 +1314,10 @@ button{
         margin-top: 2em;
     }
 
+    #mouseScroll{
+        display: none;
+    }
+
     /* .parentTextExplications{
         margin-top: -38em;
     } */
