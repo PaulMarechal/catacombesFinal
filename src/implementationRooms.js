@@ -144,31 +144,22 @@ export function customCursor(){
         var linksRooms = document.getElementsByClassName("pointRoom");
         var body = document.getElementById("body");
         var initCursor = false;
-      
-        for (var i = 0; i < links.length; i++) {
-            var selfLink = links[i];
-        
-            selfLink.addEventListener("mouseover", function() {
-                cursor.classList.add("custom-cursor--link");
-                body.style.cursor = "none";
-            });
-            selfLink.addEventListener("mouseout", function() {
-                cursor.classList.remove("custom-cursor--link");
-                body.style.cursor = "none";
-            });
-        }
 
-        for (var i = 0; i < linksRooms.length; i++) {
-            var selfLink = linksRooms[i];
-        
-            selfLink.addEventListener("mouseover", function() {
-                cursor.classList.add("custom-cursor--link");
-                body.style.cursor = "none";
-            });
-            selfLink.addEventListener("mouseout", function() {
-                cursor.classList.remove("custom-cursor--link");
-                body.style.cursor = "none";
-            });
+        const linksHover = [ links, linksRooms ]
+
+        for (var i = 0; i < linksHover.length; i++) {
+            var list = linksHover[i];
+            for (var j = 0; j < list.length; j++) {
+                var selfLink = list[j];
+                selfLink.addEventListener("mouseover", function() {
+                    cursor.classList.add("custom-cursor--link");
+                    body.style.cursor = "none";
+                });
+                selfLink.addEventListener("mouseout", function() {
+                    cursor.classList.remove("custom-cursor--link");
+                    body.style.cursor = "none";
+                });
+            }
         }
       
         window.onmousemove = function(e) {
