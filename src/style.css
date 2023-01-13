@@ -9,6 +9,7 @@
 * {
     margin: 0;
     padding: 0;
+    cursor: none!important;
 }
 
 html,
@@ -16,6 +17,7 @@ body {
     position: relative;
     background-color: #ffffff;
     /* height: 191em; */
+    cursor: none!important;
 }
 
 h1, h2{
@@ -157,6 +159,7 @@ button{
     border: #000000 solid 11px;
     margin-bottom: 2em;
     margin-top: 8em;
+    cursor: none!important;
 }
 
 #belierPoint, #plagePoint, 
@@ -323,6 +326,10 @@ button{
     opacity : 0; 
     transition:opacity 1s;
 } */
+
+.pointRoom:hover{
+    cursor: none!important;
+}
 
 .modaleElemPresentation{
     grid-area: 4 / 9 / 10 / 12; 
@@ -849,110 +856,131 @@ button{
 }
 
 /* test scroll */
+#mouse-scroll {
+    display: block;
+}
 
 #mouse-scroll {
-  display: block;
-}
-#mouse-scroll {
-  position: fixed;
-  background: #fff;
-  -webkit-transform: translateX(-50%);
-  z-index: 9999;
-  left: 2%; 
-  margin-top: -5%;
+    position: fixed;
+    background: #fff;
+    -webkit-transform: translateX(-50%);
+    z-index: 9999;
+    left: 2%; 
+    margin-top: -5%;
 }
 #mouse-scroll span{
-  display: block;
-  width: 5px; 
-  height: 5px;
-  -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-       transform: rotate(45deg);
-       transform: rotate(45deg);
-  border-right: 2px solid #000; 
-  border-bottom: 2px solid #000;
-  margin: 0 0 3px 7px;
+    display: block;
+    width: 5px; 
+    height: 5px;
+    -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        transform: rotate(45deg);
+    border-right: 2px solid #000; 
+    border-bottom: 2px solid #000;
+    margin: 0 0 3px 7px;
 }
 #mouse-scroll .mouse {
-  height: 32px;
-  width: 17px;
-  border-radius: 10px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-  border: 2px solid #000;
-  top: 170px;
+    height: 32px;
+    width: 17px;
+    border-radius: 10px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    border: 2px solid #000;
+    top: 170px;
 }
 #mouse-scroll .down-arrow-1 {
-  margin-top: 6px;
+    margin-top: 6px;
 }
 #mouse-scroll .down-arrow-1, #mouse-scroll .down-arrow-2, #mouse-scroll .down-arrow-3 {
-  -webkit-animation: mouse-scroll 1s infinite; 
-    -moz-animation: mouse-scroll 1s infinite;
+    -webkit-animation: mouse-scroll 1s infinite; 
+        -moz-animation: mouse-scroll 1s infinite;
 }
 #mouse-croll .down-arrow-1 {
-   -webkit-animation-delay: .1s; 
-   -moz-animation-delay: .1s;
-   -webkit-animation-direction: alternate;
+    -webkit-animation-delay: .1s; 
+    -moz-animation-delay: .1s;
+    -webkit-animation-direction: alternate;
 }
 #mouse-scroll .down-arrow-2 {
-  -webkit-animation-delay: .2s; 
-  -moz-animation-delay: .2s;
-  -webkit-animation-direction: alternate;
+    -webkit-animation-delay: .2s; 
+    -moz-animation-delay: .2s;
+    -webkit-animation-direction: alternate;
 }
 #mouse-scroll .down-arrow-3 {
-   -webkit-animation-delay: .3s;
-   -moz-animation-dekay: .3s;
-   -webkit-animation-direction: alternate;
+    -webkit-animation-delay: .3s;
+    -moz-animation-dekay: .3s;
+    -webkit-animation-direction: alternate;
 }
 #mouse-scroll .mouse-in {
-  height: 5px;
-  width: 2px;
-  display: block; 
-  margin: 5px auto;
-  background: #000;
-  position: relative;
+    height: 5px;
+    width: 2px;
+    display: block; 
+    margin: 5px auto;
+    background: #000;
+    position: relative;
 }
 #mouse-scroll .mouse-in {
- -webkit-animation: animated-mouse 1.2s ease infinite;
-  moz-animation: mouse-animated 1.2s ease infinite;
+    -webkit-animation: animated-mouse 1.2s ease infinite;
+    moz-animation: mouse-animated 1.2s ease infinite;
 }
 
 @-webkit-keyframes animated-mouse {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-     opacity: 0;
-    -webkit-transform: translateY(6px);
-    -ms-transform: translateY(6px);
-    transform: translateY(6px);
-  }
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        transform: translateY(6px);
+    }
 }
 @-webkit-keyframes mouse-scroll {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: .5;
-  }
-  100% {
-    opacity: 1;
-  } 
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    } 
 }
 @keyframes mouse-scroll {
-  0% {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Custom cursor */
+.custom-cursor {
+    position: fixed;
     opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
+    pointer-events: none;
+    mix-blend-mode: difference;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 350ms ease;
+    transform: translate(-50%, -50%) scale(0.3);
+    z-index: 1000;
+    cursor: none!important;
+}
+  
+.custom-cursor--link {
+    transform: translate(-50%, -50%) scale(0.7);
+    cursor: none!important;
 }
 
 

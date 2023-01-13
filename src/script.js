@@ -21,6 +21,9 @@ Developed with 🍔 by
                   \/__/         \/__/         \/__/              \/__/         \/__/         \|__|         \/__/         \/__/         \/__/         \/__/         \/__/ 
 */
 
+// Custom cursor
+ImplementationRooms.customCursor();
+
 // Display catacombs room
 ImplementationRooms.catasRooms();
 
