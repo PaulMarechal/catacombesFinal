@@ -524,6 +524,8 @@ export function darkMode() {
         const mouseScrollDark = document.getElementById("mouse-scroll");
         const infoHelpDark = document.getElementById("infoHelpMap");
         const parentDiv = document.getElementById("parentDiv");
+        const nameRoomModale = document.getElementsByClassName("nameRoom"); 
+        const backgroundColorImage = document.getElementsByClassName("backgroundColorImage");
         
         for(var i = 0; i < button.length; i++ ){
             button[i].classList.toggle("dark-mode");
@@ -532,12 +534,21 @@ export function darkMode() {
         for(var i = 0; i < cardTitle.length; i++) {
             cardTitle[i].style.color = '#000';    
         }
-        
+
+        for(var i = 0; i < nameRoomModale.length; i++) {
+            nameRoomModale[i].style.color = '#000';    
+        }
+
+        for(var i = 0; i < backgroundColorImage.length; i++) {
+            backgroundColorImage[i].style.background = '#000';    
+        }
+
         element.classList.toggle("dark-mode");
         secondTitle.classList.toggle("dark-mode-title");
         mouseScrollDark.classList.toggle("mouse-scroll-dark");
         infoHelpDark.classList.toggle("infoHelpTitle-dark");
         parentDiv.style.backgroundImage = "url('https://catacombes.xyz/assets/images/paris-night.png')";
+        parentDiv.style.border = "#fff solid 11px";
     })
   
 }
