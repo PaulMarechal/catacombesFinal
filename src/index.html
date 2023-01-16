@@ -34,6 +34,15 @@
 
     <body id="body" data-scroll-container>
 
+        <button id="darkModeButton" style="background: #fff; width: 44px; height: 44px; padding: 8px; transition: .3s; position: fixed; z-index: 102; border-radius: 0px 15px 15px 0px; margin-left:-8px;">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.7 28.7" role="img" aria-labelledby="high-contrast-svg-title">
+				<title id="high-contrast-svg-title">
+                    <span>Toggle Night Mode</span>
+                </title>
+				<path d="M14.3 0C6.5 0 0 6.5 0 14.3c0 7.9 6.5 14.3 14.3 14.3 7.9 0 14.3-6.5 14.3-14.3C28.7 6.5 22.2 0 14.3 0zm0 3.6c6 0 10.8 4.8 10.8 10.8 0 6-4.8 10.8-10.8 10.8V3.6z"></path>
+			</svg>
+        </button>
+
         <div class="custom-cursor"></div>
 
         <div data-scroll-section data-scroll-id="scrollBody">
@@ -42,7 +51,7 @@
                 
                 <div class="mainTitleDiv1" id="titleMain" style="border: #b1b1b1 solid 0.2px; padding: 10px 50px;"data-scroll data-scroll-direction="horizontal" data-scroll-speed="2">
                     <h2 class="mainTitleFirst">catacombes</h2>
-                    <h3 class="mainTitleSecond"> unofficial</h3>
+                    <h3 class="mainTitleSecond" id="secondMainTitle"> unofficial</h3>
                     <div id="logoVR">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-badge-vr" width="60" height="60" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -86,7 +95,7 @@
                 <div class="parent" id="parentDiv">
 
                     <div class="infoHelpDiv">
-                        <h4 class="infoHelpTitle">Survoler les points rouges ...</h4>
+                        <h4 class="infoHelpTitle" id="infoHelpMap">Survoler les points rouges ...</h4>
                     </div>
                     
                     <div class="modaleElemPresentation">
@@ -237,7 +246,7 @@
                 <div class="backgroundColorImage backgroundImageMobile" style="z-index: 9; background-color: #FFF; ">
                     <div class="image4" style="z-index: 9; background-color: #FFF" title="Escalier menant à un étage inférieur dans le secteur du cimetière du Montparnasse." alt="Escalier menant à un étage inférieur dans le secteur du cimetière du Montparnasse."></div>
                 </div>
-                <div class="image5" title="Vestige des anciennes fondations de l'aqueduc d'Arcueil. Plaque indiquant le numéro de l'ouvrage, suivi de l'initiale de l'inspecteur des carrières  et de la date de réalisation. On peut donc lire 57e ouvrage de Guillaumot bâto en 1778." alt="Vestige des anciennes fondations de l'aqueduc d'Arcueil. Plaque indiquant le numéro de l'ouvrage, suivi de l'initiale de l'inspecteur des carrières  et de la date de réalisation. On peut donc lire 57e ouvrage de Guillaumot bâto en 1778."></div>
+                <div class="image5" title="Vestige des anciennes fondations de l'aqueduc d'Arcueil. Plaque indiquant le numéro de l'ouvrage, suivi de l'initiale de l'inspecteur des carrières  et de la date de réalisation. On peut donc lire 57e ouvrage de Guillaumot bâti en 1778." alt="Vestige des anciennes fondations de l'aqueduc d'Arcueil. Plaque indiquant le numéro de l'ouvrage, suivi de l'initiale de l'inspecteur des carrières  et de la date de réalisation. On peut donc lire 57e ouvrage de Guillaumot bâti en 1778."></div>
                 <div class="image6" title="Portes blindées du bunker Allemand sous le lycée Montaigne à Paris." alt="Portes blindées du bunker Allemand sous le lycée Montaigne à Paris."></div>
                 <div class="image7" title="Double escalier minéralogique de Monsieur Lhuillier rue Notre Dame des Champs. Ils servaient à présenter les différentes roches présentes dans les carrières et ont été utilisés à la création de nombreux bâtiments à Paris." alt="Double escalier minéralogique de Monsieur Lhuillier rue Notre Dame des Champs. Ils servaient à présenter les différentes roches présentes dans les carrières et ont été utilisés à la création de nombreux bâtiments à Paris."></div>
                 <div class="image10" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3" title="Vestige des anciennes fondations de l'aqueduc d'Arcueil. Plaque indiquant le numéro de l'ouvrage, suivi de l'initiale de l'inspecteur des carrières  et de la date de réalisation. On peut donc lire 57e ouvrage de Guillaumot bâto en 1778." alt="Vestige des anciennes fondations de l'aqueduc d'Arcueil. Plaque indiquant le numéro de l'ouvrage, suivi de l'initiale de l'inspecteur des carrières  et de la date de réalisation. On peut donc lire 57e ouvrage de Guillaumot bâto en 1778."></div>

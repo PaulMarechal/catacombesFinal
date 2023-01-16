@@ -855,7 +855,7 @@ button{
     text-transform: uppercase;
 }
 
-/* test scroll */
+/* Scroll info */
 #mouse-scroll {
     display: block;
 }
@@ -868,6 +868,11 @@ button{
     left: 2%; 
     margin-top: -5%;
 }
+
+.mouse-scroll-dark{
+    background: #000!important;
+}
+
 #mouse-scroll span{
     display: block;
     width: 5px; 
@@ -880,6 +885,12 @@ button{
     border-bottom: 2px solid #000;
     margin: 0 0 3px 7px;
 }
+
+.mouse-scroll-dark span{
+    border-right: 2px solid #fff!important; 
+    border-bottom: 2px solid #fff!important;
+}
+
 #mouse-scroll .mouse {
     height: 32px;
     width: 17px;
@@ -890,6 +901,17 @@ button{
     border: 2px solid #000;
     top: 170px;
 }
+
+.infoHelpTitle-dark{
+    background: #000;
+    box-shadow: 9px 11px 0px 1px #fff;
+    border: 0.5px solid #fff;
+}
+
+.mouse-scroll-dark .mouse{
+    border: 2px solid #fff!important;
+}
+
 #mouse-scroll .down-arrow-1 {
     margin-top: 6px;
 }
@@ -920,6 +942,11 @@ button{
     background: #000;
     position: relative;
 }
+
+.mouse-scroll-dark .mouse-in {
+    background: #fff!important;
+}
+
 #mouse-scroll .mouse-in {
     -webkit-animation: animated-mouse 1.2s ease infinite;
     moz-animation: mouse-animated 1.2s ease infinite;
@@ -960,6 +987,16 @@ button{
     100% {
         opacity: 1;
     }
+}
+
+/* Dark mode */
+.dark-mode {
+    background: #000!important;
+    color: #fff!important;
+}
+
+.dark-mode-title{
+    -webkit-text-stroke: 0px#d1c8ca;
 }
 
 /* Custom cursor */

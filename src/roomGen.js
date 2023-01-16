@@ -512,3 +512,33 @@ export function modaleMobile(){
         }  
     });
 }
+
+export function darkMode() {
+
+    const darkModeButton = document.getElementById("darkModeButton"); 
+    darkModeButton.addEventListener("click", event => {
+        var element = document.body;
+        const secondTitle = document.getElementById("secondMainTitle");
+        const button = document.getElementsByClassName('buttonList');
+        const cardTitle = document.getElementsByClassName('titleCardServices');
+        const mouseScrollDark = document.getElementById("mouse-scroll");
+        const infoHelpDark = document.getElementById("infoHelpMap");
+        const parentDiv = document.getElementById("parentDiv");
+        
+        for(var i = 0; i < button.length; i++ ){
+            button[i].classList.toggle("dark-mode");
+        }
+        
+        for(var i = 0; i < cardTitle.length; i++) {
+            cardTitle[i].style.color = '#000';    
+        }
+        
+        element.classList.toggle("dark-mode");
+        secondTitle.classList.toggle("dark-mode-title");
+        mouseScrollDark.classList.toggle("mouse-scroll-dark");
+        infoHelpDark.classList.toggle("infoHelpTitle-dark");
+        parentDiv.style.backgroundImage = "url('https://catacombes.xyz/assets/images/paris-night.png')";
+    })
+  
+}
+
