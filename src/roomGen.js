@@ -542,6 +542,7 @@ export function darkMode() {
         const backgroundColorImage = document.getElementsByClassName("backgroundColorImage");
         const footerDiv = document.getElementsByClassName("parentFooter");
         const canvas = document.getElementById("canvas");
+
         
         for(var i = 0; i < button.length; i++ ){
             button[i].classList.toggle("dark-mode");
@@ -570,13 +571,19 @@ export function darkMode() {
         element.classList.toggle("dark-mode");
         secondTitle.classList.toggle("dark-mode-title");
         mouseScrollDark.classList.toggle("mouse-scroll-dark");
+        document.getElementById("closeIcon").style.color = "#000";
+        document.getElementById("infoIcon").style.color = "#000";
 
         if(body.classList.contains("dark-mode")){
             parentDiv.style.backgroundImage = "url('https://catacombes.xyz/assets/images/paris-night.png')";
             parentDiv.style.border = "#fff solid 11px";
+            document.getElementById("iconDarkMode").classList.remove("ti", "ti-moon");
+            document.getElementById("iconDarkMode").classList.add("ti", "ti-sun-high");
         } else {
             parentDiv.style.backgroundImage = "url('https://catacombes.xyz/assets/images/paris.png')";
             parentDiv.style.border = "#000 solid 11px";
+            document.getElementById("iconDarkMode").classList.remove("ti", "ti-sun-high");
+            document.getElementById("iconDarkMode").classList.add("ti", "ti-moon");
         }
 
         if(canvas){
@@ -590,6 +597,8 @@ export function darkMode() {
                 canvas.style.boxShadow = "-1px -1px 147px 33px rgba(0,0,0,0.75)";
                 canvas.style.webKitBoxShadow = "-1px -1px 147px 33px rgba(0,0,0,0.75)";
                 canvas.style.mozBoxShadow = "-1px -1px 147px 33px rgba(0,0,0,0.75)";
+                document.getElementById("closeIcon").style.color = "#000";
+                document.getElementById("infoIcon").style.color = "#000";
             }
         }
         
