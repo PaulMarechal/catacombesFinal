@@ -366,6 +366,18 @@ button{
     position: fixed;
 }
 
+.canvas-dark{
+    box-shadow: -1px -1px 147px 33px rgba(255, 255, 255, 0.75)!important;
+    -webkit-box-shadow: -1px -1px 147px 33px rgba(255, 255, 255, 0.75)!important;
+    -moz-box-shadow: -1px -1px 147px 33px rgba(255, 255, 255, 0.75)!important;
+}
+
+.canvas-light{
+    box-shadow: -1px -1px 147px 33px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px -1px 147px 33px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px -1px 147px 33px rgba(0,0,0,0.75);
+}
+
 #qrCode{
     position: fixed;
     z-index: 99999;
@@ -792,6 +804,17 @@ button{
     display: grid; 
     grid-template-columns: 0.7fr 0.2fr 0.7fr 0.2fr 0.7fr;
     grid-template-rows: 0.5fr;
+    background-color:#FCF5EB;
+    width: 98%; 
+    margin-left: 1%; 
+    border-radius: 10px; 
+    position: relative; 
+    bottom: 4px;
+}
+
+.parentFooter-dark{
+    background: #a3a3a2;  
+    letter-spacing:.05rem;  
 }
 
 .iconeFooter{

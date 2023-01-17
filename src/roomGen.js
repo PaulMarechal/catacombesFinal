@@ -32,6 +32,8 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
     loadingPercent.style.textAlign = "center";
 
 
+
+
     /**
     * Base
     */
@@ -42,10 +44,22 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
 
     // Canvas 
     const canvas = document.createElement("canvas");
+    const body = document.getElementById("body");
     canvas.className = 'webgl';
     canvas.setAttribute("id","canvas");
     document.body.insertBefore(canvas, loadingBarElement);
     canvas.style.display = "block"; 
+
+    if(body.classList.contains("dark-mode")){
+        document.getElementById("canvas").style.boxShadow = "-1px -1px 147px 33px rgba(255, 255, 255, 0.75)"
+        document.getElementById("canvas").style.webKitBoxShadow = "-1px -1px 147px 33px rgba(255, 255, 255, 0.75)"
+        document.getElementById("canvas").style.mozBoxShadow = "-1px -1px 147px 33px rgba(255, 255, 255, 0.75)"
+    } else {
+        document.getElementById("canvas").style.boxShadow = "-1px -1px 147px 33px rgba(0,0,0,0.75)"
+        document.getElementById("canvas").style.webKitBoxShadow = "-1px -1px 147px 33px rgba(0,0,0,0.75)"
+        document.getElementById("canvas").style.mozBoxShadow = "-1px -1px 147px 33px rgba(0,0,0,0.75)"
+    }
+
 
     // QR Code
     qrCodeRoom(linkQR);
@@ -522,10 +536,12 @@ export function darkMode() {
         const button = document.getElementsByClassName('buttonList');
         const cardTitle = document.getElementsByClassName('titleCardServices');
         const mouseScrollDark = document.getElementById("mouse-scroll");
-        const infoHelpDark = document.getElementById("infoHelpMap");
+        const infoHelpDark = document.getElementsByClassName("infoHelpTitle");
         const parentDiv = document.getElementById("parentDiv");
         const nameRoomModale = document.getElementsByClassName("nameRoom"); 
         const backgroundColorImage = document.getElementsByClassName("backgroundColorImage");
+        const footerDiv = document.getElementsByClassName("parentFooter");
+        const canvas = document.getElementById("canvas");
         
         for(var i = 0; i < button.length; i++ ){
             button[i].classList.toggle("dark-mode");
@@ -543,13 +559,47 @@ export function darkMode() {
             backgroundColorImage[i].style.background = '#000';    
         }
 
+        for(var i = 0; i < footerDiv.length; i++) {
+            footerDiv[i].classList.toggle("parentFooter-dark");
+        }
+
+        for(var i = 0; i < infoHelpDark.length; i++) {
+            infoHelpDark[i].style.color = "#000"
+        }
+
         element.classList.toggle("dark-mode");
         secondTitle.classList.toggle("dark-mode-title");
         mouseScrollDark.classList.toggle("mouse-scroll-dark");
-        infoHelpDark.classList.toggle("infoHelpTitle-dark");
-        parentDiv.style.backgroundImage = "url('https://catacombes.xyz/assets/images/paris-night.png')";
-        parentDiv.style.border = "#fff solid 11px";
+
+        if(body.classList.contains("dark-mode")){
+            parentDiv.style.backgroundImage = "url('https://catacombes.xyz/assets/images/paris-night.png')";
+            parentDiv.style.border = "#fff solid 11px";
+        } else {
+            parentDiv.style.backgroundImage = "url('https://catacombes.xyz/assets/images/paris.png')";
+            parentDiv.style.border = "#000 solid 11px";
+        }
+
+        if(canvas){
+            if(body.classList.contains("dark-mode")){
+                canvas.style.boxShadow = "-1px -1px 147px 33px rgba(255, 255, 255, 0.75)";
+                canvas.style.webKitBoxShadow = "-1px -1px 147px 33px rgba(255, 255, 255, 0.75)";
+                canvas.style.mozBoxShadow = "-1px -1px 147px 33px rgba(255, 255, 255, 0.75)";
+                document.getElementById("closeIcon").style.color = "#000";
+                document.getElementById("infoIcon").style.color = "#000";
+            } else {
+                canvas.style.boxShadow = "-1px -1px 147px 33px rgba(0,0,0,0.75)";
+                canvas.style.webKitBoxShadow = "-1px -1px 147px 33px rgba(0,0,0,0.75)";
+                canvas.style.mozBoxShadow = "-1px -1px 147px 33px rgba(0,0,0,0.75)";
+            }
+        }
+        
+
+
+        
+
     })
+
+    
   
 }
 
