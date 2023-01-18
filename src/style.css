@@ -836,6 +836,10 @@ button{
     letter-spacing:.05rem;  
 }
 
+.parentFooter-dark-mobile-landscape{
+    letter-spacing: normal;
+}
+
 .iconeFooter{
     grid-area: 1 / 1 / 2 / 2;
     margin: auto 0 auto 1em;
@@ -1118,11 +1122,23 @@ button{
         width: 14em;
     }
 
+
+    body{
+        width: 100%!important;
+        position: absolute; 
+    }
+
     #logoVR{
-        margin-top: -4.6em;
-        margin-left: 8.2em;
+        margin-top: -5em;
+        margin-left: 10em;
         /* margin-left: 23em;
         margin-top: -4.7em; */
+    }
+
+    #darkModeButton{
+        right: 8px; 
+        top: 5px;
+        color: #000;
     }
 
     .parentTextExplications{
@@ -1220,7 +1236,7 @@ button{
 
     #canvas, #canvasDiv{
         height: 90%!important;
-        width: 95%!important;
+        width: 90%!important;
         margin-right: auto; 
         margin-left: auto;
         right: 0; 
@@ -1272,7 +1288,12 @@ button{
     .loading-bar{
         top: 50%!important;
         left: -1.5%!important;   
-        width: 95%;  
+        width: 90%;  
+    }
+
+    #darkModeButton{
+        right: 25px;
+        margin-top: 35px;
     }
 
     .loadingPercent{
@@ -1428,6 +1449,10 @@ button{
     /* .parentTextExplications{
         margin-top: -38em;
     } */
+
+    #darkModeButton{
+        display: none; 
+    }
 
     .parentTextExplications{
         display: block;

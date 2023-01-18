@@ -562,6 +562,12 @@ export function darkMode() {
 
         for(var i = 0; i < footerDiv.length; i++) {
             footerDiv[i].classList.toggle("parentFooter-dark");
+
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+                if(screen.height>screen.width){
+                    footerDiv[i].classList.toggle("parentFooter-dark-mobile-landscape");
+                } 
+            }
         }
 
         for(var i = 0; i < infoHelpDark.length; i++) {
@@ -607,14 +613,30 @@ export function darkMode() {
                 document.getElementById("infoIcon").style.color = "#000";
             }
         }
-        
 
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+            if(screen.height>screen.width){
+                // Portrait mode
+                if(body.classList.contains("dark-mode")){
+                    document.getElementById("body").style.backgroundColor = "#000"; 
+                    const footerDark = document.getElementsByClassName("parentFooter-dark"); 
+                    for(var i = 0; i<footerDark.length; i++){
+                        footerDark.style.letterSpacing = "normal"; 
+                    }
+                } else {
+                    document.getElementById("body").style.backgroundColor = "#FFF"; 
 
-        
+                }
+                
+                
+                // document.getElementById("contactMeFooter").style.width = "40%!important"
+                // document.getElementById("contactMeFooter").style.padding = "0px";
 
+            } else {
+                // Landscape mode
+             
+            }
+        }
     })
-
-    
-  
 }
 
