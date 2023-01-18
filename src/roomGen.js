@@ -342,7 +342,11 @@ export function salle(modele3d, bakedJpg, linkAR, linkQR){
         if(arButton){
             arButton.style.display = "block"
         }
+        if(canvas){
+            document.getElementById("darkModeButton").style.display = "none";
+        } 
     }
+
 
 
 
@@ -471,6 +475,7 @@ export function removeCanvas(){
 
             arButton.style.display = "none";
             vrButton.style.display = "none";
+            document.getElementById("darkModeButton").style.display = "block";
             // if(arButton){
             //     vrButton.remove();
             // }
@@ -567,6 +572,10 @@ export function darkMode() {
                 if(screen.height>screen.width){
                     footerDiv[i].classList.toggle("parentFooter-dark-mobile-landscape");
                 } 
+
+                if(canvas){
+                    document.getElementById("darkModeButton").style.display = "none";
+                } 
             }
         }
 
@@ -605,6 +614,7 @@ export function darkMode() {
                 canvas.style.mozBoxShadow = "-1px -1px 147px 33px rgba(255, 255, 255, 0.75)";
                 document.getElementById("closeIcon").style.color = "#000";
                 document.getElementById("infoIcon").style.color = "#000";
+                
             } else {
                 canvas.style.boxShadow = "-1px -1px 147px 33px rgba(0,0,0,0.75)";
                 canvas.style.webKitBoxShadow = "-1px -1px 147px 33px rgba(0,0,0,0.75)";

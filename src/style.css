@@ -1236,7 +1236,7 @@ button{
 
     #canvas, #canvasDiv{
         height: 90%!important;
-        width: 90%!important;
+        width: 92%!important;
         margin-right: auto; 
         margin-left: auto;
         right: 0; 
@@ -1288,12 +1288,12 @@ button{
     .loading-bar{
         top: 50%!important;
         left: -1.5%!important;   
-        width: 90%;  
+        width: 92%;  
     }
 
     #darkModeButton{
         right: 25px;
-        margin-top: 35px;
+        margin-top: 10px;
     }
 
     .loadingPercent{
