@@ -142,10 +142,11 @@ export function customCursor(){
         var cursor = document.querySelector(".custom-cursor");
         var links = document.querySelectorAll("a");
         var linksRooms = document.getElementsByClassName("pointRoom");
+        var darkButton = document.getElementsByClassName("darkButton"); 
         var body = document.getElementById("body");
         var initCursor = false;
 
-        const linksHover = [ links, linksRooms ]
+        const linksHover = [ links, linksRooms, darkButton ]
 
         for (var i = 0; i < linksHover.length; i++) {
             var list = linksHover[i];

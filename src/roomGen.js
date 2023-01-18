@@ -542,8 +542,8 @@ export function darkMode() {
         const backgroundColorImage = document.getElementsByClassName("backgroundColorImage");
         const footerDiv = document.getElementsByClassName("parentFooter");
         const canvas = document.getElementById("canvas");
-
-        
+        const moon = document.getElementsByClassName("ti-moon");
+  
         for(var i = 0; i < button.length; i++ ){
             button[i].classList.toggle("dark-mode");
         }
@@ -565,7 +565,13 @@ export function darkMode() {
         }
 
         for(var i = 0; i < infoHelpDark.length; i++) {
-            infoHelpDark[i].style.color = "#000"
+            infoHelpDark[i].style.color = "#000"; 
+        }
+
+        for(var i = 0; i<moon.length; i++){
+            moon[i].style.transition = "transform 0.3s"
+            moon[i].style.scale = "(0.001, 0.001)";
+            console.log("test")
         }
 
         element.classList.toggle("dark-mode");
