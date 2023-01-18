@@ -1287,7 +1287,6 @@ button{
 
     .loading-bar{
         top: 50%!important;
-        left: -1.5%!important;   
         width: 92%;  
     }
 
@@ -1445,6 +1444,15 @@ button{
     #mouseScroll{
         display: none;
     }
+
+    #closeIconInfo{
+        display: none
+    }
+
+    #infoButton{
+        display: none;
+    }
+
 
     /* .parentTextExplications{
         margin-top: -38em;

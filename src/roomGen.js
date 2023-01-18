@@ -635,16 +635,10 @@ export function darkMode() {
                     }
                 } else {
                     document.getElementById("body").style.backgroundColor = "#FFF"; 
-
+                    document.getElementById("infoButton").style.color = "#000";
                 }
-                
-                
-                // document.getElementById("contactMeFooter").style.width = "40%!important"
-                // document.getElementById("contactMeFooter").style.padding = "0px";
-
             } else {
                 // Landscape mode
-             
             }
         }
     })
