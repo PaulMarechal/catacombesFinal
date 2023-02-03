@@ -489,15 +489,21 @@ export function removeCanvas(){
 function qrCodeRoom(linkQR){
 
     const qrCodeAr = document.getElementById("qrCodeAR");
+    const aArElem = document.getElementById("aArElem");
+
+    
 
     const Name = (linkQR+'').charAt(0).toUpperCase()+linkQR.substr(1);
 
     // paulmarechal.xyz
     // const qrCodePath = "https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fpaulmarechal.xyz%2Fcatacombes%2F" + Name + "%2F" + Name + ".usdz&chs=120x120&choe=UTF-8&chld=L|2"
     // catacombes.xyz
-    const qrCodePath = "https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fcatacombes.xyz%2F" + Name + "%2F" + Name + ".usdz&chs=120x120&choe=UTF-8&chld=L|2"
+    //const qrCodePath = "https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fcatacombes.xyz%2F" + Name + "%2F" + Name + ".usdz&chs=120x120&choe=UTF-8&chld=L|2"
+    const qrCodePath = "https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fcatacombes.xyz%2F" + Name + "%2Findex.html&chs=120x120&choe=UTF-8&chld=L|2"
 
     qrCodeAr.setAttribute("src", qrCodePath)
+
+    console.log(qrCodePath);
 }
 
 export function signature(){
@@ -586,7 +592,6 @@ export function darkMode() {
         for(var i = 0; i<moon.length; i++){
             moon[i].style.transition = "transform 0.3s"
             moon[i].style.scale = "(0.001, 0.001)";
-            console.log("test")
         }
 
         element.classList.toggle("dark-mode");

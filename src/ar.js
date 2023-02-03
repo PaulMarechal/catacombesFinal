@@ -4,10 +4,9 @@ export function arDisplay(linkAR){
 
     var elementA = document.createElement("a");
 
-    var elementImg = document.createElement("img")
+    var elementImg = document.createElement("img"); 
 
     // If AR available on mobile
-
     if (elementA.relList.supports("ar")){
         elementA.setAttribute("rel", "ar");
         elementA.setAttribute("id", "arLink");
