@@ -1,5 +1,6 @@
 export function mobileOrNot(){
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ){
+
+    if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ){
         document.getElementById("imgHelp").src="https://paulmarechal.xyz/assets/images/helpMobile.png";
         
         if(screen.height > screen.width){
@@ -63,6 +64,26 @@ export function mobileOrNot(){
             const infos = document.getElementById("informations")
             infos.style.padding = "3em 1em"
         }
+    } if(/Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        const bodyAndroid = document.getElementById("androidMobile"); 
+        const bodyClassique = document.getElementById("mainBody"); 
+        const seeYou = document.getElementById("seeYou"); 
+
+        bodyAndroid.style.display = "block";
+        bodyAndroid.style.background = "#fff";
+        bodyAndroid.style.fontFamily = "Bebas Neue, cursive, sans-serif";
+        bodyAndroid.style.textTransform = "uppercase";
+        bodyAndroid.style.fontSize = "1em";
+        bodyAndroid.style.fontWeight = "600";
+        bodyAndroid.style.position = "absolute";
+        bodyAndroid.style.top = "4em";
+        bodyAndroid.style.marginRight = "15%";
+        bodyAndroid.style.marginLeft = "5%";
+        bodyAndroid.style.height = "100%";
+
+        seeYou.style.marginTop = "2em";
+
+        bodyClassique.style.display = "none";
     } else {
         const newModale = document.getElementById("modaleMobilePortrait")
         if(newModale){
