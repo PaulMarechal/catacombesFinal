@@ -67,6 +67,7 @@ export function mobileOrNot(){
     } if(/Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         const bodyAndroid = document.getElementById("androidMobile"); 
         const bodyClassique = document.getElementById("mainBody"); 
+        const logoSiteAndroid = document.getElementById("logoSiteAndroid"); 
         const seeYou = document.getElementById("seeYou"); 
 
         bodyAndroid.style.display = "block";
@@ -76,12 +77,15 @@ export function mobileOrNot(){
         bodyAndroid.style.fontSize = "1em";
         bodyAndroid.style.fontWeight = "600";
         bodyAndroid.style.position = "absolute";
-        bodyAndroid.style.top = "4em";
         bodyAndroid.style.marginRight = "15%";
         bodyAndroid.style.marginLeft = "5%";
         bodyAndroid.style.height = "100%";
 
         seeYou.style.marginTop = "2em";
+
+        logoSiteAndroid.style.width = "95%"
+        logoSiteAndroid.style.top = "7%"
+        logoSiteAndroid.style.marginBottom = "3em"
 
         bodyClassique.style.display = "none";
     } else {
